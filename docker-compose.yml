@@ -1,5 +1,8 @@
-version: '3'
 services:
+  app:
+    build: .
+    volumes:
+      - .:/app
   cc_swagger:
     image: swaggerapi/swagger-ui
     ports:
@@ -7,4 +10,4 @@ services:
     environment:
       - SWAGGER_JSON=/mnt/openapi.json
     volumes:
-      - ./openapi.json:/mnt/openapi.json
+      - /Users/phamthanh/Desktop/openapi.json:/mnt/openapi.json
