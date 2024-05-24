@@ -158,6 +158,48 @@
           "uuid": "8e9a49a2-8a14-4d5f-8f56-3ae9062a9a9e"
         }
       ]
+    },
+    {
+      "uuid": "02f2e732-f0f9-4865-aa4f-11a024b80c5d",
+      "name": "authen",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "e1c8d27d-d8ff-4400-9bda-8a8c3b83a593"
+        },
+        {
+          "type": "route",
+          "uuid": "ee67dff6-0705-493b-9083-0ca1c5416c9d"
+        },
+        {
+          "type": "route",
+          "uuid": "67fe2570-cc8b-4ec3-a51b-81ece248e061"
+        },
+        {
+          "type": "route",
+          "uuid": "56f50913-8696-4514-ac32-b30c7edf5298"
+        },
+        {
+          "type": "route",
+          "uuid": "cc2d1976-5dc8-495b-b1af-97ea9c571cbb"
+        },
+        {
+          "type": "route",
+          "uuid": "9c4b6e48-cb84-491f-a7b5-0031863df465"
+        },
+        {
+          "type": "route",
+          "uuid": "978f04af-0f3f-47b0-97e9-edd7d8eb9dfc"
+        },
+        {
+          "type": "route",
+          "uuid": "1a96159c-f9f3-41d2-aac9-00147b3935a6"
+        },
+        {
+          "type": "route",
+          "uuid": "c73ee1e6-2066-4a98-b2ab-4bd16682d8db"
+        }
+      ]
     }
   ],
   "routes": [
@@ -1129,12 +1171,25 @@
           "latency": 0,
           "statusCode": 200,
           "label": "",
-          "headers": [],
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
@@ -1173,6 +1228,620 @@
         }
       ],
       "responseMode": null
+    },
+    {
+      "uuid": "e1c8d27d-d8ff-4400-9bda-8a8c3b83a593",
+      "type": "http",
+      "documentation": "API dùng cho màn hình đăng ký",
+      "method": "post",
+      "endpoint": "authen/register_otp",
+      "responses": [
+        {
+          "uuid": "287cce60-4d5c-40fb-9b4b-328448d79fae",
+          "body": "{\n  \"message\": \"Thành công, mã OTP đang được gửi tới SĐT của bạn.\",\n    \"status\": 200,\n    \"data\": {\n      \"otp_code\" : \"0000\",\n      \"time_expire\" : 60\n    }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "TH thành công",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/x-www-form-urlencoded"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "f595b4a1-01ca-4a9b-babe-1ae50997ad78",
+          "body": "{\n  \"message\": \"Số điện thoại này đã được đăng kí.\",\n    \"status\": 406,\n    \"data\": null\n}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "TH sdt đã được đăng kí",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882123\" }",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882124\" }",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882125\" }",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "ee67dff6-0705-493b-9083-0ca1c5416c9d",
+      "type": "http",
+      "documentation": "API dùng cho màn hình xác thực OTP",
+      "method": "post",
+      "endpoint": "authen/verify_otp",
+      "responses": [
+        {
+          "uuid": "bb16ed97-f867-46a2-b1d3-354d8c0e13d7",
+          "body": "{\n  \"message\": \"Mã xác thực không đúng hoặc đã hết hiệu lực\",\n    \"status\": 406,\n    \"data\": false\n}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "TH không đúng",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882046\",   \"otp_code\" : \"0000\" }",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882000\",   \"otp_code\" : \"0000\" }",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882045\",   \"otp_code\" : \"0000\" }",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "657fdd2e-9c7d-47e0-a4cc-0fb84d42d8ff",
+          "body": "{\n  \"message\": \"Thành công\",\n    \"status\": 200,\n    \"data\": true\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "TH veriry đúng",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "{   \"phone_number\" : \"0356882046\",   \"otp_code\" : \"0000\" }",
+              "value": "{   \"phone_number\" : \"0356882046\",   \"otp_code\" : \"0000\" }",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "{   \"phone_number\" : \"0356882000\",   \"otp_code\" : \"0000\" }",
+              "value": "{   \"phone_number\" : \"0356882000\",   \"otp_code\" : \"0000\" }",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "{   \"phone_number\" : \"0356882045\",   \"otp_code\" : \"0000\" }",
+              "value": "{   \"phone_number\" : \"0356882045\",   \"otp_code\" : \"0000\" }",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "2d775506-d8b3-43d6-a7e0-00e12483e5dc",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "56f50913-8696-4514-ac32-b30c7edf5298",
+      "type": "http",
+      "documentation": "Dùng cho màn hình đăng nhập",
+      "method": "post",
+      "endpoint": "authen/login",
+      "responses": [
+        {
+          "uuid": "80de5f87-c0fc-4458-bed8-3ed797dd1b53",
+          "body": "{\n    \"code\": 200,\n    \"message\": \"Request successful\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IkZDNjFGQTkxQjYxRDgyREE5REVDQUUyQzkxMDlBNzFEQkYyRTFGM0ZSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6Il9HSDZrYllkZ3RxZDdLNHNrUW1uSGI4dUh6OCJ9.eyJuYmYiOjE3MTY1MjY0OTMsImV4cCI6MTcxNjYxMjg5MywiaXNzIjoiY29uY3VuZy5jb20iLCJjbGllbnRfaWQiOiI1YmZjZmJlNy1jMmZiLTQ5NTEtOTQ1MC0zOGMyZTMzODkxMzYiLCJzdWIiOiIzIiwiYXV0aF90aW1lIjoxNzE2NTI2NDkzLCJpZHAiOiJsb2NhbCIsIi9jdXN0b21lcl9pZCI6IjMiLCIvY3VzdG9tZXJfdWlkIjoiYTQxYjQ0MzQtYmQ5OS00ZDRmLTg5MjYtYjFlYjU3YmUzNmNiIiwiL3VzZXJuYW1lIjoiMDM1Njg4MjA0NiIsIi9jdXN0b21lcl9uYW1lIjoiVGhhbmgiLCJpYXQiOjE3MTY1MjY0OTMsInNjb3BlIjoiYXV0aC1hcGkgb2ZmbGluZV9hY2Nlc3MiLCJhbXIiOlsicGhvbmVfb3RwIl19.jCvEWwf_ci6tSs0Oj3tT4s16zaMHOU-wG6J3tfkED7LBPpVhNP3dl0GEJ5J7ahfQ-Uqlgy7XPsnXflHOdtYLSXBgY4WqSb0gkOpgKAmahTY9tqdycPwHQA155z4cClhSV2CKRX96sPfDRXtrex9nMxjToUXmI21pFR-JoI1P_XhUUqxPJZYTQRWmdQVdAmjZMIDXNSs2jX9ZkS_cKEC-1tfzavIzvm99y23VN9-9Kx1AKTeuCp0fLRtAHk6sqS5VXxqBKuojLz1_0RWbew36YEVIK6HJXI7v_EG03xibIG-RR-PCOpqfZMHROL0tMbLc89qAqIrnSLDSZRNfPrL0sQ\",\n        \"refresh_token\": \"F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546\",\n        \"expires_in\": 86400\n    }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "TH Thành công",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882046\",   \"password\" : \"a12345678@\" }",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882000\",   \"password\" : \"a12345678@\" }",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882045\",   \"password\" : \"a12345678@\" }",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "5bb6e26a-2761-4640-bc04-753c475e5949",
+          "body": "{\n  \"message\": \"Đăng nhập không thành công\",\n    \"status\": 406,\n    \"data\": null\n}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "TH không thành công",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882046\",   \"password\" : \"a12345678@\" }",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882000\",   \"password\" : \"a12345678@\" }",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882045\",   \"password\" : \"a12345678@\" }",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "cc2d1976-5dc8-495b-b1af-97ea9c571cbb",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "authen/forgot_password_otp",
+      "responses": [
+        {
+          "uuid": "9b183504-c920-47b6-b56b-588e81dfa289",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "9c4b6e48-cb84-491f-a7b5-0031863df465",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "authen/update_user_info",
+      "responses": [
+        {
+          "uuid": "f13fdf0c-ca83-4339-950c-86ecd790c747",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "978f04af-0f3f-47b0-97e9-edd7d8eb9dfc",
+      "type": "http",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "authen/create_user_info",
+      "responses": [
+        {
+          "uuid": "4c1b95a8-a0b7-4e10-9996-bc543037cd0d",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "1a96159c-f9f3-41d2-aac9-00147b3935a6",
+      "type": "http",
+      "documentation": "API lấy thông tin user",
+      "method": "get",
+      "endpoint": "authen/get_user_info",
+      "responses": [
+        {
+          "uuid": "99f0818c-4bfb-41e4-93e6-81deb9b51043",
+          "body": "{\n  \"message\": \"Đăng nhập thành công\",\n    \"status\": 200,\n    \"data\": {\n  \"full_name\" : \"Lưu Hoàng Trọng\",\n  \"first_name\" : \"Lưu\",\n  \"middle_name\" : \"Hoàng\"\n  \"last_name\" : \"Trọng\",\n  \"customer_id\" : 1,\n  \"customer_uuid\" : 1,\n  \"gender\" : 1,\n  \"dob\" : \"\",\n  \"email\" : \"trongbudop113@gmail.com\",\n  \"phone\" : \"0356882046\",\n  \"avatar\" : \"\",\n  \"address\" : [],\n  \"children\" : []\n  \"token\" : \"\"\n}\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "49bf55aa-8e25-45ac-adb5-165d7800ff93",
+          "body": "{\n  \"message\": \"Không thành công\",\n    \"status\": 406,\n    \"data\": null\n}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "Không thành công",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "67fe2570-cc8b-4ec3-a51b-81ece248e061",
+      "type": "http",
+      "documentation": "Dùng cho màn hình tạo mật khẩu",
+      "method": "post",
+      "endpoint": "authen/create_password",
+      "responses": [
+        {
+          "uuid": "87150b66-2182-4d32-84de-75bbdf10ca07",
+          "body": "{\n  \"message\": \"Tạo mật khẩu thành công\",\n    \"status\": 200,\n    \"data\": true\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Th thành công",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882046\",   \"password\" : \"a12345678@\" }",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882000\",   \"password\" : \"a12345678@\" }",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882045\",   \"password\" : \"a12345678@\" }",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "0fdc497d-6ad2-497a-972f-343cd28c7e0b",
+          "body": "{\n  \"message\": \"Không thành công, vui lòng kiểm tra lại\",\n    \"status\": 406,\n    \"data\": false\n}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "TH không thành công",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882046\",   \"password\" : \"a12345678@\" }",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882000\",   \"password\" : \"a12345678@\" }",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{   \"phone_number\" : \"0356882045\",   \"password\" : \"a12345678@\" }",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "c73ee1e6-2066-4a98-b2ab-4bd16682d8db",
+      "type": "http",
+      "documentation": "API dùng refresh token",
+      "method": "post",
+      "endpoint": "authen/refresh_token",
+      "responses": [
+        {
+          "uuid": "04a5a8fe-a20a-4dc0-867e-bde11743e076",
+          "body": "{\n    \"code\": 200,\n    \"message\": \"Request successful\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IkZDNjFGQTkxQjYxRDgyREE5REVDQUUyQzkxMDlBNzFEQkYyRTFGM0ZSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6Il9HSDZrYllkZ3RxZDdLNHNrUW1uSGI4dUh6OCJ9.eyJuYmYiOjE3MTY1MjY0OTMsImV4cCI6MTcxNjYxMjg5MywiaXNzIjoiY29uY3VuZy5jb20iLCJjbGllbnRfaWQiOiI1YmZjZmJlNy1jMmZiLTQ5NTEtOTQ1MC0zOGMyZTMzODkxMzYiLCJzdWIiOiIzIiwiYXV0aF90aW1lIjoxNzE2NTI2NDkzLCJpZHAiOiJsb2NhbCIsIi9jdXN0b21lcl9pZCI6IjMiLCIvY3VzdG9tZXJfdWlkIjoiYTQxYjQ0MzQtYmQ5OS00ZDRmLTg5MjYtYjFlYjU3YmUzNmNiIiwiL3VzZXJuYW1lIjoiMDM1Njg4MjA0NiIsIi9jdXN0b21lcl9uYW1lIjoiVGhhbmgiLCJpYXQiOjE3MTY1MjY0OTMsInNjb3BlIjoiYXV0aC1hcGkgb2ZmbGluZV9hY2Nlc3MiLCJhbXIiOlsicGhvbmVfb3RwIl19.jCvEWwf_ci6tSs0Oj3tT4s16zaMHOU-wG6J3tfkED7LBPpVhNP3dl0GEJ5J7ahfQ-Uqlgy7XPsnXflHOdtYLSXBgY4WqSb0gkOpgKAmahTY9tqdycPwHQA155z4cClhSV2CKRX96sPfDRXtrex9nMxjToUXmI21pFR-JoI1P_XhUUqxPJZYTQRWmdQVdAmjZMIDXNSs2jX9ZkS_cKEC-1tfzavIzvm99y23VN9-9Kx1AKTeuCp0fLRtAHk6sqS5VXxqBKuojLz1_0RWbew36YEVIK6HJXI7v_EG03xibIG-RR-PCOpqfZMHROL0tMbLc89qAqIrnSLDSZRNfPrL0sQ\",\n        \"refresh_token\": \"F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546\",\n        \"expires_in\": 86400\n    }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Thành công",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{\"refresh_token\" : \"F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546\"}",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "2c167970-5148-4aae-a5ee-790859101dbd",
+          "body": "{\n    \"code\": 406,\n    \"message\": \"Không thành công\",\n    \"data\": null",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "Không thành công",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "{\"refresh_token\" : \"F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546\"}",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -1191,6 +1860,10 @@
     {
       "type": "folder",
       "uuid": "de096cb8-75af-4c0b-b06a-540ebeba0b92"
+    },
+    {
+      "type": "folder",
+      "uuid": "02f2e732-f0f9-4865-aa4f-11a024b80c5d"
     }
   ],
   "proxyMode": false,
