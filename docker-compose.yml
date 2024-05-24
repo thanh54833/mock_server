@@ -7,4 +7,4 @@ services:
     environment:
       - SWAGGER_JSON=/mnt/openapi.json
     volumes:
-      - /Users/phamthanh/Desktop/openapi.json:/mnt/openapi.json
+      - /openapi.json:/mnt/openapi.json
