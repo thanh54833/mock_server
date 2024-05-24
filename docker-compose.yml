@@ -1,9 +1,13 @@
 version: '3'
 services:
-#  mockoon:
-#    build: .
-#    ports:
-#      - "3000:3000"
+  mockoon:
+    image: node:14
+    volumes:
+      - ./mockoon:/app
+    working_dir: /app
+    command: [ "mockoon-cli", "start", "--data", "/app/concung.json", "--port", "3001" ]
+    ports:
+      - 3001:3001
   cc_swagger:
     image: swaggerapi/swagger-ui
     ports:
