@@ -176,8 +176,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384710"
             }
           ],
           "bodyType": "INLINE",
@@ -210,8 +214,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384711"
             }
           ],
           "bodyType": "INLINE",
@@ -244,8 +252,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384712"
             }
           ],
           "bodyType": "INLINE",
@@ -278,8 +290,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384713"
             }
           ],
           "bodyType": "INLINE",
@@ -312,8 +328,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384714"
             }
           ],
           "bodyType": "INLINE",
@@ -346,8 +366,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384715"
             }
           ],
           "bodyType": "INLINE",
@@ -380,8 +404,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=360"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384716"
             }
           ],
           "bodyType": "INLINE",
@@ -414,8 +442,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "W/106384710",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384717"
             }
           ],
           "bodyType": "INLINE",
@@ -448,15 +480,27 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384719"
             }
           ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": false,
@@ -482,8 +526,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384720"
             }
           ],
           "bodyType": "INLINE",
@@ -516,8 +564,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384730"
             }
           ],
           "bodyType": "INLINE",
@@ -550,8 +602,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384740"
             }
           ],
           "bodyType": "INLINE",
@@ -584,8 +640,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384750"
             }
           ],
           "bodyType": "INLINE",
@@ -618,8 +678,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384760"
             }
           ],
           "bodyType": "INLINE",
@@ -652,8 +716,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384770"
             }
           ],
           "bodyType": "INLINE",
@@ -686,8 +754,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384780"
             }
           ],
           "bodyType": "INLINE",
@@ -720,8 +792,12 @@
           "label": "",
           "headers": [
             {
-              "key": "",
-              "value": ""
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384310"
             }
           ],
           "bodyType": "INLINE",
@@ -1125,6 +1201,38 @@
       "responses": [
         {
           "uuid": "0f3916b7-b589-452d-b35e-77c14b91252f",
+          "body": "{\n  \"key_2\":\"value_1\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "value",
+              "value": "1",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "49ad9ab2-6a5f-4871-92f8-ad4221027faf",
           "body": "{\n  \"key_2\":\"value_2\"\n}",
           "latency": 0,
           "statusCode": 200,
@@ -1134,11 +1242,19 @@
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "value",
+              "value": "2",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
-          "default": true,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -1149,12 +1265,12 @@
       "uuid": "8e9a49a2-8a14-4d5f-8f56-3ae9062a9a9e",
       "type": "http",
       "documentation": "",
-      "method": "get",
+      "method": "post",
       "endpoint": "api_2",
       "responses": [
         {
           "uuid": "44d3c35c-a437-4c36-b99a-8a1ca4800e59",
-          "body": "{}",
+          "body": "{\n  \"key_1\":\"value_1\"\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -1163,11 +1279,46 @@
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "value_1",
+              "value": "1",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "74540be1-f39f-4dae-ad44-8bdbf2d7add9",
+          "body": "{\n\"key_2\":\"value_2\"\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": " (copy)",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "value_1",
+              "value": "2",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -1222,6 +1373,14 @@
     {
       "key": "Access-Control-Allow-Headers",
       "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    },
+    {
+      "key": "ETag",
+      "value": "W/106384710"
+    },
+    {
+      "key": "Cache-Control",
+      "value": "s-maxage=86400, must-revalidate, max-age=3600"
     }
   ],
   "proxyReqHeaders": [
