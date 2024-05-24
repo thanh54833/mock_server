@@ -1239,7 +1239,7 @@
         {
           "uuid": "287cce60-4d5c-40fb-9b4b-328448d79fae",
           "body": "{\n  \"message\": \"Thành công, mã OTP đang được gửi tới SĐT của bạn.\",\n    \"status\": 200,\n    \"data\": {\n      \"otp_code\" : \"0000\",\n      \"time_expire\" : 60\n    }\n}",
-          "latency": 0,
+          "latency": 500,
           "statusCode": 200,
           "label": "TH thành công",
           "headers": [
@@ -1398,7 +1398,7 @@
         {
           "uuid": "657fdd2e-9c7d-47e0-a4cc-0fb84d42d8ff",
           "body": "{\n  \"message\": \"Thành công\",\n    \"status\": 200,\n    \"data\": true\n}",
-          "latency": 0,
+          "latency": 500,
           "statusCode": 200,
           "label": "TH veriry đúng",
           "headers": [
@@ -1610,7 +1610,15 @@
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "customer_phone",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
