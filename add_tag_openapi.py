@@ -72,5 +72,5 @@ for route in mockoon_data['routes']:
     }
 
 # Save the OpenAPI data
-with open('openapi_w.json', 'w') as f:
+with open('openapi.json', 'w') as f:
     json.dump(openapi_data, f, indent=4)
