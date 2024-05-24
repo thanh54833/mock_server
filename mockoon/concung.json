@@ -1248,13 +1248,13 @@
               "value": "application/x-www-form-urlencoded"
             }
           ],
-          "bodyType": "INLINE",
+          "bodyType": "DATABUCKET",
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
           "rules": [
             {
-              "target": "query",
+              "target": "body",
               "modifier": "customer_phone",
               "value": "",
               "invert": true,
@@ -1266,7 +1266,12 @@
           "fallbackTo404": false,
           "default": true,
           "crudKey": "id",
-          "callbacks": []
+          "callbacks": [
+            {
+              "uuid": "b28af2b8-79a5-49fa-b736-bc101796ff9a",
+              "latency": 0
+            }
+          ]
         },
         {
           "uuid": "f595b4a1-01ca-4a9b-babe-1ae50997ad78",
@@ -1991,6 +1996,29 @@
       "value": ""
     }
   ],
-  "data": [],
-  "callbacks": []
+  "data": [
+    {
+      "uuid": "3a6360a0-ff24-446c-a872-985b08374e64",
+      "id": "jycs",
+      "name": "New data",
+      "documentation": "",
+      "value": ""
+    }
+  ],
+  "callbacks": [
+    {
+      "uuid": "b28af2b8-79a5-49fa-b736-bc101796ff9a",
+      "id": "l3at",
+      "uri": "",
+      "name": "Callback",
+      "documentation": "",
+      "method": "post",
+      "headers": [],
+      "bodyType": "INLINE",
+      "body": "{\n  \"message\": \"Thành công, mã OTP đang được gửi tới SĐT của bạn.\",\n    \"status\": 200,\n    \"data\": {\n      \"otp_code\" : \"0000\",\n      \"time_expire\" : 60\n    }\n}",
+      "databucketID": "",
+      "filePath": "",
+      "sendFileAsBody": true
+    }
+  ]
 }
