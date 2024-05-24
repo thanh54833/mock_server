@@ -1,5 +1,9 @@
 version: '3'
 services:
+  mockoon:
+    build: .
+    ports:
+      - "3000:3000"
   cc_swagger:
     image: swaggerapi/swagger-ui
     ports:
