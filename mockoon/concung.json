@@ -1167,7 +1167,7 @@
       "responses": [
         {
           "uuid": "0f3916b7-b589-452d-b35e-77c14b91252f",
-          "body": "{\n  \"key_1\":\"value_1\"\n}",
+          "body": "{\n  \"key_2\":\"value_2\"\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
