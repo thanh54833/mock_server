@@ -1252,7 +1252,15 @@
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
@@ -1278,28 +1286,60 @@
           "sendFileAsBody": false,
           "rules": [
             {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882123\" }",
-              "invert": false,
-              "operator": "equals"
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "0356882123",
+              "invert": true,
+              "operator": "null"
             },
             {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882124\" }",
-              "invert": false,
-              "operator": "equals"
-            },
-            {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882125\" }",
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "0356882123",
               "invert": false,
               "operator": "equals"
             }
           ],
-          "rulesOperator": "OR",
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "62613790-dea3-40df-b230-98d2a340597c",
+          "body": "{\n  \"message\": \"Số điện thoại này đã được đăng kí.\",\n    \"status\": 406,\n    \"data\": null\n}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "TH sdt đã được đăng kí (copy)",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "0356882124",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": false,
@@ -1334,28 +1374,21 @@
           "sendFileAsBody": false,
           "rules": [
             {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882046\",   \"otp_code\" : \"0000\" }",
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "",
               "invert": true,
-              "operator": "equals"
+              "operator": "null"
             },
             {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882000\",   \"otp_code\" : \"0000\" }",
-              "invert": true,
-              "operator": "equals"
-            },
-            {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882045\",   \"otp_code\" : \"0000\" }",
+              "target": "query",
+              "modifier": "otp_code",
+              "value": "0000",
               "invert": true,
               "operator": "equals"
             }
           ],
-          "rulesOperator": "OR",
+          "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
@@ -1380,47 +1413,21 @@
           "sendFileAsBody": false,
           "rules": [
             {
-              "target": "body",
-              "modifier": "{   \"phone_number\" : \"0356882046\",   \"otp_code\" : \"0000\" }",
-              "value": "{   \"phone_number\" : \"0356882046\",   \"otp_code\" : \"0000\" }",
-              "invert": false,
-              "operator": "equals"
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "",
+              "invert": true,
+              "operator": "null"
             },
             {
-              "target": "body",
-              "modifier": "{   \"phone_number\" : \"0356882000\",   \"otp_code\" : \"0000\" }",
-              "value": "{   \"phone_number\" : \"0356882000\",   \"otp_code\" : \"0000\" }",
-              "invert": false,
-              "operator": "equals"
-            },
-            {
-              "target": "body",
-              "modifier": "{   \"phone_number\" : \"0356882045\",   \"otp_code\" : \"0000\" }",
-              "value": "{   \"phone_number\" : \"0356882045\",   \"otp_code\" : \"0000\" }",
+              "target": "query",
+              "modifier": "otp_code",
+              "value": "\"0000\"",
               "invert": false,
               "operator": "equals"
             }
           ],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        },
-        {
-          "uuid": "2d775506-d8b3-43d6-a7e0-00e12483e5dc",
-          "body": "{}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
+          "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": false,
@@ -1455,31 +1462,91 @@
           "sendFileAsBody": false,
           "rules": [
             {
-              "target": "body",
-              "modifier": "",
+              "target": "query",
+              "modifier": "customer_phone",
               "value": "{   \"phone_number\" : \"0356882046\",   \"password\" : \"a12345678@\" }",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "0356882046",
               "invert": false,
               "operator": "equals"
             },
             {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882000\",   \"password\" : \"a12345678@\" }",
-              "invert": false,
-              "operator": "equals"
-            },
-            {
-              "target": "body",
-              "modifier": "",
+              "target": "query",
+              "modifier": "password",
               "value": "{   \"phone_number\" : \"0356882045\",   \"password\" : \"a12345678@\" }",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "query",
+              "modifier": "password",
+              "value": "a12345678@",
               "invert": false,
               "operator": "equals"
             }
           ],
-          "rulesOperator": "OR",
+          "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "2e1d99d6-e0ad-4045-aa46-86399cc10509",
+          "body": "{\n    \"code\": 200,\n    \"message\": \"Request successful\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IkZDNjFGQTkxQjYxRDgyREE5REVDQUUyQzkxMDlBNzFEQkYyRTFGM0ZSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6Il9HSDZrYllkZ3RxZDdLNHNrUW1uSGI4dUh6OCJ9.eyJuYmYiOjE3MTY1MjY0OTMsImV4cCI6MTcxNjYxMjg5MywiaXNzIjoiY29uY3VuZy5jb20iLCJjbGllbnRfaWQiOiI1YmZjZmJlNy1jMmZiLTQ5NTEtOTQ1MC0zOGMyZTMzODkxMzYiLCJzdWIiOiIzIiwiYXV0aF90aW1lIjoxNzE2NTI2NDkzLCJpZHAiOiJsb2NhbCIsIi9jdXN0b21lcl9pZCI6IjMiLCIvY3VzdG9tZXJfdWlkIjoiYTQxYjQ0MzQtYmQ5OS00ZDRmLTg5MjYtYjFlYjU3YmUzNmNiIiwiL3VzZXJuYW1lIjoiMDM1Njg4MjA0NiIsIi9jdXN0b21lcl9uYW1lIjoiVGhhbmgiLCJpYXQiOjE3MTY1MjY0OTMsInNjb3BlIjoiYXV0aC1hcGkgb2ZmbGluZV9hY2Nlc3MiLCJhbXIiOlsicGhvbmVfb3RwIl19.jCvEWwf_ci6tSs0Oj3tT4s16zaMHOU-wG6J3tfkED7LBPpVhNP3dl0GEJ5J7ahfQ-Uqlgy7XPsnXflHOdtYLSXBgY4WqSb0gkOpgKAmahTY9tqdycPwHQA155z4cClhSV2CKRX96sPfDRXtrex9nMxjToUXmI21pFR-JoI1P_XhUUqxPJZYTQRWmdQVdAmjZMIDXNSs2jX9ZkS_cKEC-1tfzavIzvm99y23VN9-9Kx1AKTeuCp0fLRtAHk6sqS5VXxqBKuojLz1_0RWbew36YEVIK6HJXI7v_EG03xibIG-RR-PCOpqfZMHROL0tMbLc89qAqIrnSLDSZRNfPrL0sQ\",\n        \"refresh_token\": \"F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546\",\n        \"expires_in\": 86400\n    }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "TH Thành công (copy)",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "{   \"phone_number\" : \"0356882046\",   \"password\" : \"a12345678@\" }",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "0356882000",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "query",
+              "modifier": "password",
+              "value": "{   \"phone_number\" : \"0356882045\",   \"password\" : \"a12345678@\" }",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "query",
+              "modifier": "password",
+              "value": "a12345678@",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         },
@@ -1501,28 +1568,21 @@
           "sendFileAsBody": false,
           "rules": [
             {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882046\",   \"password\" : \"a12345678@\" }",
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "0356882046",
               "invert": true,
               "operator": "equals"
             },
             {
               "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882000\",   \"password\" : \"a12345678@\" }",
-              "invert": true,
-              "operator": "equals"
-            },
-            {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882045\",   \"password\" : \"a12345678@\" }",
+              "modifier": "password",
+              "value": "a12345678@",
               "invert": true,
               "operator": "equals"
             }
           ],
-          "rulesOperator": "OR",
+          "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": false,
@@ -1692,28 +1752,28 @@
           "sendFileAsBody": false,
           "rules": [
             {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882046\",   \"password\" : \"a12345678@\" }",
+              "target": "query",
+              "modifier": "customer_phone",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "query",
+              "modifier": "password",
+              "value": "a12345678@",
               "invert": false,
               "operator": "equals"
             },
             {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882000\",   \"password\" : \"a12345678@\" }",
-              "invert": false,
-              "operator": "equals"
-            },
-            {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882045\",   \"password\" : \"a12345678@\" }",
-              "invert": false,
-              "operator": "equals"
+              "target": "query",
+              "modifier": "password",
+              "value": "",
+              "invert": true,
+              "operator": "null"
             }
           ],
-          "rulesOperator": "OR",
+          "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
@@ -1738,28 +1798,28 @@
           "sendFileAsBody": false,
           "rules": [
             {
-              "target": "body",
-              "modifier": "",
+              "target": "query",
+              "modifier": "customer_phone",
               "value": "{   \"phone_number\" : \"0356882046\",   \"password\" : \"a12345678@\" }",
               "invert": true,
-              "operator": "equals"
+              "operator": "null"
             },
             {
-              "target": "body",
-              "modifier": "",
+              "target": "query",
+              "modifier": "password",
               "value": "{   \"phone_number\" : \"0356882000\",   \"password\" : \"a12345678@\" }",
-              "invert": false,
-              "operator": "equals"
+              "invert": true,
+              "operator": "null"
             },
             {
-              "target": "body",
-              "modifier": "",
-              "value": "{   \"phone_number\" : \"0356882045\",   \"password\" : \"a12345678@\" }",
-              "invert": false,
+              "target": "query",
+              "modifier": "password",
+              "value": "a12345678@",
+              "invert": true,
               "operator": "equals"
             }
           ],
-          "rulesOperator": "OR",
+          "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": false,
@@ -1794,14 +1854,21 @@
           "sendFileAsBody": false,
           "rules": [
             {
-              "target": "body",
-              "modifier": "",
-              "value": "{\"refresh_token\" : \"F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546\"}",
+              "target": "query",
+              "modifier": "refresh_token",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "query",
+              "modifier": "refresh_token",
+              "value": "F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546",
               "invert": false,
               "operator": "equals"
             }
           ],
-          "rulesOperator": "OR",
+          "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
@@ -1827,13 +1894,20 @@
           "rules": [
             {
               "target": "body",
-              "modifier": "",
-              "value": "{\"refresh_token\" : \"F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546\"}",
+              "modifier": "refresh_token",
+              "value": "{\"refresh_token\" : \"\"}",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "body",
+              "modifier": "refresh_token",
+              "value": "F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546",
               "invert": true,
               "operator": "equals"
             }
           ],
-          "rulesOperator": "OR",
+          "rulesOperator": "AND",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": false,
