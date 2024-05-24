@@ -1,0 +1,10 @@
+version: '3'
+services:
+  cc_swagger:
+    image: swaggerapi/swagger-ui
+    ports:
+      - "8081:8080"
+    environment:
+      - SWAGGER_JSON=/mnt/openapi.json
+    volumes:
+      - /Users/phamthanh/Desktop/openapi.json:/mnt/openapi.json
