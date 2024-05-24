@@ -1,14 +1,9 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Concung",
+        "title": "API title",
         "version": "1.0.0"
     },
-    "servers": [
-        {
-            "url": "http://localhost:3001/"
-        }
-    ],
     "paths": {
         "/home/suggestsearch": {
             "post": {
@@ -787,6 +782,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -825,6 +826,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -863,6 +870,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -901,6 +914,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -939,6 +958,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -977,6 +1002,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -1015,6 +1046,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -1053,6 +1090,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -1091,6 +1134,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -1129,6 +1178,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -1167,6 +1222,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -1205,6 +1266,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -1243,6 +1310,12 @@
                                     "type": "string"
                                 },
                                 "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
                             }
                         }
                     }
@@ -1251,6 +1324,55 @@
                     "view_all"
                 ]
             }
+        },
+        "/api_1": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n  \"key_1\":\"value_1\"\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "api_1"
+                ]
+            }
         }
-    }
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3001/"
+        }
+    ]
 }
