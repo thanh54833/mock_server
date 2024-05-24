@@ -1167,7 +1167,7 @@
       "responses": [
         {
           "uuid": "0f3916b7-b589-452d-b35e-77c14b91252f",
-          "body": "{\n  \"key_2\":\"value_2\"\n}",
+          "body": "{\n  \"key_1\":\"value_2111\"\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
@@ -1628,7 +1628,7 @@
       "responses": [
         {
           "uuid": "99f0818c-4bfb-41e4-93e6-81deb9b51043",
-          "body": "{\n  \"message\": \"Đăng nhập thành công\",\n    \"status\": 200,\n    \"data\": {\n  \"full_name\" : \"Lưu Hoàng Trọng\",\n  \"first_name\" : \"Lưu\",\n  \"middle_name\" : \"Hoàng\"\n  \"last_name\" : \"Trọng\",\n  \"customer_id\" : 1,\n  \"customer_uuid\" : 1,\n  \"gender\" : 1,\n  \"dob\" : \"\",\n  \"email\" : \"trongbudop113@gmail.com\",\n  \"phone\" : \"0356882046\",\n  \"avatar\" : \"\",\n  \"address\" : [],\n  \"children\" : []\n  \"token\" : \"\"\n}\n}",
+          "body": "{\n  \"message\": \"Đăng nhập thành công\",\n    \"status\": 200,\n    \"data\": {\n  \"full_name\" : \"Lưu Hoàng Trọng\",\n  \"first_name\" : \"Lưu\",\n  \"middle_name\" : \"Hoàng\"\n  \"last_name\" : \"Trọng\",\n  \"customer_id\" : 1,\n  \"customer_uuid\" : 1,\n  \"gender\" : 1,\n  \"dob\" : \"\",\n  \"email\" : \"trongbudop113@gmail.com\",\n  \"phone\" : \"0356882046\",\n  \"avatar\" : \"\",\n  \"address\" : [ ],\n  \"children\" : []\n  \"token\" : \"\"\n}\n}",
           "latency": 0,
           "statusCode": 200,
           "label": "",
