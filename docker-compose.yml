@@ -1,11 +1,10 @@
 version: '3'
 services:
-  mockoon:
-    image: node:14
+  mock_server:
+    image: mockoon/cli:latest
+    command: ["--data", "data", "--port", "3001"]
     volumes:
-      - ./mockoon:/app
-    working_dir: /app
-    command: [ "mockoon-cli", "start", "--data", "/app/concung.json", "--port", "3001" ]
+      - ./mockoon/concung.json:/data:ro
     ports:
       - 3001:3001
   cc_swagger:
