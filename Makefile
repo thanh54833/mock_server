@@ -4,6 +4,7 @@ p_c:
 
 
 u_d:
-	python add_tag_openapi.py
+	git add --all && git commit -m "push code" && git push
+	#python add_tag_openapi.py
 	docker-compose down
 	docker-compose up -d
