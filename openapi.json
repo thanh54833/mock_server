@@ -1333,7 +1333,7 @@
                         "description": "",
                         "content": {
                             "application/json": {
-                                "example": "{\n  \"key_1\":\"value_1\"\n}"
+                                "example": "{\n  \"key_1\":\"value_2111\"\n}"
                             }
                         },
                         "headers": {
@@ -1370,7 +1370,183 @@
             }
         },
         "/api_2": {
-            "get": {
+            "post": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n  \"key_1\":\"value_1\"\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "api_2"
+                ]
+            }
+        },
+        "/authen/register_otp": {
+            "post": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n  \"message\": \"Th\u00e0nh c\u00f4ng, m\u00e3 OTP \u0111ang \u0111\u01b0\u1ee3c g\u1eedi t\u1edbi S\u0110T c\u1ee7a b\u1ea1n.\",\n    \"status\": 200,\n    \"data\": {\n      \"otp_code\" : \"0000\",\n      \"time_expire\" : 60\n    }\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "authen"
+                ]
+            }
+        },
+        "/authen/verify_otp": {
+            "post": {
+                "description": "",
+                "responses": {
+                    "406": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n  \"message\": \"M\u00e3 x\u00e1c th\u1ef1c kh\u00f4ng \u0111\u00fang ho\u1eb7c \u0111\u00e3 h\u1ebft hi\u1ec7u l\u1ef1c\",\n    \"status\": 406,\n    \"data\": false\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "authen"
+                ]
+            }
+        },
+        "/authen/login": {
+            "post": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n    \"code\": 200,\n    \"message\": \"Request successful\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IkZDNjFGQTkxQjYxRDgyREE5REVDQUUyQzkxMDlBNzFEQkYyRTFGM0ZSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6Il9HSDZrYllkZ3RxZDdLNHNrUW1uSGI4dUh6OCJ9.eyJuYmYiOjE3MTY1MjY0OTMsImV4cCI6MTcxNjYxMjg5MywiaXNzIjoiY29uY3VuZy5jb20iLCJjbGllbnRfaWQiOiI1YmZjZmJlNy1jMmZiLTQ5NTEtOTQ1MC0zOGMyZTMzODkxMzYiLCJzdWIiOiIzIiwiYXV0aF90aW1lIjoxNzE2NTI2NDkzLCJpZHAiOiJsb2NhbCIsIi9jdXN0b21lcl9pZCI6IjMiLCIvY3VzdG9tZXJfdWlkIjoiYTQxYjQ0MzQtYmQ5OS00ZDRmLTg5MjYtYjFlYjU3YmUzNmNiIiwiL3VzZXJuYW1lIjoiMDM1Njg4MjA0NiIsIi9jdXN0b21lcl9uYW1lIjoiVGhhbmgiLCJpYXQiOjE3MTY1MjY0OTMsInNjb3BlIjoiYXV0aC1hcGkgb2ZmbGluZV9hY2Nlc3MiLCJhbXIiOlsicGhvbmVfb3RwIl19.jCvEWwf_ci6tSs0Oj3tT4s16zaMHOU-wG6J3tfkED7LBPpVhNP3dl0GEJ5J7ahfQ-Uqlgy7XPsnXflHOdtYLSXBgY4WqSb0gkOpgKAmahTY9tqdycPwHQA155z4cClhSV2CKRX96sPfDRXtrex9nMxjToUXmI21pFR-JoI1P_XhUUqxPJZYTQRWmdQVdAmjZMIDXNSs2jX9ZkS_cKEC-1tfzavIzvm99y23VN9-9Kx1AKTeuCp0fLRtAHk6sqS5VXxqBKuojLz1_0RWbew36YEVIK6HJXI7v_EG03xibIG-RR-PCOpqfZMHROL0tMbLc89qAqIrnSLDSZRNfPrL0sQ\",\n        \"refresh_token\": \"F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546\",\n        \"expires_in\": 86400\n    }\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "authen"
+                ]
+            }
+        },
+        "/authen/forgot_password_otp": {
+            "post": {
                 "description": "",
                 "responses": {
                     "200": {
@@ -1409,7 +1585,227 @@
                     }
                 },
                 "tags": [
-                    "api_2"
+                    "authen"
+                ]
+            }
+        },
+        "/authen/update_user_info": {
+            "post": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "authen"
+                ]
+            }
+        },
+        "/authen/create_user_info": {
+            "post": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "authen"
+                ]
+            }
+        },
+        "/authen/get_user_info": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n  \"message\": \"\u0110\u0103ng nh\u1eadp th\u00e0nh c\u00f4ng\",\n    \"status\": 200,\n    \"data\": {\n  \"full_name\" : \"L\u01b0u Ho\u00e0ng Tr\u1ecdng\",\n  \"first_name\" : \"L\u01b0u\",\n  \"middle_name\" : \"Ho\u00e0ng\",\n  \"last_name\" : \"Tr\u1ecdng\",\n  \"customer_id\" : 1,\n  \"customer_uuid\" : 1,\n  \"gender\" : 1,\n  \"dob\" : \"\",\n  \"email\" : \"trongbudop113@gmail.com\",\n  \"phone\" : \"0356882046\",\n  \"avatar\" : \"\",\n  \"address\" : [ ],\n  \"children\" : []\n  \"token\" : \"\"\n}\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "authen"
+                ]
+            }
+        },
+        "/authen/create_password": {
+            "post": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n  \"message\": \"T\u1ea1o m\u1eadt kh\u1ea9u th\u00e0nh c\u00f4ng\",\n    \"status\": 200,\n    \"data\": true\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "authen"
+                ]
+            }
+        },
+        "/authen/refresh_token": {
+            "post": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n    \"code\": 200,\n    \"message\": \"Request successful\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IkZDNjFGQTkxQjYxRDgyREE5REVDQUUyQzkxMDlBNzFEQkYyRTFGM0ZSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6Il9HSDZrYllkZ3RxZDdLNHNrUW1uSGI4dUh6OCJ9.eyJuYmYiOjE3MTY1MjY0OTMsImV4cCI6MTcxNjYxMjg5MywiaXNzIjoiY29uY3VuZy5jb20iLCJjbGllbnRfaWQiOiI1YmZjZmJlNy1jMmZiLTQ5NTEtOTQ1MC0zOGMyZTMzODkxMzYiLCJzdWIiOiIzIiwiYXV0aF90aW1lIjoxNzE2NTI2NDkzLCJpZHAiOiJsb2NhbCIsIi9jdXN0b21lcl9pZCI6IjMiLCIvY3VzdG9tZXJfdWlkIjoiYTQxYjQ0MzQtYmQ5OS00ZDRmLTg5MjYtYjFlYjU3YmUzNmNiIiwiL3VzZXJuYW1lIjoiMDM1Njg4MjA0NiIsIi9jdXN0b21lcl9uYW1lIjoiVGhhbmgiLCJpYXQiOjE3MTY1MjY0OTMsInNjb3BlIjoiYXV0aC1hcGkgb2ZmbGluZV9hY2Nlc3MiLCJhbXIiOlsicGhvbmVfb3RwIl19.jCvEWwf_ci6tSs0Oj3tT4s16zaMHOU-wG6J3tfkED7LBPpVhNP3dl0GEJ5J7ahfQ-Uqlgy7XPsnXflHOdtYLSXBgY4WqSb0gkOpgKAmahTY9tqdycPwHQA155z4cClhSV2CKRX96sPfDRXtrex9nMxjToUXmI21pFR-JoI1P_XhUUqxPJZYTQRWmdQVdAmjZMIDXNSs2jX9ZkS_cKEC-1tfzavIzvm99y23VN9-9Kx1AKTeuCp0fLRtAHk6sqS5VXxqBKuojLz1_0RWbew36YEVIK6HJXI7v_EG03xibIG-RR-PCOpqfZMHROL0tMbLc89qAqIrnSLDSZRNfPrL0sQ\",\n        \"refresh_token\": \"F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546\",\n        \"expires_in\": 86400\n    }\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "authen"
                 ]
             }
         }
