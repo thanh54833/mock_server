@@ -9,3 +9,6 @@ u_d:
 
 	docker-compose down
 	docker-compose up -d
+
+t:
+	docker build -t mock_server .
