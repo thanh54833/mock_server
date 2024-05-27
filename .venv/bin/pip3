@@ -1,4 +1,4 @@
-#!/Users/phamthanh/Desktop/fast_api/comapny/mock_server/mock_server/.venv/bin/python3.11
+#!/Users/phamthanh/Desktop/fast_api/comapny/mock_server/mock_server/.venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
