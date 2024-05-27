@@ -198,6 +198,10 @@
         {
           "type": "route",
           "uuid": "c73ee1e6-2066-4a98-b2ab-4bd16682d8db"
+        },
+        {
+          "type": "route",
+          "uuid": "21ba5913-55ce-4335-b69a-58ea05409c81"
         }
       ]
     }
@@ -2345,6 +2349,133 @@
             {
               "target": "body",
               "modifier": "refresh_token",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "21ba5913-55ce-4335-b69a-58ea05409c81",
+      "type": "http",
+      "documentation": "APi lấy thông tin sổ địa chỉ",
+      "method": "get",
+      "endpoint": "authen/get_user_address",
+      "responses": [
+        {
+          "uuid": "7677aad2-3afc-45e1-abd6-fe5c151d481c",
+          "body": "{\n  \"message\": \"Thành công\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"address_id\": 1,\n      \"created_date\": null,\n      \"customer_name\": \"Lưu Hoàng Trọng\",\n      \"customer_phone\": \"0356882046\",\n      \"customer_address\": \"08 Hoàng Văn Thái\",\n      \"district_id\": 50,\n      \"district_name\": \"Huyện Bù Đốp\",\n      \"is_activated\": 1,\n      \"is_default\": true,\n      \"is_deleted\": 0,\n      \"lat\": 10.729246,\n      \"long\": 106.719714,\n      \"province_id\": 210,\n      \"province_name\": \"Tỉnh Bình Phước\",\n      \"updated_date\": null,\n      \"ward_id\": 1080,\n      \"ward_name\": \"Xã Thiện Hưng\"\n    },\n    {\n      \"address_id\": 1,\n      \"created_date\": null,\n      \"customer_name\": \"Nguyễn Văn A\",\n      \"customer_phone\": \"0356882000\",\n      \"customer_address\": \"163 Đường Thôn 3\",\n      \"district_id\": 50,\n      \"district_name\": \"Quận 7\",\n      \"is_activated\": 1,\n      \"is_default\": false,\n      \"is_deleted\": 0,\n      \"lat\": 10.729246,\n      \"long\": 106.719714,\n      \"province_id\": 210,\n      \"province_name\": \"Thành Phố Hồ Chí Minh\",\n      \"updated_date\": null,\n      \"ward_id\": 1080,\n      \"ward_name\": \"Phường Tân Phú\"\n    },\n    {\n      \"address_id\": 1,\n      \"created_date\": null,\n      \"customer_name\": \"Nguyễn Văn B\",\n      \"customer_phone\": \"0987654321\",\n      \"customer_address\": \"384/42 Nam Kì Khởi Nghĩa\",\n      \"district_id\": 50,\n      \"district_name\": \"Quận 3\",\n      \"is_activated\": 1,\n      \"is_default\": false,\n      \"is_deleted\": 0,\n      \"lat\": 10.729246,\n      \"long\": 106.719714,\n      \"province_id\": 210,\n      \"province_name\": \"Thành Phố Hồ Chí Minh\",\n      \"updated_date\": null,\n      \"ward_id\": 1080,\n      \"ward_name\": \"Phường 8\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Th đúng user_id",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "customer_id",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "body",
+              "modifier": "customer_id",
+              "value": "1",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "f300975c-bea8-4d07-b512-ed59c79ae301",
+          "body": "{\n  \"message\": \"Thành công\",\n  \"status\": 200,\n  \"data\": []\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "TH không có",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "customer_id",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "body",
+              "modifier": "customer_id",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "8ce7d191-a919-4b98-b268-5dda79dad13a",
+          "body": "{\n  \"message\": \"Không thành công\",\n  \"status\": 200,\n  \"data\": null\n}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "TH lỗi",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "customer_id",
+              "value": "",
+              "invert": false,
+              "operator": "null"
+            },
+            {
+              "target": "body",
+              "modifier": "customer_id",
               "value": "",
               "invert": false,
               "operator": "equals"
