@@ -2368,7 +2368,7 @@
       "uuid": "21ba5913-55ce-4335-b69a-58ea05409c81",
       "type": "http",
       "documentation": "APi lấy thông tin sổ địa chỉ",
-      "method": "get",
+      "method": "post",
       "endpoint": "authen/get_user_address",
       "responses": [
         {
