@@ -2539,7 +2539,7 @@
     {
       "uuid": "81276d8c-1946-43de-99cb-9b9c0067bbbc",
       "type": "http",
-      "documentation": "top menu",
+      "documentation": "",
       "method": "get",
       "endpoint": "home/top_block_menu",
       "responses": [
