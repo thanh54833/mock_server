@@ -234,6 +234,16 @@
           "uuid": "f6397971-a305-4533-93d1-e3ef34b5ad0a"
         }
       ]
+    },
+    {
+      "uuid": "b6ba2962-a133-4e90-a2b6-b180becab033",
+      "name": "search",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "8dc1acef-d659-47cb-8346-cfa00ea8ea69"
+        }
+      ]
     }
   ],
   "routes": [
@@ -2743,6 +2753,35 @@
         }
       ],
       "responseMode": null
+    },
+    {
+      "uuid": "8dc1acef-d659-47cb-8346-cfa00ea8ea69",
+      "type": "http",
+      "documentation": "API dùng để lấy tên các nhãn hàng trong màn hình search",
+      "method": "get",
+      "endpoint": "search/get_promotion_brands",
+      "responses": [
+        {
+          "uuid": "f4c1b459-8660-4460-889f-cb7b51c965ff",
+          "body": "{\n  \"message\": \"success\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id\": 1,\n      \"brand_name\": \"Meiji\",\n      \"image_url\": \"https://drive.google.com/file/d/1Djoh6nM3ffSfnPFES17X9TB2Hf03BZb6/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Genki\",\n      \"image_url\": \"https://drive.google.com/file/d/1Eh9IX-DWC-qE4zfwqlm-x4A4ch2Ej1my/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Merries\",\n      \"image_url\": \"https://drive.google.com/file/d/1EuGbtOTlrBexz3JAK3x_si_YyHZAEXOY/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Vinamilk\",\n      \"image_url\": \"https://drive.google.com/file/d/1ZfwwZtH8UdyCA8rQbAsZJ8ged2o9d9P8/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"YOKOGOLD\",\n      \"image_url\": \"https://drive.google.com/file/d/137b_-9eUJdFbm83bNlvO3xbZGB7toAwX/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Enfa\",\n      \"image_url\": \"https://drive.google.com/file/d/1_l0fRxo4MmRQi0QLJypN4UG_BAQUV8Fv/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"GOO.N\",\n      \"image_url\": \"https://drive.google.com/file/d/1BMZvlAXsU0YoGx_ipJnjljbHOOgVrorl/view?usp=sharing\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Nestle\",\n      \"image_url\": \"https://drive.google.com/file/d/1ZKuKKfY5jvLp_JxMbos-_VU48wqbW-na/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Whito\",\n      \"image_url\": \"https://drive.google.com/file/d/1ewHYjltn0xikYBAtkUmYAVp6PpOXvjcy/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Huggies\",\n      \"image_url\": \"https://drive.google.com/file/d/1uvrK1gvkoQtJjVXVeNZ3yuw8cV-twlaK/view?usp=share_link\",\n      \"promotions\": 10\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -2769,6 +2808,10 @@
     {
       "type": "folder",
       "uuid": "9c5ff75d-1424-4f22-a4bc-d47e8e704878"
+    },
+    {
+      "type": "folder",
+      "uuid": "b6ba2962-a133-4e90-a2b6-b180becab033"
     }
   ],
   "proxyMode": false,
