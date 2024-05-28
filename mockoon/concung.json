@@ -220,7 +220,7 @@
     {
       "uuid": "6a703280-8608-4413-9ff7-31d0eca82b8f",
       "type": "http",
-      "documentation": "documents 1",
+      "documentation": "Tiêu đề cho box search",
       "method": "post",
       "endpoint": "home/suggestsearch",
       "responses": [
