@@ -2503,7 +2503,16 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "s-maxage=86400, must-revalidate, max-age=3600"
+            },
+            {
+              "key": "ETag",
+              "value": "W/106384390"
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
