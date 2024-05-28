@@ -245,52 +245,6 @@
           "default": true,
           "crudKey": "id",
           "callbacks": []
-        },
-        {
-          "uuid": "02ae9ae0-350c-4dee-be25-ac89f67c799a",
-          "body": "{}  ",
-          "latency": 100,
-          "statusCode": 304,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "header",
-              "modifier": "if-none-match",
-              "value": "W/106384710",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "AND",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
-        },
-        {
-          "uuid": "44e33c52-66f2-4a96-bcf1-b99305d5e792",
-          "body": "{}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": false,
-          "crudKey": "id",
-          "callbacks": []
         }
       ],
       "responseMode": null
@@ -2539,7 +2493,7 @@
     {
       "uuid": "81276d8c-1946-43de-99cb-9b9c0067bbbc",
       "type": "http",
-      "documentation": "",
+      "documentation": "top menu",
       "method": "get",
       "endpoint": "home/top_block_menu",
       "responses": [
