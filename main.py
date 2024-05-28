@@ -1,5 +1,3 @@
-import subprocess
-
 from fastapi import FastAPI
 from starlette.staticfiles import StaticFiles
 
@@ -10,7 +8,6 @@ app = FastAPI()
 app.include_router(home_cache_api, prefix="/home_cache_api")
 
 app.mount("/images", StaticFiles(directory="images/avif"), name="images")
-
 
 @app.on_event("startup")
 def startup_event():
