@@ -1326,14 +1326,14 @@
             }
         },
         "/api_1": {
-            "get": {
+            "post": {
                 "description": "",
                 "responses": {
                     "200": {
                         "description": "",
                         "content": {
                             "application/json": {
-                                "example": "{\n  \"key_1\":\"value_2111\"\n}"
+                                "example": "{\n  \"key_1\":\"value_1\"\n}"
                             }
                         },
                         "headers": {
@@ -1417,11 +1417,11 @@
             "post": {
                 "description": "",
                 "responses": {
-                    "200": {
+                    "406": {
                         "description": "",
                         "content": {
                             "application/json": {
-                                "example": "{\n  \"message\": \"Th\u00e0nh c\u00f4ng, m\u00e3 OTP \u0111ang \u0111\u01b0\u1ee3c g\u1eedi t\u1edbi S\u0110T c\u1ee7a b\u1ea1n.\",\n    \"status\": 200,\n    \"data\": {\n      \"otp_code\" : \"0000\",\n      \"time_expire\" : 60\n    }\n}"
+                                "example": "{\n  \"message\": \"S\u1ed1 \u0111i\u1ec7n tho\u1ea1i n\u00e0y \u0111\u00e3 \u0111\u01b0\u1ee3c \u0111\u0103ng k\u00ed.\",\n    \"status\": 406,\n    \"data\": null\n}"
                             }
                         },
                         "headers": {
@@ -1685,7 +1685,7 @@
                         "description": "",
                         "content": {
                             "application/json": {
-                                "example": "{\n  \"message\": \"\u0110\u0103ng nh\u1eadp th\u00e0nh c\u00f4ng\",\n    \"status\": 200,\n    \"data\": {\n  \"full_name\" : \"L\u01b0u Ho\u00e0ng Tr\u1ecdng\",\n  \"first_name\" : \"L\u01b0u\",\n  \"middle_name\" : \"Ho\u00e0ng\",\n  \"last_name\" : \"Tr\u1ecdng\",\n  \"customer_id\" : 1,\n  \"customer_uuid\" : 1,\n  \"gender\" : 1,\n  \"dob\" : \"\",\n  \"email\" : \"trongbudop113@gmail.com\",\n  \"phone\" : \"0356882046\",\n  \"avatar\" : \"\",\n  \"address\" : [ ],\n  \"children\" : []\n  \"token\" : \"\"\n}\n}"
+                                "example": "{\n  \"message\": \"\u0110\u0103ng nh\u1eadp th\u00e0nh c\u00f4ng\",\n    \"status\": 200,\n    \"data\": {\n      \"full_name\" : \"L\u01b0u Ho\u00e0ng Tr\u1ecdng\",\n      \"first_name\" : \"L\u01b0u\",\n      \"middle_name\" : \"Ho\u00e0ng\",\n      \"last_name\" : \"Tr\u1ecdng\",\n      \"customer_id\" : 1,\n      \"customer_uuid\" : 1,\n      \"gender\" : 1,\n      \"dob\" : \"\",\n      \"email\" : \"trongbudop113@gmail.com\",\n      \"phone\" : \"0356882046\",\n      \"avatar\" : \"\",\n      \"address\" : \"\",\n      \"children\" : []\n    }\n}"
                             }
                         },
                         "headers": {
@@ -1806,6 +1806,94 @@
                 },
                 "tags": [
                     "authen"
+                ]
+            }
+        },
+        "/authen/get_user_address": {
+            "post": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n  \"message\": \"Th\u00e0nh c\u00f4ng\",\n  \"status\": 200,\n  \"data\": [\n        {\n      \"address_id\": 1,\n      \"created_date\": null,\n      \"customer_name\": \"L\u01b0u Ho\u00e0ng Tr\u1ecdng\",\n      \"customer_phone\": \"0356882046\",\n      \"customer_address\": \"08 Ho\u00e0ng V\u0103n Th\u00e1i\",\n      \"district_id\": 50,\n      \"district_name\": \"Qu\u1eadn 7\",\n      \"is_activated\": 1,\n      \"is_default\": true,\n      \"is_deleted\": 0,\n      \"lat\": 10.729246,\n      \"long\": 106.719714,\n      \"province_id\": 210,\n      \"province_name\": \"Th\u00e0nh Ph\u1ed1 H\u1ed3 Ch\u00ed Minh\",\n      \"updated_date\": null,\n      \"ward_id\": 1080,\n      \"ward_name\": \"Ph\u01b0\u1eddng T\u00e2n Ph\u00fa\"\n    },\n    {\n      \"address_id\": 2,\n      \"created_date\": null,\n      \"customer_name\": \"Nguy\u1ec5n V\u0103n A\",\n      \"customer_phone\": \"0356882000\",\n      \"customer_address\": \"163 \u0110\u01b0\u1eddng Th\u00f4n 3\",\n      \"district_id\": 50,\n      \"district_name\": \"Huy\u1ec7n B\u00f9 \u0110\u1ed1p\",\n      \"is_activated\": 1,\n      \"is_default\": false,\n      \"is_deleted\": 0,\n      \"lat\": 10.729246,\n      \"long\": 106.719714,\n      \"province_id\": 210,\n      \"province_name\": \"T\u1ec9nh B\u00ecnh Ph\u01b0\u1edbc\",\n      \"updated_date\": null,\n      \"ward_id\": 1080,\n      \"ward_name\": \"X\u00e3 Thi\u1ec7n H\u01b0ng\"\n    },\n    {\n      \"address_id\": 3,\n      \"created_date\": null,\n      \"customer_name\": \"Nguy\u1ec5n V\u0103n B\",\n      \"customer_phone\": \"0987654321\",\n      \"customer_address\": \"384/42 Nam K\u00ec Kh\u1edfi Ngh\u0129a\",\n      \"district_id\": 50,\n      \"district_name\": \"Qu\u1eadn 3\",\n      \"is_activated\": 1,\n      \"is_default\": false,\n      \"is_deleted\": 0,\n      \"lat\": 10.729246,\n      \"long\": 106.719714,\n      \"province_id\": 210,\n      \"province_name\": \"Th\u00e0nh Ph\u1ed1 H\u1ed3 Ch\u00ed Minh\",\n      \"updated_date\": null,\n      \"ward_id\": 1080,\n      \"ward_name\": \"Ph\u01b0\u1eddng 8\"\n    }\n  ]\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "authen"
+                ]
+            }
+        },
+        "/home/top_block_menu": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": [\n  {\n    \"id_utility\": \"27\",\n    \"id_type\": \"4\",\n    \"utility_name\": \"B\u00e1n Ch\u1ea1y\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com\",\n    \"sub_image\": \"\",\n    \"position\": \"1\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"3\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"T\u1ea5t c\u1ea3\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/menu-mobile/492-iconmebauembe@500-1634918558.png\",\n    \"sub_image\": \"\",\n    \"position\": \"1\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"4\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"Xu h\u01b0\u1edbng\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/menu-mobile/542-iconungdungmevabe-1646811921.png\",\n    \"sub_image\": \"\",\n    \"position\": \"2\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"12\",\n    \"id_type\": \"3\",\n    \"utility_name\": \"Hot Sale\",\n    \"utility_meta\": \"Th\u00e1ng 5\",\n    \"short_name\": \"Hot Sale\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/hot_sale_thang_5.png\",\n    \"sub_image\": \"\",\n    \"position\": \"2\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"28\",\n    \"id_type\": \"4\",\n    \"utility_name\": \"Xu H\u01b0\u1edbng\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com\",\n    \"sub_image\": \"\",\n    \"position\": \"2\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"10\",\n    \"id_type\": \"3\",\n    \"utility_name\": \"Si\u00eau T\u1ed1c\",\n    \"utility_meta\": \"Giao 1h\",\n    \"short_name\": \"Si\u00eau T\u1ed1c\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/sieu_toc_1h_moi.png\",\n    \"sub_image\": \"\",\n    \"position\": \"3\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"1\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"29\",\n    \"id_type\": \"4\",\n    \"utility_name\": \"Top Review T\u1ed1t\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com\",\n    \"sub_image\": \"\",\n    \"position\": \"3\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"5\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"S\u1eefa b\u1ed9t\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/2022/06/26173-frame34272-1655798237.png\",\n    \"sub_image\": \"\",\n    \"position\": \"3\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"586\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"30\",\n    \"id_type\": \"4\",\n    \"utility_name\": \"Top Mua L\u1ea1i\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com\",\n    \"sub_image\": \"\",\n    \"position\": \"4\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"6\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"B\u0129m t\u00e3\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/2022/06/26173-frame34272(1)-1655798267.png\",\n    \"sub_image\": \"\",\n    \"position\": \"4\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"635\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"11\",\n    \"id_type\": \"3\",\n    \"utility_name\": \"T\u1ea5t C\u1ea3\",\n    \"utility_meta\": \"Freeship\",\n    \"short_name\": \"Freeship\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/freeship.png\",\n    \"sub_image\": \"\",\n    \"position\": \"4\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"31\",\n    \"id_type\": \"4\",\n    \"utility_name\": \"Top Gi\u1ecf H\u00e0ng\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com\",\n    \"sub_image\": \"\",\n    \"position\": \"5\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"7\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"S\u1eefa n\u01b0\u1edbc\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/2022/06/26173-frame34272(2)-1655798297.png\",\n    \"sub_image\": \"\",\n    \"position\": \"5\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"842\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"13\",\n    \"id_type\": \"3\",\n    \"utility_name\": \"Mua L\u00e0\",\n    \"utility_meta\": \"C\u00f3 Qu\u00e0\",\n    \"short_name\": \"C\u00f3 Qu\u00e0\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/buy_with_gift.png\",\n    \"sub_image\": \"\",\n    \"position\": \"5\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"8\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"Ti\u00eau d\u00f9ng\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/menu-mobile/542-iconungdungmevabe-1646811921.png\",\n    \"sub_image\": \"\",\n    \"position\": \"6\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  }\n]\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "home"
                 ]
             }
         }

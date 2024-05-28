@@ -16,7 +16,7 @@ openapi_data = {
         {
             "url": "http://10.10.11.159:3001/"
         }
-    ],
+    ]
 }
 
 # Convert the Mockoon data to OpenAPI format
