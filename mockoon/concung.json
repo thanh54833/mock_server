@@ -220,7 +220,7 @@
     {
       "uuid": "6a703280-8608-4413-9ff7-31d0eca82b8f",
       "type": "http",
-      "documentation": "",
+      "documentation": "documents 1",
       "method": "post",
       "endpoint": "home/suggestsearch",
       "responses": [
