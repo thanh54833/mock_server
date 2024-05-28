@@ -6,7 +6,6 @@ p_c:
 u_d:
 
 	python add_tag_openapi.py
-
 	docker-compose down
 	docker-compose up -d
 
