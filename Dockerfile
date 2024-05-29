@@ -12,6 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Install numpy
 RUN pip install numpy
+RUN pip install pillow
 
 # Copy the entire application code into the container
 COPY . .
