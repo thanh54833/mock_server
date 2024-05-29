@@ -1,0 +1,80 @@
+{
+    "uuid": "32f4ed3b-592a-411f-acfa-105f1d117c3c",
+    "lastMigration": 32,
+    "name": "Api",
+    "endpointPrefix": "",
+    "latency": 0,
+    "port": 3002,
+    "hostname": "",
+    "folders": [],
+    "routes": [
+        {
+            "uuid": "0c497252-35b7-4670-85c6-252e5880345c",
+            "type": "http",
+            "documentation": "",
+            "method": "get",
+            "endpoint": "api_1",
+            "responses": [
+                {
+                    "uuid": "6326103e-d818-4075-9cb4-8da76be725a9",
+                    "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id_menu\": \"10\",\n      \"id_category\": \"586\",\n      \"search_hint\": \"S\u1eefa b\u1ed9t c\u00f4ng th\u1ee9c\",\n      \"id_manufacturer\": \"0\",\n      \"id_menu_parent\": \"9\",\n      \"menu_name\": \"S\u1eefa b\u1ed9t\",\n      \"menu_meta\": \"cao c\u1ea5p\",\n      \"id_category_product\": \"0\",\n      \"id_manufacturer_product\": \"0\",\n      \"menu_image\": \"http://10.10.11.169:8002/images/10-sua-bot-1682043498.avif\",\n      \"width_image\": \"100\",\n      \"height_image\": \"100\",\n      \"menu_color\": \"#4657bf\",\n      \"menu_text_color\": \"#000000\",\n      \"id_menu_home\": \"10\",\n      \"menu_type\": \"1\",\n      \"menu_size\": \"1\",\n      \"is_show_logo\": \"0\",\n      \"is_feature_active\": \"0\",\n      \"block_size\": \"1\",\n      \"id_level\": \"1\",\n      \"have_child\": \"0\",\n      \"position\": \"1\",\n      \"position_zig\": \"1\",\n      \"is_hot\": \"1\",\n      \"hot_position\": \"1\",\n      \"hot_position_zig\": \"1\",\n      \"is_bold\": \"0\",\n      \"is_home\": \"1\",\n      \"home_position\": \"1\",\n      \"home_position_zig\": \"1\",\n      \"url_link\": \"https://concung.com/sua-bot-101586.html\",\n      \"date_upd\": \"1711353600\",\n      \"actived\": \"1\",\n      \"deleted\": \"0\",\n      \"category_name\": \"S\u1eefa b\u1ed9t c\u00f4ng th\u1ee9c\",\n      \"name\": null,\n      \"table_link\": \"\",\n      \"table_size\": \"233\",\n      \"api_page\": \"category\",\n      \"id_page\": \"586\",\n      \"name_page\": \"\"\n    }\n  ]\n}",
+                    "latency": 0,
+                    "statusCode": 200,
+                    "label": "",
+                    "headers": [],
+                    "bodyType": "INLINE",
+                    "filePath": "",
+                    "databucketID": "",
+                    "sendFileAsBody": false,
+                    "rules": [],
+                    "rulesOperator": "OR",
+                    "disableTemplating": false,
+                    "fallbackTo404": false,
+                    "default": true,
+                    "crudKey": "id",
+                    "callbacks": []
+                }
+            ],
+            "responseMode": null
+        }
+    ],
+    "rootChildren": [
+        {
+            "type": "route",
+            "uuid": "0c497252-35b7-4670-85c6-252e5880345c"
+        }
+    ],
+    "proxyMode": false,
+    "proxyHost": "",
+    "proxyRemovePrefix": false,
+    "tlsOptions": {
+        "enabled": false,
+        "type": "CERT",
+        "pfxPath": "",
+        "certPath": "",
+        "keyPath": "",
+        "caPath": "",
+        "passphrase": ""
+    },
+    "cors": true,
+    "headers": [
+        {
+            "key": "Content-Type",
+            "value": "application/json"
+        }
+    ],
+    "proxyReqHeaders": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "proxyResHeaders": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "data": [],
+    "callbacks": []
+}

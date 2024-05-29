@@ -12,6 +12,17 @@ avif_dir = 'images/avif/'
 list_url_convert_error = []
 
 
+def replace_value(data, old_value, new_value):
+    if isinstance(data, dict):
+        return {k: replace_value(v, old_value, new_value) for k, v in data.items()}
+    elif isinstance(data, list):
+        return [replace_value(i, old_value, new_value) for i in data]
+    elif isinstance(data, str):
+        return data.replace(old_value, new_value)
+    else:
+        return data
+
+
 def convert_to_avif(url, avif_dir):
     try:
         # Define the directory for the temporary PNG file
@@ -57,40 +68,55 @@ def convert_to_avif(url, avif_dir):
     return ""
 
 
-def find_image_urls(data_):
+def find_image_urls(data_source):
     image_urls = []
 
-    def process_dict(d):
-        for key, value in list(d.items()):
-            if isinstance(value, str) and ('.jpg' in value or '.png' in value):
-                if ('packages/assets' not in value) and ('<img src=' not in value):
-                    image_urls.append(value)
-                    url_local = convert_to_avif(value, avif_dir)
-                    if url_local:
-                        d[key] = url_local
-            elif isinstance(value, dict):
-                process_dict(value)
-            elif isinstance(value, list):
-                for item in value:
-                    if isinstance(item, dict):
-                        process_dict(item)
-
-    for route in data_['routes']:
+    data_image_change_avif = data_source
+    for route in data_source['routes']:
         for response in route['responses']:
             try:
                 body = json.loads(response['body'])
                 if 'data' in body and isinstance(body['data'], (list, dict)):
-                    process_dict(body['data'])
-            except json.JSONDecodeError as e:
-                print(f"Error decoding JSON from response body: {e}")
-    return data_, image_urls
+                    data_ = body['data']
+                    if isinstance(data_, dict):
+                        for key, value in data_.items():
+                            if isinstance(value, str) and ('.jpg' in value or '.png' in value or '.gif' in value):
+                                if ('packages/assets' not in value) and ('<img src=' not in value):
+                                    image_urls.append(value)
+                                    url_local = convert_to_avif(value, avif_dir)
 
-with open('mockoon/concung_2.json', 'r') as f:
+                                    if url_local:
+                                        data_[key] = url_local
+                                        data_image_change_avif = replace_value(data_source, value, url_local)
+                                        # print(data_new)
+                                        # print(data_[key])
+                    else:
+                        for i in range(len(data_)):
+                            for key, value in data_[i].items():
+                                if isinstance(value, str) and ('.jpg' in value or '.png' in value or '.gif' in value):
+                                    if ('packages/assets' not in value) and ('<img src=' not in value):
+                                        image_urls.append(value)
+                                        url_local = convert_to_avif(value, avif_dir)
+                                        print(value)
+                                        if url_local:
+                                            data_[i][key] = url_local
+                                            data_image_change_avif = replace_value(data_source, value, url_local)
+                                            # print(data_new)
+                                            # print(data_[i][key])
+
+            except json.JSONDecodeError as e:
+                list_url_convert_error.append("Error decoding JSON from response body:")
+                print(f"Error decoding JSON from response body: {e}")
+
+    return data_image_change_avif, image_urls
+
+
+with open('mockoon/concung.json', 'r') as f:
     data = json.load(f)
 
 data, image_urls = find_image_urls(data)
 
-with open('mockoon/concung_3.json', 'w') as f:
+with open('mockoon/concung_1.json', 'w') as f:
     json.dump(data, f, indent=4)
 
 # Create the output directory if it doesn't exist
