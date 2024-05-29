@@ -60,7 +60,7 @@ def convert_to_avif(url, avif_dir):
         os.remove(temp_png)
         return f'http://10.10.11.159:8002/images/{base_name}.avif'
     except Exception as e:
-        list_url_convert_error.append(url)
+        list_url_convert_error.append("[63]" + url + " -> " + str(e))
         print("----------")
         print(f"url -> {url}")
         print(f"Error downloading image: {e}")
@@ -100,7 +100,8 @@ def find_image_urls(data_source):
                                         print(value)
                                         if url_local:
                                             data_[i][key] = url_local
-                                            data_image_change_avif = replace_value(data_image_change_avif, value, url_local)
+                                            data_image_change_avif = replace_value(data_image_change_avif, value,
+                                                                                   url_local)
                                             # print(data_new)
                                             # print(data_[i][key])
 
@@ -124,6 +125,8 @@ os.makedirs(avif_dir, exist_ok=True)
 
 print(f"Total images before convert : {len(image_urls)}")
 print(f"Total images convert error : {len(list_url_convert_error)}")
+for item in list_url_convert_error:
+    print(item)
 # List the files in the directory
 files = os.listdir(avif_dir)
 # Print the total number of files
