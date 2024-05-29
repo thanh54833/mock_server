@@ -16,14 +16,14 @@ app.mount("/images", StaticFiles(directory="images/avif"), name="images")
 def startup_event():
     # print("Starting up...")
     # subprocess.run(["python", "add_tag_openapi.py"], check=True)
-    # subprocess.run(["python", "png_to_avif.py"], check=True)
+    subprocess.run(["python", "image_to_avif.py"], check=True)
     # subprocess.run(["python", "download_image.py"], check=True)
 
-    # # Add all changes to the staging area
-    # subprocess.run(["git", "add", "--all"], check=True)
-    # # Commit the changes with a message
-    # subprocess.run(["git", "commit", "-m", "+ auto push code"], check=True)
-    # # Push the changes to the 'main' branch on the 'origin' remote
+    # Add all changes to the staging area
+    subprocess.run(["git", "add", "--all"], check=True)
+    # Commit the changes with a message
+    subprocess.run(["git", "commit", "-m", "+ auto push code"], check=True)
+    # Push the changes to the 'main' branch on the 'origin' remote
     # subprocess.run(["git", "push", "origin", "HEAD:main"], check=True)
 
     print("Starting up...")
