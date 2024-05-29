@@ -5,7 +5,7 @@ p_c:
 
 u_d:
 	python add_tag_openapi.py
-	# python png_to_avif.py
+	python image_to_avif.py
 
 	docker-compose down
 	docker-compose up -d

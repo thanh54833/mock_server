@@ -7,59 +7,29 @@ from urllib.parse import urlparse
 import requests
 from PIL import Image
 
-
-def find_image_urls(data):
-    image_urls = []
-    for route in data['routes']:
-        for response in route['responses']:
-            try:
-                body = json.loads(response['body'])
-                if 'data' in body and isinstance(body['data'], (list, dict)):
-                    data_ = body['data']
-                    if isinstance(data_, dict):
-                        for key, value in data_.items():
-                            if isinstance(value, str) and ('.jpg' in value or '.png' in value or '.gif' in value):
-                                image_urls.append(value)
-                    else:
-                        for item in data_:
-                            for key, value in item.items():
-                                if isinstance(value, str) and ('.jpg' in value or '.png' in value or '.gif' in value):
-                                    image_urls.append(value)
-            except json.JSONDecodeError as e:
-                print(f"Error decoding JSON from response body: {e}")
-    return image_urls
-
-
-with open('mockoon/concung.json', 'r') as f:
-    data = json.load(f)
-
-image_urls = find_image_urls(data)
-filter_urls = [url for url in image_urls if ('packages/assets' not in url) and ('<img src=' not in url)]
-
 # Define the directory for the output AVIF images
 avif_dir = 'images/avif/'
-
-# Create the output directory if it doesn't exist
-os.makedirs(avif_dir, exist_ok=True)
+list_url_convert_error = []
 
 
 def convert_to_avif(url, avif_dir):
-    # Define the directory for the temporary PNG file
-    temp_dir = 'images/input'
-    os.makedirs(temp_dir, exist_ok=True)
-
-    headers = {
-        'Cookie': 'Srv=cc205|ZlYHP|ZlYFd',
-        'cc_mock_server': 'GET',
-        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-        'accept-language': 'en-US,en;q=0.9',
-        'cache-control': 'max-age=0',
-        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
-    }
-
-    # Download the image into a PIL.Image object
-    response = requests.get(url, headers=headers)
     try:
+        # Define the directory for the temporary PNG file
+        temp_dir = 'images/input'
+        os.makedirs(temp_dir, exist_ok=True)
+
+        headers = {
+            'Cookie': 'Srv=cc205|ZlYHP|ZlYFd',
+            'cc_mock_server': 'GET',
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'accept-language': 'en-US,en;q=0.9',
+            'cache-control': 'max-age=0',
+            'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'
+        }
+
+        # Download the image into a PIL.Image object
+        response = requests.get(url, headers=headers)
+
         image = Image.open(io.BytesIO(response.content))
 
         # Extract the base name from the URL
@@ -77,22 +47,60 @@ def convert_to_avif(url, avif_dir):
 
         # Delete the temporary PNG file
         os.remove(temp_png)
+        return f'http://10.10.11.169:8002/images/{base_name}.avif'
     except Exception as e:
+        list_url_convert_error.append(url)
         print("----------")
         print(f"url -> {url}")
         print(f"Error downloading image: {e}")
         print("----------")
+    return ""
 
 
-print(f"Total images before convert : {len(filter_urls)}")
-for url in filter_urls:
-    convert_to_avif(url, avif_dir)
+def find_image_urls(data):
+    image_urls = []
+    for route in data['routes']:
+        for response in route['responses']:
+            try:
+                body = json.loads(response['body'])
+                if 'data' in body and isinstance(body['data'], (list, dict)):
+                    data_ = body['data']
+                    if isinstance(data_, dict):
+                        for key, value in data_.items():
+                            if isinstance(value, str) and ('.jpg' in value or '.png' in value):
+                                if ('packages/assets' not in value) and ('<img src=' not in value):
+                                    image_urls.append(value)
+                                    url_local = convert_to_avif(value, avif_dir)
+                                    if url_local:
+                                        data_[key] = url_local
+                    else:
+                        for item in data_:
+                            for key, value in item.items():
+                                if isinstance(value, str) and ('.jpg' in value or '.png' in value):
+                                    if ('packages/assets' not in value) and ('<img src=' not in value):
+                                        image_urls.append(value)
+                                        url_local = convert_to_avif(value, avif_dir)
+                                        if url_local:
+                                            item[key] = url_local
+            except json.JSONDecodeError as e:
+                print(f"Error decoding JSON from response body: {e}")
+    return data, image_urls
 
-# Define the directory
-avif_dir = 'images/avif/'
 
+with open('mockoon/concung_2.json', 'r') as f:
+    data = json.load(f)
+
+data, image_urls = find_image_urls(data)
+
+with open('mockoon/concung_3.json', 'w') as f:
+    json.dump(data, f, indent=4)
+
+# Create the output directory if it doesn't exist
+os.makedirs(avif_dir, exist_ok=True)
+
+print(f"Total images before convert : {len(image_urls)}")
+print(f"Total images convert error : {len(list_url_convert_error)}")
 # List the files in the directory
 files = os.listdir(avif_dir)
-
 # Print the total number of files
 print(f"Total files in {avif_dir}: {len(files)}")
