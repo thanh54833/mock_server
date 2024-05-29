@@ -4,12 +4,19 @@ p_c:
 
 
 u_d:
-	python add_tag_openapi.py
-	python image_to_avif.py
+	# docker-compose down --volumes --rmi all
+	python3 -m pip install -r requirements.txt
+
+	python3 add_tag_openapi.py
+
+	python3 image_to_avif.py
 
 	docker-compose down
 	docker-compose up -d
 
+
+image_to_avif:
+	python3 -m pip install pillow
 
 t:
 	docker build -t mock_server .

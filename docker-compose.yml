@@ -13,20 +13,20 @@ services:
     ports:
       - 8002:8002
 
-  mock_server:
-    image: mockoon/cli:latest
-    container_name: mock_server
-    command: [ "--data", "data", "--port", "3001" ]
-    volumes:
-      - ./mockoon/concung.json:/data:ro
-    ports:
-      - 3001:3001
-  cc_swagger:
-    image: swaggerapi/swagger-ui
-    container_name: cc_swagger
-    ports:
-      - "8081:8080"
-    environment:
-      - SWAGGER_JSON=/mnt/openapi.json
-    volumes:
-      - ./openapi.json:/mnt/openapi.json
+#  mock_server:
+#    image: mockoon/cli:latest
+#    container_name: mock_server
+#    command: [ "--data", "data", "--port", "3001" ]
+#    volumes:
+#      - ./mockoon/concung.json:/data:ro
+#    ports:
+#      - 3001:3001
+#  cc_swagger:
+#    image: swaggerapi/swagger-ui
+#    container_name: cc_swagger
+#    ports:
+#      - "8081:8080"
+#    environment:
+#      - SWAGGER_JSON=/mnt/openapi.json
+#    volumes:
+#      - ./openapi.json:/mnt/openapi.json
