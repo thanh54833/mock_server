@@ -87,7 +87,7 @@ def find_image_urls(data_source):
 
                                     if url_local:
                                         data_[key] = url_local
-                                        data_image_change_avif = replace_value(data_source, value, url_local)
+                                        data_image_change_avif = replace_value(data_image_change_avif, value, url_local)
                                         # print(data_new)
                                         # print(data_[key])
                     else:
@@ -100,7 +100,7 @@ def find_image_urls(data_source):
                                         print(value)
                                         if url_local:
                                             data_[i][key] = url_local
-                                            data_image_change_avif = replace_value(data_source, value, url_local)
+                                            data_image_change_avif = replace_value(data_image_change_avif, value, url_local)
                                             # print(data_new)
                                             # print(data_[i][key])
 
