@@ -1,7 +1,7 @@
 import json
 
 # Load the Mockoon data
-with open('mockoon/concung_1.json', 'r') as f:
+with open('mockoon/concung.json', 'r') as f:
     mockoon_data = json.load(f)
 
 # Initialize the OpenAPI data

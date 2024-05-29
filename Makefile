@@ -12,8 +12,9 @@ u_d:
 	docker-compose up -d
 
 
-image_to_avif:
-	python3 -m pip install pillow
+
+convert_avif:
+	python download_image.py
 
 t:
 	docker build -t mock_server .
