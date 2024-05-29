@@ -2116,6 +2116,50 @@
                     "categories"
                 ]
             }
+        },
+        "/search/get_promotion_brands": {
+            "get": {
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "example": "{\n  \"message\": \"success\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id\": 1,\n      \"brand_name\": \"Meiji\",\n      \"image_url\": \"https://drive.google.com/file/d/1Djoh6nM3ffSfnPFES17X9TB2Hf03BZb6/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Genki\",\n      \"image_url\": \"https://drive.google.com/file/d/1Eh9IX-DWC-qE4zfwqlm-x4A4ch2Ej1my/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Merries\",\n      \"image_url\": \"https://drive.google.com/file/d/1EuGbtOTlrBexz3JAK3x_si_YyHZAEXOY/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Vinamilk\",\n      \"image_url\": \"https://drive.google.com/file/d/1ZfwwZtH8UdyCA8rQbAsZJ8ged2o9d9P8/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"YOKOGOLD\",\n      \"image_url\": \"https://drive.google.com/file/d/137b_-9eUJdFbm83bNlvO3xbZGB7toAwX/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Enfa\",\n      \"image_url\": \"https://drive.google.com/file/d/1_l0fRxo4MmRQi0QLJypN4UG_BAQUV8Fv/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"GOO.N\",\n      \"image_url\": \"https://drive.google.com/file/d/1BMZvlAXsU0YoGx_ipJnjljbHOOgVrorl/view?usp=sharing\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Nestle\",\n      \"image_url\": \"https://drive.google.com/file/d/1ZKuKKfY5jvLp_JxMbos-_VU48wqbW-na/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Whito\",\n      \"image_url\": \"https://drive.google.com/file/d/1ewHYjltn0xikYBAtkUmYAVp6PpOXvjcy/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Huggies\",\n      \"image_url\": \"https://drive.google.com/file/d/1uvrK1gvkoQtJjVXVeNZ3yuw8cV-twlaK/view?usp=share_link\",\n      \"promotions\": 10\n    }\n  ]\n}"
+                            }
+                        },
+                        "headers": {
+                            "Access-Control-Allow-Origin": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "*"
+                            },
+                            "Access-Control-Allow-Methods": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                            },
+                            "Access-Control-Allow-Headers": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                            },
+                            "": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "example": ""
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "search"
+                ]
+            }
         }
     },
     "servers": [
