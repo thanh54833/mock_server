@@ -9,6 +9,7 @@ u_d:
 
 	python3 add_tag_openapi.py
 	python3 image_to_avif.py
+
 	git add --all && git commit -m "push code" && git push origin HEAD:main
 
 
