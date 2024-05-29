@@ -9,8 +9,6 @@ u_d:
 
 	python3 add_tag_openapi.py
 
-	python3 image_to_avif.py
-
 	docker-compose down
 	docker-compose up -d
 
