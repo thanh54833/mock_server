@@ -9,7 +9,7 @@ app = FastAPI()
 
 app.include_router(home_cache_api, prefix="/home_cache_api")
 
-app.mount("/images", StaticFiles(directory="images/avif"), name="images")
+app.mount("/images", StaticFiles(directory="images/webp"), name="images")
 
 
 @app.on_event("startup")
