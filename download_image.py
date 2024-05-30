@@ -9,6 +9,7 @@ from PIL import Image
 
 # Define the directory for the output AVIF images
 avif_dir = 'images/avif/'
+webp_dir = 'images/webp/'
 list_url_convert_error = []
 
 
@@ -52,13 +53,16 @@ def convert_to_avif(url, avif_dir):
 
         # Construct the AVIF filename
         avif_path = os.path.join(avif_dir, f'{base_name}.avif')
+        webp_path = os.path.join(webp_dir, f'{base_name}.webp')
 
         # Convert the temporary PNG file to AVIF format
         subprocess.run(['avifenc', temp_png, avif_path])
+        # Convert the temporary PNG file to WebP format
+        subprocess.run(['cwebp', temp_png, '-o', webp_path])
 
         # Delete the temporary PNG file
         os.remove(temp_png)
-        return f'http://10.10.11.159:8002/images/{base_name}.avif'
+        return f'http://10.10.11.159:8002/images/{base_name}.webp'
     except Exception as e:
         list_url_convert_error.append("[63]" + url + " -> " + str(e))
         print("----------")
@@ -117,7 +121,7 @@ with open('mockoon/concung.json', 'r') as f:
 
 data, image_urls = find_image_urls(data)
 
-with open('mockoon/concung_convert_avif.json', 'w') as f:
+with open('mockoon/concung_convert_webp.json', 'w') as f:
     json.dump(data, f, indent=4)
 
 # Create the output directory if it doesn't exist

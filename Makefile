@@ -12,7 +12,7 @@ u_d:
 	docker-compose up -d
 
 
-
+# brew install webp
 convert_avif:
 	python download_image.py
 
