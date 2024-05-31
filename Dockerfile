@@ -2,13 +2,18 @@
 FROM python:3.11
 
 # Set the working directory in the container to /app
-WORKDIR /app
+WORKDIR /code
 
 # Copy the requirements file into the container
 COPY requirements.txt .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install fastapi
+
+# Install numpy
+RUN pip install numpy
+RUN pip install pillow
 
 # Copy the entire application code into the container
 COPY . .

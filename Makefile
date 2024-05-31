@@ -4,10 +4,17 @@ p_c:
 
 
 u_d:
+	python3 mockoon_to_openapi.py
+	python3 image_to_webp.py
 
-	python add_tag_openapi.py
+	# git add --all && git commit -m "push code" && git push origin HEAD:main
 	docker-compose down
 	docker-compose up -d
+
+
+# brew install webp
+convert_avif:
+	python download_image.py
 
 t:
 	docker build -t mock_server .
