@@ -78,10 +78,6 @@
         {
           "type": "route",
           "uuid": "e50a8396-d751-4ea9-aaba-cdd5af51a85b"
-        },
-        {
-          "type": "route",
-          "uuid": "81276d8c-1946-43de-99cb-9b9c0067bbbc"
         }
       ]
     },
@@ -208,32 +204,33 @@
           "uuid": "21ba5913-55ce-4335-b69a-58ea05409c81"
         }
       ]
+    },
+    {
+      "uuid": "7cf03663-a6d1-4095-8a4d-210247703238",
+      "name": "search",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "9fee14d3-3165-4079-bd03-3ecd8e33a014"
+        }
+      ]
     }
   ],
   "routes": [
     {
       "uuid": "6a703280-8608-4413-9ff7-31d0eca82b8f",
       "type": "http",
-      "documentation": "",
+      "documentation": "Tiêu đề cho box search",
       "method": "post",
       "endpoint": "home/suggestsearch",
       "responses": [
         {
-          "uuid": "958d13dc-46df-46ba-81a8-6473419cab38",
+          "uuid": "2d4a60d7-0776-4fce-8953-61bc25c94a5b",
           "body": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": [\n      {\n        \"id_search_suggest\": \"13\",\n        \"title\": \"Ba mẹ tìm gì cho con hôm nay?\",\n        \"image_cover\": \"\",\n        \"id_type\": \"3\"\n      }\n    ]\n}",
           "latency": 500,
           "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384710"
-            }
-          ],
+          "label": " ",
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -245,6 +242,33 @@
           "default": true,
           "crudKey": "id",
           "callbacks": []
+        },
+        {
+          "uuid": "02ae9ae0-350c-4dee-be25-ac89f67c799a",
+          "body": "{}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
       "responseMode": null
@@ -252,7 +276,7 @@
     {
       "uuid": "1ea624a3-fba6-43f4-814b-261964637154",
       "type": "http",
-      "documentation": "",
+      "documentation": "Box Danh mục",
       "method": "post",
       "endpoint": "home/home_categories",
       "responses": [
@@ -262,16 +286,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384711"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -281,6 +296,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "03fc8cf4-74ee-4f9f-afd6-1519a001cdb2",
+          "body": "{}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -300,16 +342,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384712"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -319,6 +352,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "c0a148d2-e5ac-49b5-ad60-292f43067b2d",
+          "body": "{}",
+          "latency": 1,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -328,7 +388,7 @@
     {
       "uuid": "0f2d8aca-6364-468b-b879-e06d56913fb7",
       "type": "http",
-      "documentation": "",
+      "documentation": "Get list Icon, Name cho box MiniApp",
       "method": "post",
       "endpoint": "home/miniapp",
       "responses": [
@@ -338,16 +398,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384713"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -359,6 +410,33 @@
           "default": true,
           "crudKey": "id",
           "callbacks": []
+        },
+        {
+          "uuid": "f2626c29-9d99-49d1-b618-4e0dce11223e",
+          "body": "{}",
+          "latency": 1,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
         }
       ],
       "responseMode": null
@@ -366,7 +444,7 @@
     {
       "uuid": "aeb8102a-66bb-4261-a690-fa48d39b922a",
       "type": "http",
-      "documentation": "",
+      "documentation": "List các live sắp diễn ra",
       "method": "post",
       "endpoint": "home/livestream",
       "responses": [
@@ -376,16 +454,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384714"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -395,6 +464,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "edcc134f-7988-46e3-a09f-28e7011e3e86",
+          "body": "{}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -414,16 +510,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384715"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -433,6 +520,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "42b846d5-f94d-4e08-9323-11755c25e22b",
+          "body": "{}",
+          "latency": 1,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -452,16 +566,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=360"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384716"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -471,6 +576,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "e7cb1776-95c3-4dac-a237-44e3d6c19306",
+          "body": "{}",
+          "latency": 1,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -490,16 +622,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "W/106384710",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384717"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -509,6 +632,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "5452ee5b-bfcc-49e6-9656-663fed68c83e",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id_product\": \"62439\",\n      \"product_name\": \"Tã quần Huggies Skincare gói cực đại (L, 9-14kg, 68 miếng)\",\n      \"image_cover\": \"https://cdn1.concung.com/2023/05/62439-trans.png\",\n      \"category_name\": \"Bỉm Tã khuyến mãi\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"635\",\n      \"reference\": \"2265000000022\",\n      \"id_manufacturer\": \"1345\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Huggies Skincare\",\n      \"url_link\": \"https://concung.com/khuyen-mai-don-hang-78655.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"638\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"1774\",\n      \"text_price\": \"\",\n      \"price\": \"355000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"309000\",\n      \"reduction_price\": \"46000\",\n      \"reduction_percent\": \"13\",\n      \"reduction_from\": \"1714842000\",\n      \"reduction_to\": \"1715101199\",\n      \"promotion_id\": \"78475\",\n      \"promotion_no\": \"441PRO24050258522371\",\n      \"have_gift\": \"0\",\n      \"gift_content\": \"\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"590\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"link_video\": \"\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"https://cdn1.concung.com/img/frame/2024/04/doc-quyen-online.png\",\n      \"gift_list\": [\n        {\n          \"id_product_gift\": \"57663\",\n          \"reference_gift\": \"4177000000019\",\n          \"image_cover\": \"https://cdn1.concung.com/2022/05/57663-88784-large_mobile/qt-huggies-dan-ukulele-huggies.jpg\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        },\n        {\n          \"id_product_gift\": \"66354\",\n          \"reference_gift\": \"4177000000090\",\n          \"image_cover\": \"https://cdn1.concung.com/2024/04/66354-109670-large_mobile/qt-huggies-nha-banh-leu-vu-tru.jpg\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        }\n      ],\n      \"thumb_start\": \"1714842000\",\n      \"thumb_end\": \"1715101140\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"2265\",\n      \"category_name_erp\": \"Tã;Huggies;Huggies Thường;Huggies Thường_Tã Quần\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"0\",\n      \"date_start\": \"1617288113\",\n      \"date_end\": \"1617288113\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"426\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"1\",\n      \"position\": \"2\",\n      \"table_link\": \"\",\n      \"total_sales\": \"45\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"0\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"300\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"50000\",\n      \"date_add\": \"1684119325\",\n      \"date_upd\": \"1714841467\",\n      \"deleted\": \"0\",\n      \"api_page\": \"khuyen-mai-don-hang\",\n      \"id_page\": \"7865500\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_san_qua_ta_sua_t2.png\",\n      \"name_page\": \"\",\n      \"image_top\": \"\",\n      \"revenue\": \"692\",\n      \"score\": \"2\"\n    },\n    {\n      \"id_product\": \"66215\",\n      \"product_name\": \"Combo 4 Thùng Sữa GrowPLUS+ Xanh 110ml (lốc 4 hộp)\",\n      \"image_cover\": \"https://cdn1.concung.com/2024/04/66215-1713322061-trans.png\",\n      \"category_name\": \"Sữa bột, sữa tươi\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"842\",\n      \"reference\": \"6898000000002\",\n      \"id_manufacturer\": \"1371\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"GrowPLUS+ Xanh\",\n      \"url_link\": \"https://concung.com/sua-tuoi-cac-loai/sua-growplus-xanh-110ml-loc-4-hop-66215.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"29\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"602\",\n      \"text_price\": \"\",\n      \"price\": \"1584000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"1504800\",\n      \"reduction_price\": \"79200\",\n      \"reduction_percent\": \"5\",\n      \"reduction_from\": \"1714842000\",\n      \"reduction_to\": \"1715101199\",\n      \"promotion_id\": \"78499\",\n      \"promotion_no\": \"441PRO24050260620147\",\n      \"have_gift\": \"1\",\n      \"gift_content\": \"Tặng Bộ nệm kèm gối khi mua 4 thùng Sữa GrowPLUS+ Xanh 110ml (lốc 4 hộp)\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"27\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"link_video\": \"\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"https://cdn1.concung.com/img/frame/2024/04/doc-quyen-online.png\",\n      \"gift_list\": [\n        {\n          \"id_product_gift\": \"66349\",\n          \"reference_gift\": \"2472000000073\",\n          \"image_cover\": \"https://cdn1.concung.com/2024/04/66349-109690-large_mobile/qt-bo-nem-kem-goi-em-be-hoa-tiet-ca-voi-xanh-growplus.png\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        }\n      ],\n      \"thumb_start\": \"1653325200\",\n      \"thumb_end\": \"1715239835\",\n      \"combo_id\": \"2404134725569\",\n      \"id_category_erp\": \"6898\",\n      \"category_name_erp\": \"Sữa nước;Sữa bột pha sẵn;Nutifood;Grow Plus Xanh\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"48\",\n      \"date_start\": \"1617288113\",\n      \"date_end\": \"1617288113\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"21\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"20\",\n      \"table_link\": \"\",\n      \"total_sales\": \"1\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"10\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"100\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"0\",\n      \"date_add\": \"1713176808\",\n      \"date_upd\": \"1714844962\",\n      \"deleted\": \"0\",\n      \"api_page\": \"product\",\n      \"id_page\": \"66215\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_san_qua_ta_sua_t2.png\",\n      \"name_page\": \"\",\n      \"image_top\": \"\",\n      \"revenue\": \"34\",\n      \"score\": \"1\"\n    },\n    {\n      \"id_product\": \"65930\",\n      \"product_name\": \"Combo 4 Thùng SPDDPS Sữa GrowPLUS+ Hộp 110ml (lốc 4 hộp)\",\n      \"image_cover\": \"https://cdn1.concung.com/2024/03/65930-1710736190-trans.png\",\n      \"category_name\": \"Sữa bột, sữa tươi\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"842\",\n      \"reference\": \"6697000000001\",\n      \"id_manufacturer\": \"1370\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"GrowPLUS+ Đỏ\",\n      \"url_link\": \"https://concung.com/sua-tuoi-cac-loai/spddps-growplus-110ml-loc-4-hop-65930.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"332\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"12837\",\n      \"text_price\": \"\",\n      \"price\": \"1632000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"1550400\",\n      \"reduction_price\": \"81600\",\n      \"reduction_percent\": \"5\",\n      \"reduction_from\": \"1714842000\",\n      \"reduction_to\": \"1715101199\",\n      \"promotion_id\": \"78500\",\n      \"promotion_no\": \"441PRO24050260687101\",\n      \"have_gift\": \"1\",\n      \"gift_content\": \"Tặng Bộ nệm kèm gối khi mua 4 thùng SPDDPS GrowPLUS+ 110ml (lốc 4 hộp)\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"153\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"link_video\": \"\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"https://cdn1.concung.com/img/frame/2024/04/doc-quyen-online.png\",\n      \"gift_list\": [\n        {\n          \"id_product_gift\": \"66349\",\n          \"reference_gift\": \"2472000000073\",\n          \"image_cover\": \"https://cdn1.concung.com/2024/04/66349-109690-large_mobile/qt-bo-nem-kem-goi-em-be-hoa-tiet-ca-voi-xanh-growplus.png\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        }\n      ],\n      \"thumb_start\": \"1653325200\",\n      \"thumb_end\": \"1715239835\",\n      \"combo_id\": \"2403133496897\",\n      \"id_category_erp\": \"6697\",\n      \"category_name_erp\": \"Sữa nước;Sữa đặc trị pha sẵn;Nutifood;Grow Plus đỏ\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"48\",\n      \"date_start\": \"1617288113\",\n      \"date_end\": \"1617288113\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"111\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"21\",\n      \"table_link\": \"\",\n      \"total_sales\": \"53\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"30\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"300\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"0\",\n      \"date_add\": \"1710735129\",\n      \"date_upd\": \"1714844998\",\n      \"deleted\": \"0\",\n      \"api_page\": \"product\",\n      \"id_page\": \"65930\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_san_qua_ta_sua_t2.png\",\n      \"name_page\": \"\",\n      \"image_top\": \"\",\n      \"revenue\": \"398\",\n      \"score\": \"1\"\n    },\n    {\n      \"id_product\": \"42697\",\n      \"product_name\": \"Bỉm tã quần Bobby size XXL 56 miếng (trên 16kg) (sản phẩm được giao với bao bì ngẫu nhiên)\",\n      \"image_cover\": \"https://cdn1.concung.com/2023/11/42697-1700038710-trans.png\",\n      \"category_name\": \"Bỉm Tã khuyến mãi\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"635\",\n      \"reference\": \"1237000000009\",\n      \"id_manufacturer\": \"79\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Bobby\",\n      \"url_link\": \"https://concung.com/khuyen-mai-don-hang-77900.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"908\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"2226\",\n      \"text_price\": \"\",\n      \"price\": \"375000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"319000\",\n      \"reduction_price\": \"56000\",\n      \"reduction_percent\": \"14.9\",\n      \"reduction_from\": \"1713978000\",\n      \"reduction_to\": \"1715360399\",\n      \"promotion_id\": \"77891\",\n      \"promotion_no\": \"441PRO24042245122979\",\n      \"have_gift\": \"0\",\n      \"gift_content\": \"\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"1211\",\n      \"top_text\": \"XXL\",\n      \"middle_text\": \"\",\n      \"center_text\": \"56\",\n      \"bottom_text\": \"miếng\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"link_video\": \"\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"90\",\n      \"thumb_height\": \"137\",\n      \"image_frame\": \"\",\n      \"gift_list\": [\n        {\n          \"id_product_gift\": \"59721\",\n          \"reference_gift\": \"0020010000006\",\n          \"image_cover\": \"https://cdn1.concung.com/2022/11/59721-94536-large_mobile/ta-quan-bobby-fresh-xl-12-17kg-14-mieng.jpg\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        },\n        {\n          \"id_product_gift\": \"65897\",\n          \"reference_gift\": \"4173000000056\",\n          \"image_cover\": \"https://cdn1.concung.com/2024/02/65897-108876-large_mobile/qt-bobby-khan-uot-bobby-care-80-mieng-khong-huong.jpeg\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        }\n      ],\n      \"thumb_start\": \"1714945600\",\n      \"thumb_end\": \"1715018500\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"2231\",\n      \"category_name_erp\": \"Tã;Bobby;Bobby Fresh;Bobby Fresh_Tã Quần\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"1\",\n      \"date_start\": \"1617288113\",\n      \"date_end\": \"1617288113\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"3109\",\n      \"is_hot\": \"1\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"1\",\n      \"position\": \"31\",\n      \"table_link\": \"\",\n      \"total_sales\": \"6\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"100\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"100\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"30000\",\n      \"date_add\": \"1562295525\",\n      \"date_upd\": \"1714934723\",\n      \"deleted\": \"0\",\n      \"api_page\": \"khuyen-mai-don-hang\",\n      \"id_page\": \"7790000\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_san_qua_ta_sua_t2.png\",\n      \"name_page\": \"\",\n      \"image_top\": \"\",\n      \"revenue\": \"582\",\n      \"score\": \"2\"\n    },\n    {\n      \"id_product\": \"42699\",\n      \"product_name\": \"Bỉm tã quần Bobby size L 68 miếng (9-13kg) (giao bao bì ngẫu nhiên)\",\n      \"image_cover\": \"https://cdn1.concung.com/2023/11/42699-1700038369-trans.png\",\n      \"category_name\": \"Bỉm Tã khuyến mãi\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"635\",\n      \"reference\": \"1237000000007\",\n      \"id_manufacturer\": \"79\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Bobby\",\n      \"url_link\": \"https://concung.com/khuyen-mai-don-hang-77900.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"1070\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"1841\",\n      \"text_price\": \"\",\n      \"price\": \"375000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"319000\",\n      \"reduction_price\": \"56000\",\n      \"reduction_percent\": \"14.9\",\n      \"reduction_from\": \"1713978000\",\n      \"reduction_to\": \"1715360399\",\n      \"promotion_id\": \"77891\",\n      \"promotion_no\": \"441PRO24042245122979\",\n      \"have_gift\": \"0\",\n      \"gift_content\": \"\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"1938\",\n      \"top_text\": \"L\",\n      \"middle_text\": \"9-13kg\",\n      \"center_text\": \"68\",\n      \"bottom_text\": \"miếng\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"link_video\": \"\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"90\",\n      \"thumb_height\": \"137\",\n      \"image_frame\": \"\",\n      \"gift_list\": [\n        {\n          \"id_product_gift\": \"59721\",\n          \"reference_gift\": \"0020010000006\",\n          \"image_cover\": \"https://cdn1.concung.com/2022/11/59721-94536-large_mobile/ta-quan-bobby-fresh-xl-12-17kg-14-mieng.jpg\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        },\n        {\n          \"id_product_gift\": \"65897\",\n          \"reference_gift\": \"4173000000056\",\n          \"image_cover\": \"https://cdn1.concung.com/2024/02/65897-108876-large_mobile/qt-bobby-khan-uot-bobby-care-80-mieng-khong-huong.jpeg\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        }\n      ],\n      \"thumb_start\": \"1714945600\",\n      \"thumb_end\": \"1715018500\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"2231\",\n      \"category_name_erp\": \"Tã;Bobby;Bobby Fresh;Bobby Fresh_Tã Quần\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"1\",\n      \"date_start\": \"1617288113\",\n      \"date_end\": \"1617288113\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"2963\",\n      \"is_hot\": \"1\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"1\",\n      \"position\": \"32\",\n      \"table_link\": \"\",\n      \"total_sales\": \"8\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"100\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"100\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"30000\",\n      \"date_add\": \"1562295526\",\n      \"date_upd\": \"1714934723\",\n      \"deleted\": \"0\",\n      \"api_page\": \"khuyen-mai-don-hang\",\n      \"id_page\": \"7790000\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_san_qua_ta_sua_t2.png\",\n      \"name_page\": \"\",\n      \"image_top\": \"\",\n      \"revenue\": \"481\",\n      \"score\": \"2\"\n    },\n    {\n      \"id_product\": \"66365\",\n      \"product_name\": \"Sữa Nuvi Grow 2+ 900g (Trên 2 tuổi)\",\n      \"image_cover\": \"https://cdn1.concung.com/2024/05/66365-1714720440-trans.png\",\n      \"category_name\": \"Sữa bột công thức\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"586\",\n      \"reference\": \"6468000000003\",\n      \"id_manufacturer\": \"1172\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Nuvi Grow\",\n      \"url_link\": \"https://concung.com/sua-bot/tpbs-spdd-nuvi-grow-2-lon-900g-66365.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"1\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"366\",\n      \"text_price\": \"\",\n      \"price\": \"299000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"299000\",\n      \"reduction_price\": \"0\",\n      \"reduction_percent\": \"0\",\n      \"reduction_from\": \"1714706567\",\n      \"reduction_to\": \"1714706567\",\n      \"promotion_id\": \"0\",\n      \"promotion_no\": \"\",\n      \"have_gift\": \"1\",\n      \"gift_content\": \"Tặng Bộ đồ chơi nhà tắm động vật vui vẻ khi mua 1 lon TPBS SPDD Nuvi Grow 2+ Lon 900g\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"0\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"link_video\": \"\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"\",\n      \"gift_list\": [\n        {\n          \"id_product_gift\": \"54575\",\n          \"reference_gift\": \"2110000000007\",\n          \"image_cover\": \"https://cdn1.concung.com/2021/12/54575-78574-large_mobile/bo-do-choi-nha-tam-dong-vat-vui-ve-rfd331282.jpg\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        },\n        {\n          \"id_product_gift\": \"54580\",\n          \"reference_gift\": \"2110000000002\",\n          \"image_cover\": \"https://cdn1.concung.com/2022/03/54580-83833-large_mobile/bo-do-choi-nha-tam-dong-vat-vui-ve-rfd331283.jpg\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        }\n      ],\n      \"thumb_start\": \"1653325200\",\n      \"thumb_end\": \"1715239835\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"6468\",\n      \"category_name_erp\": \"Sữa;Nutifood;Nuvi Grow;Nuvi Grow\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"0\",\n      \"date_start\": \"1617288113\",\n      \"date_end\": \"1617288113\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"2\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"900\",\n      \"table_link\": \"\",\n      \"total_sales\": \"1\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"0\",\n      \"step_number\": \"0\",\n      \"deal_number\": \"0\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"20000\",\n      \"date_add\": \"1714706567\",\n      \"date_upd\": \"1714724197\",\n      \"deleted\": \"0\",\n      \"api_page\": \"product\",\n      \"id_page\": \"66365\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_san_qua_ta_sua_t2.png\",\n      \"name_page\": \"\",\n      \"image_top\": \"\",\n      \"revenue\": \"37\",\n      \"score\": \"0\"\n    },\n    {\n      \"id_product\": \"66300\",\n      \"product_name\": \"Combo 4 Sữa Similac Total Protection 4 900g (2 - 6 tuổi)\",\n      \"image_cover\": \"https://cdn1.concung.com/2024/05/66300-1714725284-trans.png\",\n      \"category_name\": \"Sữa bột công thức\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"586\",\n      \"reference\": \"6491000000001\",\n      \"id_manufacturer\": \"1184\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Similac Total Protection\",\n      \"url_link\": \"https://concung.com/sua-bot/sua-similac-total-protection-4-5-hmo-900g-2-6-tuoi-66300.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"116\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"398\",\n      \"text_price\": \"\",\n      \"price\": \"2236000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"2236000\",\n      \"reduction_price\": \"0\",\n      \"reduction_percent\": \"0\",\n      \"reduction_from\": \"1656297517\",\n      \"reduction_to\": \"1656556717\",\n      \"promotion_id\": \"0\",\n      \"promotion_no\": \"\",\n      \"have_gift\": \"1\",\n      \"gift_content\": \"Tặng Bộ bàn ghế đa năng khi mua 4 lon Sữa Similac Total Protection 4 (5 HMO+) 900g (2 - 6 tuôi)\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"97\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"link_video\": \"\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"\",\n      \"gift_list\": [\n        {\n          \"id_product_gift\": \"66337\",\n          \"reference_gift\": \"4186000000090\",\n          \"image_cover\": \"https://cdn1.concung.com/2024/04/66337-109681-large_mobile/qt-abbott-bo-ban-ghe-da-nang-similac.png\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        }\n      ],\n      \"thumb_start\": \"1653325200\",\n      \"thumb_end\": \"1715239835\",\n      \"combo_id\": \"2404223882657\",\n      \"id_category_erp\": \"6491\",\n      \"category_name_erp\": \"Sữa;Abbott;Similac Protection;Similac Protection Step 4\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"4\",\n      \"date_start\": \"1617288113\",\n      \"date_end\": \"1617288113\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"57\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"900\",\n      \"table_link\": \"\",\n      \"total_sales\": \"8\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"1\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"10\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"https://cdn1.concung.com/img/res/ship_label_new/list_20k_new.png\",\n      \"total_buy\": \"30000\",\n      \"date_add\": \"1713860781\",\n      \"date_upd\": \"1714725497\",\n      \"deleted\": \"0\",\n      \"api_page\": \"product\",\n      \"id_page\": \"66300\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_san_qua_ta_sua_t2.png\",\n      \"name_page\": \"\",\n      \"image_top\": \"\",\n      \"revenue\": \"120\",\n      \"score\": \"1\"\n    },\n    {\n      \"id_product\": \"65689\",\n      \"product_name\": \"Tã dán sơ sinh Huggies Skin Perfect (S, 4-8kg, 80 miếng)\",\n      \"image_cover\": \"https://cdn1.concung.com/2024/02/65689-1708478943-trans.png\",\n      \"category_name\": \"Bỉm Tã khuyến mãi\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"635\",\n      \"reference\": \"2263000000019\",\n      \"id_manufacturer\": \"1396\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Huggies Skin Perfect \",\n      \"url_link\": \"https://concung.com/bim-ta-khuyen-mai/ta-dan-so-sinh-huggies-skin-perfect-s-4-8kg-80-mieng-65689.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"187\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"1176\",\n      \"text_price\": \"\",\n      \"price\": \"299000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"265000\",\n      \"reduction_price\": \"34000\",\n      \"reduction_percent\": \"11.4\",\n      \"reduction_from\": \"1713978000\",\n      \"reduction_to\": \"1716483599\",\n      \"promotion_id\": \"77915\",\n      \"promotion_no\": \"441PRO24042248914197\",\n      \"have_gift\": \"1\",\n      \"gift_content\": \"Tặng 1 gói Khăn ướt Huggies khi mua 1 gói Tã dán NB70/S80/M76\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"215\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"link_video\": \"\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"https://cdn1.concung.com/img/frame/2024/04/doc-quyen-online.png\",\n      \"gift_list\": [\n        {\n          \"id_product_gift\": \"64635\",\n          \"reference_gift\": \"1774000000004\",\n          \"image_cover\": \"https://cdn1.concung.com/2023/11/64635-106448-large_mobile/khan-uot-huggies-80-mieng.png\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        }\n      ],\n      \"thumb_start\": \"1653325200\",\n      \"thumb_end\": \"1715239835\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"2263\",\n      \"category_name_erp\": \"Tã;Huggies;Huggies Thường;Huggies Thường_Sơ Sinh\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"0\",\n      \"date_start\": \"1617288113\",\n      \"date_end\": \"1617288113\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"74\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"1000\",\n      \"table_link\": \"\",\n      \"total_sales\": \"27\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"100\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"100\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"50000\",\n      \"date_add\": \"1707118292\",\n      \"date_upd\": \"1711392549\",\n      \"deleted\": \"0\",\n      \"api_page\": \"product\",\n      \"id_page\": \"65689\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_san_qua_ta_sua_t2.png\",\n      \"name_page\": \"\",\n      \"image_top\": \"\",\n      \"revenue\": \"245\",\n      \"score\": \"0\"\n    },\n    {\n      \"id_product\": \"61717\",\n      \"product_name\": \"Tã quần Nhật Bản Takato siêu mềm mại (XXL, 56 miếng)\",\n      \"image_cover\": \"https://cdn1.concung.com/2023/02/61717-trans.png\",\n      \"category_name\": \"Bỉm Tã khuyến mãi\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"635\",\n      \"reference\": \"6768000000005\",\n      \"id_manufacturer\": \"1322\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Takato\",\n      \"url_link\": \"https://concung.com/khuyen-mai-don-hang-77933.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"317\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"3711\",\n      \"text_price\": \"\",\n      \"price\": \"345000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"315000\",\n      \"reduction_price\": \"30000\",\n      \"reduction_percent\": \"8.7\",\n      \"reduction_from\": \"1713978000\",\n      \"reduction_to\": \"1716483599\",\n      \"promotion_id\": \"77729\",\n      \"promotion_no\": \"441PRO24042062117967\",\n      \"have_gift\": \"0\",\n      \"gift_content\": \"\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"251\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"link_video\": \"\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"https://cdn1.concung.com/img/frame/2024/04/doc-quyen-online.png\",\n      \"gift_list\": [\n        {\n          \"id_product_gift\": \"66371\",\n          \"reference_gift\": \"2323000000061\",\n          \"image_cover\": \"https://cdn1.concung.com/2024/05/66371-109927-large_mobile/ghe-sofa-xanh-tai-trang-theu-logo-takato-ep-chan-khong.png\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        }\n      ],\n      \"thumb_start\": \"1677550800\",\n      \"thumb_end\": \"1641747600\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"6768\",\n      \"category_name_erp\": \"Tã;Takato;Takato;Takato_Tã Quần\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"0\",\n      \"date_start\": \"1617288113\",\n      \"date_end\": \"1617288113\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"191\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"1000\",\n      \"table_link\": \"\",\n      \"total_sales\": \"114\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"100\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"100\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"120000\",\n      \"date_add\": \"1677550633\",\n      \"date_upd\": \"1706774986\",\n      \"deleted\": \"0\",\n      \"api_page\": \"khuyen-mai-don-hang\",\n      \"id_page\": \"7793300\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_san_qua_ta_sua_t2.png\",\n      \"name_page\": \"\",\n      \"image_top\": \"\",\n      \"revenue\": \"1213\",\n      \"score\": \"2\"\n    },\n    {\n      \"id_product\": \"61719\",\n      \"product_name\": \"Tã quần Nhật Bản Takato siêu mềm mại (L, 68 miếng)\",\n      \"image_cover\": \"https://cdn1.concung.com/2023/02/61719-trans.png\",\n      \"category_name\": \"Bỉm Tã khuyến mãi\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"635\",\n      \"reference\": \"6768000000003\",\n      \"id_manufacturer\": \"1322\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Takato\",\n      \"url_link\": \"https://concung.com/khuyen-mai-don-hang-77933.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"303\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"1103\",\n      \"text_price\": \"\",\n      \"price\": \"345000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"315000\",\n      \"reduction_price\": \"30000\",\n      \"reduction_percent\": \"8.7\",\n      \"reduction_from\": \"1713978000\",\n      \"reduction_to\": \"1716483599\",\n      \"promotion_id\": \"77729\",\n      \"promotion_no\": \"441PRO24042062117967\",\n      \"have_gift\": \"0\",\n      \"gift_content\": \"\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"311\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"link_video\": \"\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"https://cdn1.concung.com/img/frame/2024/04/doc-quyen-online.png\",\n      \"gift_list\": [\n        {\n          \"id_product_gift\": \"66371\",\n          \"reference_gift\": \"2323000000061\",\n          \"image_cover\": \"https://cdn1.concung.com/2024/05/66371-109927-large_mobile/ghe-sofa-xanh-tai-trang-theu-logo-takato-ep-chan-khong.png\",\n          \"link_video\": \"\",\n          \"gift_value\": \"0\",\n          \"is_gift\": \"0\"\n        }\n      ],\n      \"thumb_start\": \"1677550823\",\n      \"thumb_end\": \"1706288340\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"6768\",\n      \"category_name_erp\": \"Tã;Takato;Takato;Takato_Tã Quần\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"0\",\n      \"date_start\": \"1617288113\",\n      \"date_end\": \"1617288113\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"950\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"1000\",\n      \"table_link\": \"\",\n      \"total_sales\": \"92\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"100\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"100\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"120000\",\n      \"date_add\": \"1677550634\",\n      \"date_upd\": \"1706294868\",\n      \"deleted\": \"0\",\n      \"api_page\": \"khuyen-mai-don-hang\",\n      \"id_page\": \"7793300\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_san_qua_ta_sua_t2.png\",\n      \"name_page\": \"\",\n      \"image_top\": \"\",\n      \"revenue\": \"871\",\n      \"score\": \"2\"\n    }\n  ]\n}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -528,62 +678,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384719"
-            }
-          ],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [
-            {
-              "target": "body",
-              "modifier": "",
-              "value": "",
-              "invert": false,
-              "operator": "equals"
-            }
-          ],
-          "rulesOperator": "AND",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": null
-    },
-    {
-      "uuid": "266ac3c5-37f0-4b0a-b7e4-31c00df64248",
-      "type": "http",
-      "documentation": "",
-      "method": "post",
-      "endpoint": "home/getInfoTop",
-      "responses": [
-        {
-          "uuid": "6f22fae0-e303-48f9-91d1-b70a3639a90b",
-          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": {\n\t\"vouchers\": [\n  \t{\n    \t\"voucher_gift_id\": \"16275307\",\n    \t\"voucher_id\": \"1162\",\n    \t\"reference\": \"1920000007070\",\n    \t\"gift_code\": \"4738-7888-1370-7848\",\n    \t\"manage_code\": \"1065465653429933\",\n    \t\"voucher_type_id\": \"1\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn từ 0đ\",\n    \t\"price_voucher\": \"50000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Áp dụng đơn hàng online\",\n    \t\"date_start\": \"1714842059\",\n    \t\"date_end\": \"1715101199\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16177533\",\n    \t\"voucher_id\": \"1158\",\n    \t\"reference\": \"1920000007065\",\n    \t\"gift_code\": \"3252-8417-9253-7566\",\n    \t\"manage_code\": \"4374430309542961\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 399K\",\n    \t\"price_voucher\": \"20000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1714842009\",\n    \t\"date_end\": \"1715101199\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16166015\",\n    \t\"voucher_id\": \"1156\",\n    \t\"reference\": \"1920000007063\",\n    \t\"gift_code\": \"8265-6969-8928-4038\",\n    \t\"manage_code\": \"3579937406326250\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 999K\",\n    \t\"price_voucher\": \"50000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1714842020\",\n    \t\"date_end\": \"1715101199\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16158587\",\n    \t\"voucher_id\": \"1154\",\n    \t\"reference\": \"1920000007061\",\n    \t\"gift_code\": \"6204-4324-9716-6703\",\n    \t\"manage_code\": \"1971350864817146\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 1.499.000\",\n    \t\"price_voucher\": \"100000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1714842000\",\n    \t\"date_end\": \"1715101199\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16052519\",\n    \t\"voucher_id\": \"1142\",\n    \t\"reference\": \"1920000007049\",\n    \t\"gift_code\": \"6293-9681-3440-9640\",\n    \t\"manage_code\": \"8553183881790346\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 1.999.000đ\",\n    \t\"price_voucher\": \"100000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1715274018\",\n    \t\"date_end\": \"1715360399\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16043587\",\n    \t\"voucher_id\": \"1141\",\n    \t\"reference\": \"1920000007048\",\n    \t\"gift_code\": \"1441-1277-1726-6395\",\n    \t\"manage_code\": \"4920046458447269\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 999K\",\n    \t\"price_voucher\": \"50000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1715274024\",\n    \t\"date_end\": \"1715360399\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16025799\",\n    \t\"voucher_id\": \"1140\",\n    \t\"reference\": \"1920000007047\",\n    \t\"gift_code\": \"2779-6230-5648-5724\",\n    \t\"manage_code\": \"6832453988749718\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 499K\",\n    \t\"price_voucher\": \"20000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1715274054\",\n    \t\"date_end\": \"1715360399\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"15412588\",\n    \t\"voucher_id\": \"1097\",\n    \t\"reference\": \"1920000006721\",\n    \t\"gift_code\": \"1771-4268-8317-8496\",\n    \t\"manage_code\": \"7926666005993104\",\n    \t\"voucher_type_id\": \"1\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 899K\",\n    \t\"price_voucher\": \"20000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"\",\n    \t\"date_start\": \"1714496425\",\n    \t\"date_end\": \"1717174799\"\n  \t}\n\t]\n  }\n}\n",
-          "latency": 500,
-          "statusCode": 200,
-          "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384720"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -593,6 +688,89 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "5de79789-45a9-44f8-879e-aa0e93d0b837",
+          "body": "{}",
+          "latency": 1,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "266ac3c5-37f0-4b0a-b7e4-31c00df64248",
+      "type": "http",
+      "documentation": "List các voucher",
+      "method": "post",
+      "endpoint": "home/getInfoTop",
+      "responses": [
+        {
+          "uuid": "6f22fae0-e303-48f9-91d1-b70a3639a90b",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": {\n\t\"vouchers\": [\n  \t{\n    \t\"voucher_gift_id\": \"16275307\",\n    \t\"voucher_id\": \"1162\",\n    \t\"reference\": \"1920000007070\",\n    \t\"gift_code\": \"4738-7888-1370-7848\",\n    \t\"manage_code\": \"1065465653429933\",\n    \t\"voucher_type_id\": \"1\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn từ 0đ\",\n    \t\"price_voucher\": \"50000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Áp dụng đơn hàng online\",\n    \t\"date_start\": \"1714842059\",\n    \t\"date_end\": \"1715101199\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16177533\",\n    \t\"voucher_id\": \"1158\",\n    \t\"reference\": \"1920000007065\",\n    \t\"gift_code\": \"3252-8417-9253-7566\",\n    \t\"manage_code\": \"4374430309542961\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 399K\",\n    \t\"price_voucher\": \"20000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1714842009\",\n    \t\"date_end\": \"1715101199\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16166015\",\n    \t\"voucher_id\": \"1156\",\n    \t\"reference\": \"1920000007063\",\n    \t\"gift_code\": \"8265-6969-8928-4038\",\n    \t\"manage_code\": \"3579937406326250\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 999K\",\n    \t\"price_voucher\": \"50000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1714842020\",\n    \t\"date_end\": \"1715101199\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16158587\",\n    \t\"voucher_id\": \"1154\",\n    \t\"reference\": \"1920000007061\",\n    \t\"gift_code\": \"6204-4324-9716-6703\",\n    \t\"manage_code\": \"1971350864817146\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 1.499.000\",\n    \t\"price_voucher\": \"100000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1714842000\",\n    \t\"date_end\": \"1715101199\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16052519\",\n    \t\"voucher_id\": \"1142\",\n    \t\"reference\": \"1920000007049\",\n    \t\"gift_code\": \"6293-9681-3440-9640\",\n    \t\"manage_code\": \"8553183881790346\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 1.999.000đ\",\n    \t\"price_voucher\": \"100000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1715274018\",\n    \t\"date_end\": \"1715360399\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16043587\",\n    \t\"voucher_id\": \"1141\",\n    \t\"reference\": \"1920000007048\",\n    \t\"gift_code\": \"1441-1277-1726-6395\",\n    \t\"manage_code\": \"4920046458447269\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 999K\",\n    \t\"price_voucher\": \"50000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1715274024\",\n    \t\"date_end\": \"1715360399\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"16025799\",\n    \t\"voucher_id\": \"1140\",\n    \t\"reference\": \"1920000007047\",\n    \t\"gift_code\": \"2779-6230-5648-5724\",\n    \t\"manage_code\": \"6832453988749718\",\n    \t\"voucher_type_id\": \"2\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 499K\",\n    \t\"price_voucher\": \"20000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"Trừ sữa cho trẻ dưới 24 tháng tuổi\",\n    \t\"date_start\": \"1715274054\",\n    \t\"date_end\": \"1715360399\"\n  \t},\n  \t{\n    \t\"voucher_gift_id\": \"15412588\",\n    \t\"voucher_id\": \"1097\",\n    \t\"reference\": \"1920000006721\",\n    \t\"gift_code\": \"1771-4268-8317-8496\",\n    \t\"manage_code\": \"7926666005993104\",\n    \t\"voucher_type_id\": \"1\",\n    \t\"is_get\": \"0\",\n    \t\"gift_name\": \"cho đơn online từ 899K\",\n    \t\"price_voucher\": \"20000\",\n    \t\"manufacturer_name\": \"Tất cả sản phẩm\",\n    \t\"manu_desc\": \"\",\n    \t\"date_start\": \"1714496425\",\n    \t\"date_end\": \"1717174799\"\n  \t}\n\t]\n  }\n}\n",
+          "latency": 500,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "3b6e5476-adbe-4abf-aeca-a90f4dd4d3c3",
+          "body": "{}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -612,16 +790,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384730"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -631,6 +800,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "d0f4f4ab-a97a-48f8-a5cb-a201f6283a97",
+          "body": "{}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -650,16 +846,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384740"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -669,6 +856,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "9c15d2e0-dde3-40a6-b39f-01aa4be2e586",
+          "body": "{}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -688,16 +902,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384750"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -707,6 +912,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "a6f0e3bc-4338-48e8-8c25-8a64a8e11114",
+          "body": "{}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -726,16 +958,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384760"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -745,6 +968,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "140ba88e-b130-4e1e-8942-efde1f1c00e3",
+          "body": "{}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -764,16 +1014,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384770"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -783,6 +1024,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "3008747e-1737-428b-aefd-de2377b2cc5a",
+          "body": "{}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -802,16 +1070,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384780"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -821,6 +1080,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "1fdafa01-bbb1-4087-8522-0613507b9ff9",
+          "body": "{}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -840,16 +1126,7 @@
           "latency": 500,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384310"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -859,6 +1136,33 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "37fc92a0-dcf7-4d15-9b10-6200d387a322",
+          "body": "{}",
+          "latency": 100,
+          "statusCode": 304,
+          "label": " (copy)",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "if-none-match",
+              "value": "W/106384710",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -1255,12 +1559,26 @@
           "latency": 0,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "",
-              "value": ""
-            }
-          ],
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "76d10efa-971e-4af8-a074-8fa5313457a2",
+          "body": "{\n  \"key_1\":\"value_2\"\n}",
+          "latency": 0,
+          "statusCode": 304,
+          "label": "",
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -2491,28 +2809,19 @@
       "responseMode": null
     },
     {
-      "uuid": "81276d8c-1946-43de-99cb-9b9c0067bbbc",
+      "uuid": "9fee14d3-3165-4079-bd03-3ecd8e33a014",
       "type": "http",
-      "documentation": "",
+      "documentation": "API dùng để lấy thông tin khuyến mãi của các brands trong thanh search",
       "method": "get",
-      "endpoint": "home/top_block_menu",
+      "endpoint": "search/get_brand_promotions",
       "responses": [
         {
-          "uuid": "03683c24-d1db-46c5-b8a8-65284a659688",
-          "body": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": [\n  {\n    \"id_utility\": \"27\",\n    \"id_type\": \"4\",\n    \"utility_name\": \"Bán Chạy\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com\",\n    \"sub_image\": \"\",\n    \"position\": \"1\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"3\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"Tất cả\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/menu-mobile/492-iconmebauembe@500-1634918558.png\",\n    \"sub_image\": \"\",\n    \"position\": \"1\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"4\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"Xu hướng\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/menu-mobile/542-iconungdungmevabe-1646811921.png\",\n    \"sub_image\": \"\",\n    \"position\": \"2\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"12\",\n    \"id_type\": \"3\",\n    \"utility_name\": \"Hot Sale\",\n    \"utility_meta\": \"Tháng 5\",\n    \"short_name\": \"Hot Sale\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/hot_sale_thang_5.png\",\n    \"sub_image\": \"\",\n    \"position\": \"2\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"28\",\n    \"id_type\": \"4\",\n    \"utility_name\": \"Xu Hướng\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com\",\n    \"sub_image\": \"\",\n    \"position\": \"2\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"10\",\n    \"id_type\": \"3\",\n    \"utility_name\": \"Siêu Tốc\",\n    \"utility_meta\": \"Giao 1h\",\n    \"short_name\": \"Siêu Tốc\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/sieu_toc_1h_moi.png\",\n    \"sub_image\": \"\",\n    \"position\": \"3\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"1\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"29\",\n    \"id_type\": \"4\",\n    \"utility_name\": \"Top Review Tốt\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com\",\n    \"sub_image\": \"\",\n    \"position\": \"3\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"5\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"Sữa bột\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/2022/06/26173-frame34272-1655798237.png\",\n    \"sub_image\": \"\",\n    \"position\": \"3\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"586\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"30\",\n    \"id_type\": \"4\",\n    \"utility_name\": \"Top Mua Lại\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com\",\n    \"sub_image\": \"\",\n    \"position\": \"4\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"6\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"Bĩm tã\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/2022/06/26173-frame34272(1)-1655798267.png\",\n    \"sub_image\": \"\",\n    \"position\": \"4\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"635\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"11\",\n    \"id_type\": \"3\",\n    \"utility_name\": \"Tất Cả\",\n    \"utility_meta\": \"Freeship\",\n    \"short_name\": \"Freeship\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/freeship.png\",\n    \"sub_image\": \"\",\n    \"position\": \"4\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"31\",\n    \"id_type\": \"4\",\n    \"utility_name\": \"Top Giỏ Hàng\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com\",\n    \"sub_image\": \"\",\n    \"position\": \"5\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"7\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"Sữa nước\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/2022/06/26173-frame34272(2)-1655798297.png\",\n    \"sub_image\": \"\",\n    \"position\": \"5\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"842\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"13\",\n    \"id_type\": \"3\",\n    \"utility_name\": \"Mua Là\",\n    \"utility_meta\": \"Có Quà\",\n    \"short_name\": \"Có Quà\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/buy_with_gift.png\",\n    \"sub_image\": \"\",\n    \"position\": \"5\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  },\n  {\n    \"id_utility\": \"8\",\n    \"id_type\": \"2\",\n    \"utility_name\": \"Tiêu dùng\",\n    \"utility_meta\": \"\",\n    \"short_name\": \"\",\n    \"mobile_image\": \"https://cdn1.concung.com/img/res/menu-mobile/542-iconungdungmevabe-1646811921.png\",\n    \"sub_image\": \"\",\n    \"position\": \"6\",\n    \"new_number\": \"0\",\n    \"url_link\": \"\",\n    \"id_manufacturer\": \"0\",\n    \"id_category\": \"0\",\n    \"id_promotion_list\": \"\",\n    \"require_location\": \"0\",\n    \"api_page\": \"web\",\n    \"id_page\": \"\"\n  }\n]\n}",
-          "latency": 500,
+          "uuid": "3326e2ec-9c96-429d-9f72-fe9469b2d6b6",
+          "body": "{\n  \"message\": \"success\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id\": 1,\n      \"brand_name\": \"Meiji\",\n      \"image_url\": \"https://drive.google.com/file/d/1Djoh6nM3ffSfnPFES17X9TB2Hf03BZb6/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Genki\",\n      \"image_url\": \"https://drive.google.com/file/d/1Eh9IX-DWC-qE4zfwqlm-x4A4ch2Ej1my/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Merries\",\n      \"image_url\": \"https://drive.google.com/file/d/1EuGbtOTlrBexz3JAK3x_si_YyHZAEXOY/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Vinamilk\",\n      \"image_url\": \"https://drive.google.com/file/d/1ZfwwZtH8UdyCA8rQbAsZJ8ged2o9d9P8/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"YOKOGOLD\",\n      \"image_url\": \"https://drive.google.com/file/d/137b_-9eUJdFbm83bNlvO3xbZGB7toAwX/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Enfa\",\n      \"image_url\": \"https://drive.google.com/file/d/1_l0fRxo4MmRQi0QLJypN4UG_BAQUV8Fv/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"GOO.N\",\n      \"image_url\": \"https://drive.google.com/file/d/1BMZvlAXsU0YoGx_ipJnjljbHOOgVrorl/view?usp=sharing\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Nestle\",\n      \"image_url\": \"https://drive.google.com/file/d/1ZKuKKfY5jvLp_JxMbos-_VU48wqbW-na/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Whito\",\n      \"image_url\": \"https://drive.google.com/file/d/1ewHYjltn0xikYBAtkUmYAVp6PpOXvjcy/view?usp=share_link\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Huggies\",\n      \"image_url\": \"https://drive.google.com/file/d/1uvrK1gvkoQtJjVXVeNZ3yuw8cV-twlaK/view?usp=share_link\",\n      \"promotions\": 10\n    }\n  ]\n}",
+          "latency": 0,
           "statusCode": 200,
           "label": "",
-          "headers": [
-            {
-              "key": "Cache-Control",
-              "value": "s-maxage=86400, must-revalidate, max-age=3600"
-            },
-            {
-              "key": "ETag",
-              "value": "W/106384390"
-            }
-          ],
+          "headers": [],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
@@ -2549,6 +2858,10 @@
     {
       "type": "folder",
       "uuid": "02f2e732-f0f9-4865-aa4f-11a024b80c5d"
+    },
+    {
+      "type": "folder",
+      "uuid": "7cf03663-a6d1-4095-8a4d-210247703238"
     }
   ],
   "proxyMode": false,
