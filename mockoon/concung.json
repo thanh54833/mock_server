@@ -246,12 +246,54 @@
       ]
     },
     {
-      "uuid": "e6b87157-e7d9-4610-9f0c-59fc059ae269",
-      "name": "splash",
+      "uuid": "333c80b5-2550-40d6-b733-270d7c285cdf",
+      "name": "cart",
       "children": [
         {
           "type": "route",
-          "uuid": "baecff83-60e2-424f-9d43-9cad579af504"
+          "uuid": "b8c25137-1ba7-4184-9fa1-efcda813eb10"
+        },
+        {
+          "type": "route",
+          "uuid": "a4b0d560-4360-4f45-b444-a513c012d79a"
+        },
+        {
+          "type": "route",
+          "uuid": "5dbd3c2c-658b-44d3-be43-ead9639c3443"
+        }
+      ]
+    },
+    {
+      "uuid": "9a7ee1e3-8c98-4895-b261-00a57939f080",
+      "name": "customer",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "39ba8b13-1fa1-45e1-91fb-670051958753"
+        }
+      ]
+    },
+    {
+      "uuid": "3cdcca54-4d68-45af-be02-3976cea6c184",
+      "name": "payment",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "75e70ed7-73b9-43c2-8364-14fbb539b11b"
+        },
+        {
+          "type": "route",
+          "uuid": "010b2356-43be-4f9c-a03a-bf64441a5f65"
+        }
+      ]
+    },
+    {
+      "uuid": "b0873c3e-20ec-48b1-bf24-6ee4579dfa17",
+      "name": "customer",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "49ea3672-d4d9-4cd5-96db-5fea0ad6442b"
         }
       ]
     }
@@ -2821,6 +2863,371 @@
         }
       ],
       "responseMode": null
+    },
+    {
+      "uuid": "b8c25137-1ba7-4184-9fa1-efcda813eb10",
+      "type": "http",
+      "documentation": "api lấy khuyến mãi của giỏ hàng",
+      "method": "post",
+      "endpoint": "cart/getCategoryPromotionByCart",
+      "responses": [
+        {
+          "uuid": "3b28d238-eeac-4eb4-bfcb-1cd48902a66a",
+          "body": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": [\n        {\n            \"PromotionID\": 20706,\n            \"PromotionNo\": \"441PRO24050959442776\",\n            \"PromotionName\": \"[Thủytặng quà\",\n            \"PromotionTypeID\": 16,\n            \"BeginDate\": 1715187600,\n            \"EndDate\": 1720544399,\n            \"PriorityLevelID\": 0,\n            \"IsOption\": false,\n            \"IsDefault\": true,\n            \"IsFixed\": false,\n            \"IsDiscount\": false,\n            \"DiscountAmount\": 0,\n            \"DiscountPercent\": 0,\n            \"SamePrice\": null,\n            \"IsCondition\": false,\n            \"InvoiceFromPrice\": 100000,\n            \"InvoiceToPrice\": 0,\n            \"IsPromotionProductGroup\": false,\n            \"IsPromotionGift\": false,\n            \"IsCombo\": false,\n            \"CodeID\": null,\n            \"ShortCode\": null,\n            \"CreatedDate\": \"2024-05-09T16:30:42.777\",\n            \"InvoiceApplyType\": 0,\n            \"ExtendTypeID\": null,\n            \"MaxDiscountAmount\": null,\n            \"RegisterCode\": null,\n            \"ShortDescription\": null,\n            \"PromotionParentID\": null,\n            \"IsAccumulated\": null,\n            \"QuantityMaxOffer\": null,\n            \"PromotionProductApplys\": [\n                {\n                    \"PProductApplyID\": 1817042,\n                    \"PromotionID\": 20706,\n                    \"PID\": 68758,\n                    \"ProductID\": \"0006040000170\",\n                    \"ProductName\": \"Yếm khăn thời trang cho bé Kuku (KU2239, 38x28cm, Xanh)\",\n                    \"Discount\": 0,\n                    \"TypeID\": 1,\n                    \"SalePriceAfter\": 115000\n                }\n            ],\n            \"PromotionProductOffers\": [\n                {\n                    \"PPOfferID\": 25079,\n                    \"PID\": 68758,\n                    \"ProductID\": \"0006040000170\",\n                    \"ProductName\": \"Yếm khăn thời trang cho bé Kuku (KU2239, 38x28cm, Xanh)\",\n                    \"PromotionID\": 20706,\n                    \"Quantity\": 1,\n                    \"IsFixed\": false,\n                    \"IsDefault\": true,\n                    \"IsOption\": false,\n                    \"IsGift\": false,\n                    \"GuaranteeExpired\": 0,\n                    \"IsOnline\": 0,\n                    \"ReferenceID\": null,\n                    \"IsPrice\": false,\n                    \"StockQuantity\": 0,\n                    \"VAT\": 10,\n                    \"GiftValue\": null,\n                    \"LimitDay\": null,\n                    \"ProductGiftConfigName\": null,\n                    \"price\": \"115000\",\n                    \"product_image\": \"https://cdn1.concung.com/2020/09/47759-65679-large_mobile/yem-khan-thoi-trang-cho-be-kuku-ku2239-38x28cm-xanh.jpg\",\n                    \"url_link\": \"https://123test.concung.com/xay-yem-an-cho-be/yem-khan-thoi-trang-cho-be-kuku-ku2239-38x28cm-xanh-47759.html\",\n                    \"api_page\": \"product\",\n                    \"id_page\": \"47759\",\n                    \"name_page\": \"47759_Yếm khăn thời trang cho bé Kuku (KU2239, 38x28cm, Xanh)\"\n                }\n            ],\n            \"PromotionProductSamePrices\": null,\n            \"PromotionFollows\": [],\n            \"PromotionCategorys\": [],\n            \"PromotionMembership\": [],\n            \"PromotionCombos\": null,\n            \"companionBrands\": [],\n            \"TimesApply\": null,\n            \"LevelApply\": null,\n            \"OfferPromotions\": null,\n            \"LimitApply\": null,\n            \"BuyMorePayLess\": null,\n            \"RequiredQuantity\": null,\n            \"PromotionEnvironments\": [\n                {\n                    \"PromotionEnvironmentID\": 3972,\n                    \"PromotionID\": 20706,\n                    \"EnvironmentID\": 2\n                },\n                {\n                    \"PromotionEnvironmentID\": 3975,\n                    \"PromotionID\": 20706,\n                    \"EnvironmentID\": 5\n                },\n                {\n                    \"PromotionEnvironmentID\": 3973,\n                    \"PromotionID\": 20706,\n                    \"EnvironmentID\": 3\n                },\n                {\n                    \"PromotionEnvironmentID\": 3976,\n                    \"PromotionID\": 20706,\n                    \"EnvironmentID\": 7\n                },\n                {\n                    \"PromotionEnvironmentID\": 3971,\n                    \"PromotionID\": 20706,\n                    \"EnvironmentID\": 1\n                },\n                {\n                    \"PromotionEnvironmentID\": 3974,\n                    \"PromotionID\": 20706,\n                    \"EnvironmentID\": 4\n                },\n                {\n                    \"PromotionEnvironmentID\": 3977,\n                    \"PromotionID\": 20706,\n                    \"EnvironmentID\": 9\n                }\n            ],\n            \"IsLimitOrder\": 0,\n            \"LimitQuantity\": 60,\n            \"LimitQuantityGift\": 60\n        },\n        {\n            \"PromotionID\": 10537,\n            \"PromotionNo\": \"441PRO19102469508993\",\n            \"PromotionName\": \"[STANDARD Member] Tích lũy 1% tất cả các sản phẩm còn lại (Trừ sữa dưới 2 tuổi)\",\n            \"PromotionTypeID\": 19,\n            \"BeginDate\": 1571936400,\n            \"EndDate\": 1738342799,\n            \"PriorityLevelID\": 0,\n            \"IsOption\": false,\n            \"IsDefault\": false,\n            \"IsFixed\": true,\n            \"IsDiscount\": true,\n            \"DiscountAmount\": 0,\n            \"DiscountPercent\": 1,\n            \"SamePrice\": null,\n            \"IsCondition\": false,\n            \"InvoiceFromPrice\": 0,\n            \"InvoiceToPrice\": 0,\n            \"IsPromotionProductGroup\": false,\n            \"IsPromotionGift\": false,\n            \"IsCombo\": false,\n            \"CodeID\": null,\n            \"ShortCode\": null,\n            \"CreatedDate\": \"2019-10-24T19:18:28.993\",\n            \"InvoiceApplyType\": 0,\n            \"ExtendTypeID\": null,\n            \"MaxDiscountAmount\": null,\n            \"RegisterCode\": null,\n            \"ShortDescription\": null,\n            \"PromotionParentID\": null,\n            \"IsAccumulated\": null,\n            \"QuantityMaxOffer\": null,\n            \"PromotionProductApplys\": [],\n            \"PromotionProductOffers\": [],\n            \"PromotionProductSamePrices\": null,\n            \"PromotionFollows\": [],\n            \"PromotionCategorys\": [\n                {\n                    \"PromotionCategoryID\": 471336,\n                    \"PromotionID\": 10537,\n                    \"CategoryID\": 1,\n                    \"TypeID\": 1\n                }\n            ],\n            \"PromotionMembership\": [\n                {\n                    \"PMID\": 39,\n                    \"PromotionID\": 10537,\n                    \"MemberType\": 1\n                }\n            ],\n            \"PromotionCombos\": null,\n            \"companionBrands\": [],\n            \"TimesApply\": null,\n            \"LevelApply\": null,\n            \"OfferPromotions\": null,\n            \"LimitApply\": null,\n            \"BuyMorePayLess\": null,\n            \"RequiredQuantity\": null,\n            \"PromotionEnvironments\": [],\n            \"IsLimitOrder\": 0,\n            \"LimitQuantity\": 60,\n            \"LimitQuantityGift\": 60\n        }\n    ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "b9b2374e-1e50-4b18-b566-606ac9230f7f",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "a4b0d560-4360-4f45-b444-a513c012d79a",
+      "type": "http",
+      "documentation": "api lấy list sản phẩm liên quan trong giỏ hàng",
+      "method": "post",
+      "endpoint": "cart/getProductList",
+      "responses": [
+        {
+          "uuid": "270f3122-afc5-4ef6-b677-061e9a1b92f0",
+          "body": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": [\n        {\n            \"id_product\": \"31115\",\n            \"product_name\": \"Bánh Ăn Dặm Gerber vị Chuối 42g\",\n            \"image_cover\": \"https://cdn1.concung.com/2019/10/31115-52703-large_mobile/banh-an-dam-gerber-vi-chuoi-42g.jpg\",\n            \"height_mobile\": \"280\",\n            \"category_name\": \"Bột, bánh ăn dặm\",\n            \"id_page_segment\": \"1\",\n            \"id_recommendation\": \"Concung_A1\",\n            \"id_category\": \"587\",\n            \"reference\": \"0029110000036\",\n            \"id_manufacturer\": \"449\",\n            \"image_logo\": \"\",\n            \"manufacture_name\": \"Gerber\",\n            \"url_link\": \"https://123test.concung.com/bot-an-dam/banh-an-dam-gerber-vi-chuoi-42g-31115.html\",\n            \"text_buy\": \"200K+\",\n            \"total_product\": \"0\",\n            \"rating_number\": \"1\",\n            \"rating_star\": \"5\",\n            \"show_rating\": \"1\",\n            \"quantity\": \"9953\",\n            \"text_price\": \"\",\n            \"price\": \"69000\",\n            \"save_price\": \"0\",\n            \"real_price\": \"69000\",\n            \"reduction_price\": \"0\",\n            \"reduction_percent\": \"0\",\n            \"reduction_from\": \"1627838402\",\n            \"reduction_to\": \"1628097602\",\n            \"promotion_id\": \"0\",\n            \"promotion_no\": \"\",\n            \"have_gift\": \"0\",\n            \"gift_content\": \"\",\n            \"ui_type\": \"0\",\n            \"is_show_filter\": \"0\",\n            \"comment_number\": \"38\",\n            \"top_text\": \"\",\n            \"middle_text\": \"\",\n            \"center_text\": \"\",\n            \"bottom_text\": \"\",\n            \"is_newdate\": \"0\",\n            \"event_uid\": \"\",\n            \"event_url\": \"\",\n            \"is_take_promotion\": \"0\",\n            \"reference_gift\": \"\",\n            \"gift_list\": [],\n            \"link_video\": \"\",\n            \"only_online\": \"0\",\n            \"image_thumb\": \"\",\n            \"thumb_width\": \"90\",\n            \"thumb_height\": \"137\",\n            \"image_frame\": \"\",\n            \"thumb_start\": \"1262278800\",\n            \"thumb_end\": \"1262278800\",\n            \"combo_id\": \"\",\n            \"id_category_erp\": \"1341\",\n            \"category_name_erp\": \"Thực phẩm;Bánh ăn dặm;Puff;Gerber (Mỹ\",\n            \"combo_name\": \"\",\n            \"type_combo\": \"0\",\n            \"quantity_combo\": \"1\",\n            \"date_start\": \"1262278800\",\n            \"date_end\": \"1262278800\",\n            \"type_group\": \"0\",\n            \"type_show\": \"1\",\n            \"trust_love\": \"208\",\n            \"is_hot\": \"1\",\n            \"is_cf\": \"0\",\n            \"type_sale\": \"0\",\n            \"position\": \"1000\",\n            \"table_link\": \"\",\n            \"total_sales\": \"51\",\n            \"actived\": \"1\",\n            \"is_online\": \"0\",\n            \"max_number\": \"0\",\n            \"step_number\": \"1\",\n            \"deal_number\": \"0\",\n            \"is_outstock\": \"0\",\n            \"is_freeship\": 0,\n            \"ship_label\": \"\",\n            \"total_buy\": \"0\",\n            \"date_add\": \"1497864085\",\n            \"date_upd\": \"1713240203\",\n            \"deleted\": \"0\",\n            \"api_page\": \"product\",\n            \"id_page\": \"31115\",\n            \"name_page\": \"\",\n            \"score\": \"0\",\n            \"image_top\": \"\",\n            \"gross_margin\": \"236265\"\n        },\n        {\n            \"id_product\": \"47200\",\n            \"product_name\": \"Hộp bánh Trung Thu Gà quay Jambon\",\n            \"image_cover\": \"https://cdn1.concung.com/2020/08/47200-64598-large_mobile/hop-banh-trung-thu-ga-quay-jambon.jpg\",\n            \"height_mobile\": \"280\",\n            \"category_name\": \"Bánh và kẹo cho bé\",\n            \"id_page_segment\": \"1\",\n            \"id_recommendation\": \"Concung_A1\",\n            \"id_category\": \"589\",\n            \"reference\": \"1528000000015\",\n            \"id_manufacturer\": \"469\",\n            \"image_logo\": \"\",\n            \"manufacture_name\": \"ConCung Food\",\n            \"url_link\": \"https://123test.concung.com/banh-an-dam-va-keo-cho-be/hop-banh-trung-thu-ga-quay-jambon-47200.html\",\n            \"text_buy\": \"500+\",\n            \"total_product\": \"0\",\n            \"rating_number\": \"1\",\n            \"rating_star\": \"5\",\n            \"show_rating\": \"1\",\n            \"quantity\": \"70\",\n            \"text_price\": \"\",\n            \"price\": \"15000\",\n            \"save_price\": \"0\",\n            \"real_price\": \"15000\",\n            \"reduction_price\": \"0\",\n            \"reduction_percent\": \"0\",\n            \"reduction_from\": \"1598808000\",\n            \"reduction_to\": \"1599067200\",\n            \"promotion_id\": \"0\",\n            \"promotion_no\": \"\",\n            \"have_gift\": \"0\",\n            \"gift_content\": \"\",\n            \"ui_type\": \"0\",\n            \"is_show_filter\": \"0\",\n            \"comment_number\": \"0\",\n            \"top_text\": \"\",\n            \"middle_text\": \"\",\n            \"center_text\": \"\",\n            \"bottom_text\": \"\",\n            \"is_newdate\": \"0\",\n            \"event_uid\": \"\",\n            \"event_url\": \"\",\n            \"is_take_promotion\": \"0\",\n            \"reference_gift\": \"\",\n            \"gift_list\": [],\n            \"link_video\": \"\",\n            \"only_online\": \"0\",\n            \"image_thumb\": \"\",\n            \"thumb_width\": \"0\",\n            \"thumb_height\": \"0\",\n            \"image_frame\": \"\",\n            \"thumb_start\": \"1598843202\",\n            \"thumb_end\": \"1598843202\",\n            \"combo_id\": \"\",\n            \"id_category_erp\": \"1528\",\n            \"category_name_erp\": \"Thực phẩm;SP mùa vụ;Bánh Trung Thu Con Cưng;Con Cưng Food\",\n            \"combo_name\": \"\",\n            \"type_combo\": \"0\",\n            \"quantity_combo\": \"1\",\n            \"date_start\": \"1598843202\",\n            \"date_end\": \"1598843202\",\n            \"type_group\": \"0\",\n            \"type_show\": \"1\",\n            \"trust_love\": \"9\",\n            \"is_hot\": \"1\",\n            \"is_cf\": \"0\",\n            \"type_sale\": \"0\",\n            \"position\": \"1000\",\n            \"table_link\": \"\",\n            \"total_sales\": \"1\",\n            \"actived\": \"1\",\n            \"is_online\": \"0\",\n            \"max_number\": \"0\",\n            \"step_number\": \"1\",\n            \"deal_number\": \"0\",\n            \"is_outstock\": \"0\",\n            \"is_freeship\": 0,\n            \"ship_label\": \"\",\n            \"total_buy\": \"0\",\n            \"date_add\": \"1598843149\",\n            \"date_upd\": \"1706522264\",\n            \"deleted\": \"0\",\n            \"api_page\": \"product\",\n            \"id_page\": \"47200\",\n            \"name_page\": \"\",\n            \"score\": \"0\",\n            \"image_top\": \"\",\n            \"gross_margin\": \"5\"\n        },\n        {\n            \"id_product\": \"51730\",\n            \"product_name\": \"Sữa GrowPLUS+ Hộp 180ml (lốc 4 hộp)\",\n            \"image_cover\": \"https://cdn1.concung.com/combo/2023/08/600x331-998-2021-06-51730-73468-large_mobile-sua-growplus-hop-180ml-loc-4-hop.png\",\n            \"height_mobile\": \"280\",\n            \"category_name\": \"Sữa bột pha sẵn\",\n            \"id_page_segment\": \"1\",\n            \"id_recommendation\": \"Concung_A1\",\n            \"id_category\": \"842\",\n            \"reference\": \"4327000000002\",\n            \"id_manufacturer\": \"1124\",\n            \"image_logo\": \"\",\n            \"manufacture_name\": \"GrowPLUS\",\n            \"url_link\": \"https://123test.concung.com/sua-tuoi-cac-loai/sua-growplus-hop-180ml-loc-4-hop-51730.html\",\n            \"text_buy\": \"1M+\",\n            \"total_product\": \"0\",\n            \"rating_number\": \"170\",\n            \"rating_star\": \"5\",\n            \"show_rating\": \"1\",\n            \"quantity\": \"21353\",\n            \"text_price\": \"\",\n            \"price\": \"43000\",\n            \"save_price\": \"0\",\n            \"real_price\": \"43000\",\n            \"reduction_price\": \"0\",\n            \"reduction_percent\": \"0\",\n            \"reduction_from\": \"1621492521\",\n            \"reduction_to\": \"1684564521\",\n            \"promotion_id\": \"0\",\n            \"promotion_no\": \"\",\n            \"have_gift\": \"1\",\n            \"gift_content\": \"Tặng Xe kéo thú nhún nhỏ (mẫu bất kỳ) hoặc PQT thời trang, đồ chơi 50,000 đồng khi mua 3 thùng 110ml/ 2 thùng 180ml sữa nước GrowPLUS+ Đỏ từ 1.030.000 đồng\",\n            \"ui_type\": \"0\",\n            \"is_show_filter\": \"0\",\n            \"comment_number\": \"239\",\n            \"top_text\": \"\",\n            \"middle_text\": \"\",\n            \"center_text\": \"\",\n            \"bottom_text\": \"\",\n            \"is_newdate\": \"0\",\n            \"event_uid\": \"\",\n            \"event_url\": \"\",\n            \"is_take_promotion\": \"0\",\n            \"reference_gift\": \"\",\n            \"gift_list\": [],\n            \"link_video\": \"\",\n            \"only_online\": \"0\",\n            \"image_thumb\": \"\",\n            \"thumb_width\": \"0\",\n            \"thumb_height\": \"0\",\n            \"image_frame\": \"\",\n            \"thumb_start\": \"1621492521\",\n            \"thumb_end\": \"1621492521\",\n            \"combo_id\": \"\",\n            \"id_category_erp\": \"3833\",\n            \"category_name_erp\": \"\",\n            \"combo_name\": \"\",\n            \"type_combo\": \"0\",\n            \"quantity_combo\": \"1\",\n            \"date_start\": \"1621492521\",\n            \"date_end\": \"1621492521\",\n            \"type_group\": \"0\",\n            \"type_show\": \"0\",\n            \"trust_love\": \"446\",\n            \"is_hot\": \"1\",\n            \"is_cf\": \"0\",\n            \"type_sale\": \"0\",\n            \"position\": \"1000\",\n            \"table_link\": \"\",\n            \"total_sales\": \"36\",\n            \"actived\": \"1\",\n            \"is_online\": \"0\",\n            \"max_number\": \"20\",\n            \"step_number\": \"20\",\n            \"deal_number\": \"100\",\n            \"is_outstock\": \"0\",\n            \"is_freeship\": 0,\n            \"ship_label\": \"https://123test.concung.com/img/res/ship_label_new/alone_list_sieu_toc_1h.png\",\n            \"total_buy\": \"6443\",\n            \"date_add\": \"1621492420\",\n            \"date_upd\": \"1696494512\",\n            \"deleted\": \"0\",\n            \"api_page\": \"product\",\n            \"id_page\": \"51730\",\n            \"name_page\": \"\",\n            \"score\": \"0\",\n            \"image_top\": \"\",\n            \"gross_margin\": \"1171613\"\n        },\n        {\n            \"id_product\": \"45443\",\n            \"product_name\": \"Bánh Ăn Dặm Gerber vị Táo Dâu 42g\",\n            \"image_cover\": \"https://cdn1.concung.com/2020/05/45443-60416-large_mobile/banh-an-dam-gerber-vi-tao-dau-42g.jpg\",\n            \"height_mobile\": \"280\",\n            \"category_name\": \"Bột, bánh ăn dặm\",\n            \"id_page_segment\": \"1\",\n            \"id_recommendation\": \"Concung_A1\",\n            \"id_category\": \"587\",\n            \"reference\": \"0029110000039\",\n            \"id_manufacturer\": \"449\",\n            \"image_logo\": \"\",\n            \"manufacture_name\": \"Gerber\",\n            \"url_link\": \"https://123test.concung.com/bot-an-dam/banh-an-dam-gerber-vi-tao-dau-42g-45443.html\",\n            \"text_buy\": \"200K+\",\n            \"total_product\": \"0\",\n            \"rating_number\": \"1\",\n            \"rating_star\": \"5\",\n            \"show_rating\": \"1\",\n            \"quantity\": \"978\",\n            \"text_price\": \"\",\n            \"price\": \"69000\",\n            \"save_price\": \"0\",\n            \"real_price\": \"69000\",\n            \"reduction_price\": \"0\",\n            \"reduction_percent\": \"0\",\n            \"reduction_from\": \"1627838402\",\n            \"reduction_to\": \"1628097602\",\n            \"promotion_id\": \"0\",\n            \"promotion_no\": \"\",\n            \"have_gift\": \"0\",\n            \"gift_content\": \"\",\n            \"ui_type\": \"0\",\n            \"is_show_filter\": \"0\",\n            \"comment_number\": \"91\",\n            \"top_text\": \"\",\n            \"middle_text\": \"\",\n            \"center_text\": \"\",\n            \"bottom_text\": \"\",\n            \"is_newdate\": \"0\",\n            \"event_uid\": \"\",\n            \"event_url\": \"\",\n            \"is_take_promotion\": \"0\",\n            \"reference_gift\": \"\",\n            \"gift_list\": [],\n            \"link_video\": \"\",\n            \"only_online\": \"0\",\n            \"image_thumb\": \"\",\n            \"thumb_width\": \"90\",\n            \"thumb_height\": \"137\",\n            \"image_frame\": \"\",\n            \"thumb_start\": \"1262278800\",\n            \"thumb_end\": \"1262278800\",\n            \"combo_id\": \"\",\n            \"id_category_erp\": \"1341\",\n            \"category_name_erp\": \"Thực phẩm;Bánh ăn dặm;Puff;Gerber (Mỹ\",\n            \"combo_name\": \"\",\n            \"type_combo\": \"0\",\n            \"quantity_combo\": \"1\",\n            \"date_start\": \"1262278800\",\n            \"date_end\": \"1262278800\",\n            \"type_group\": \"0\",\n            \"type_show\": \"1\",\n            \"trust_love\": \"398\",\n            \"is_hot\": \"1\",\n            \"is_cf\": \"0\",\n            \"type_sale\": \"0\",\n            \"position\": \"1000\",\n            \"table_link\": \"\",\n            \"total_sales\": \"59\",\n            \"actived\": \"1\",\n            \"is_online\": \"0\",\n            \"max_number\": \"0\",\n            \"step_number\": \"1\",\n            \"deal_number\": \"0\",\n            \"is_outstock\": \"0\",\n            \"is_freeship\": 0,\n            \"ship_label\": \"\",\n            \"total_buy\": \"0\",\n            \"date_add\": \"1588312127\",\n            \"date_upd\": \"1713240298\",\n            \"deleted\": \"0\",\n            \"api_page\": \"product\",\n            \"id_page\": \"45443\",\n            \"name_page\": \"\",\n            \"score\": \"0\",\n            \"image_top\": \"\",\n            \"gross_margin\": \"231503\"\n        },\n        {\n            \"id_product\": \"51729\",\n            \"product_name\": \"Sữa GrowPLUS+ Hộp 110ml (lốc 4 hộp)\",\n            \"image_cover\": \"https://cdn1.concung.com/2021/06/51729-73467-large_mobile/sua-growplus-hop-110ml-loc-4-hop.png\",\n            \"height_mobile\": \"280\",\n            \"category_name\": \"Sữa bột pha sẵn\",\n            \"id_page_segment\": \"1\",\n            \"id_recommendation\": \"Concung_A1\",\n            \"id_category\": \"842\",\n            \"reference\": \"4337000000001\",\n            \"id_manufacturer\": \"1124\",\n            \"image_logo\": \"\",\n            \"manufacture_name\": \"GrowPLUS\",\n            \"url_link\": \"https://123test.concung.com/sua-tuoi-cac-loai/sua-growplus-hop-110ml-loc-4-hop-51729.html\",\n            \"text_buy\": \"1M+\",\n            \"total_product\": \"0\",\n            \"rating_number\": \"167\",\n            \"rating_star\": \"5\",\n            \"show_rating\": \"1\",\n            \"quantity\": \"18362\",\n            \"text_price\": \"\",\n            \"price\": \"29000\",\n            \"save_price\": \"0\",\n            \"real_price\": \"29000\",\n            \"reduction_price\": \"0\",\n            \"reduction_percent\": \"0\",\n            \"reduction_from\": \"1680663894\",\n            \"reduction_to\": \"1680663894\",\n            \"promotion_id\": \"0\",\n            \"promotion_no\": \"\",\n            \"have_gift\": \"1\",\n            \"gift_content\": \"Tặng Xe kéo thú nhún nhỏ (mẫu bất kỳ) hoặc PQT thời trang, đồ chơi 50,000 đồng khi mua 3 thùng 110ml/ 2 thùng 180ml sữa nước GrowPLUS+ Đỏ từ 1.030.000 đồng\",\n            \"ui_type\": \"0\",\n            \"is_show_filter\": \"0\",\n            \"comment_number\": \"209\",\n            \"top_text\": \"\",\n            \"middle_text\": \"\",\n            \"center_text\": \"\",\n            \"bottom_text\": \"\",\n            \"is_newdate\": \"0\",\n            \"event_uid\": \"\",\n            \"event_url\": \"\",\n            \"is_take_promotion\": \"0\",\n            \"reference_gift\": \"\",\n            \"gift_list\": [],\n            \"link_video\": \"\",\n            \"only_online\": \"0\",\n            \"image_thumb\": \"\",\n            \"thumb_width\": \"0\",\n            \"thumb_height\": \"0\",\n            \"image_frame\": \"\",\n            \"thumb_start\": \"1680663894\",\n            \"thumb_end\": \"1680663894\",\n            \"combo_id\": \"\",\n            \"id_category_erp\": \"6697\",\n            \"category_name_erp\": \"\",\n            \"combo_name\": \"\",\n            \"type_combo\": \"0\",\n            \"quantity_combo\": \"0\",\n            \"date_start\": \"1680663894\",\n            \"date_end\": \"1680663894\",\n            \"type_group\": \"0\",\n            \"type_show\": \"0\",\n            \"trust_love\": \"412\",\n            \"is_hot\": \"1\",\n            \"is_cf\": \"0\",\n            \"type_sale\": \"0\",\n            \"position\": \"1000\",\n            \"table_link\": \"\",\n            \"total_sales\": \"24\",\n            \"actived\": \"1\",\n            \"is_online\": \"0\",\n            \"max_number\": \"1\",\n            \"step_number\": \"1\",\n            \"deal_number\": \"1000\",\n            \"is_outstock\": \"0\",\n            \"is_freeship\": 0,\n            \"ship_label\": \"\",\n            \"total_buy\": \"3571\",\n            \"date_add\": \"1621492173\",\n            \"date_upd\": \"1680664825\",\n            \"deleted\": \"0\",\n            \"api_page\": \"product\",\n            \"id_page\": \"51729\",\n            \"name_page\": \"\",\n            \"score\": \"0\",\n            \"image_top\": \"\",\n            \"gross_margin\": \"1123244\"\n        }\n    ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "9d77bd45-a148-4d87-8738-1a2b6ae95a61",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "39ba8b13-1fa1-45e1-91fb-670051958753",
+      "type": "http",
+      "documentation": "api lấy voucher giảm giá của cart",
+      "method": "post",
+      "endpoint": "customer/getGiftCode",
+      "responses": [
+        {
+          "uuid": "410205d5-16f7-4db0-b9e8-1241016cebff",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109413,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"Cashback 80.000đ\",\n      \"gift_content\": \"Concung.com: Ma PQT 2477-8497-7682-9915 nhan Cashback 80.000đ, han su dung den ngay 11/02/2050\",\n      \"gift_code\": \"2477-8497-7682-9915\",\n      \"manage_code\": \"1042292076380\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"Cashback 80.000đ ... HSD: 26/09-11/02\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 0,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1664182601,\n      \"date_expire\": 2528211599,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 9388\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109414,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"Cashback 80.000đ\",\n      \"gift_content\": \"Concung.com: Ma PQT 0810-9301-0931-3921 nhan Cashback 80.000đ, han su dung den ngay 08/02/2050\",\n      \"gift_code\": \"0810-9301-0931-3921\",\n      \"m anage_code\": \"1945332046160\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"Cashback 80.000đ ... HSD: 23/09-08/02\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 0,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1663925085,\n      \"date_expire\": 2527952399,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 9385\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109414,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"Cashback 8.000đ\",\n      \"gift_content\": \"Concung.com: Ma PQT 2528-0339-5847-6291 nhan Cashback 8.000đ, han su dung den ngay 22/06/2025\",\n      \"gift_code\": \"2528-0339-5847-6291\",\n      \"manage_code\": \"1308132087990\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"Cashback 8.000đ ... HSD: 26/09-22/06\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 0,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1664160339,\n      \"date_expire\": 1750611599,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 388\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109415,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"Cashback 8.000đ\",\n      \"gift_content\": \"Concung.com: Ma PQT 9479-9960-8197-9955 nhan Cashback 8.000đ, han su dung den ngay 22/06/2025\",\n      \"gift_code\": \"9479-9960-8197-9955\",\n      \"manage_code\": \"1838528000443\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"Cashback 8.000đ ... HSD: 26/09-22/06\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 0,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1664158659,\n      \"date_expire\": 1750611599,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 388\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109416,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"Cashback 8.000đ\",\n      \"gift_content\": \"Concung.com: Ma PQT 6530-5535-5061-7167 nhan Cashback 8.000đ, han su dung den ngay 22/06/2025\",\n      \"gift_code\": \"6530-5535-5061-7167\",\n      \"manage_code\": \"1520413100443\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"Cashback 8.000đ ... HSD: 26/09-22/06\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 0,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1664157898,\n      \"date_expire\": 1750611599,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 388\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109419,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"Cashback 800.000đ\",\n      \"gift_content\": \"Concung.com: Ma PQT 8176-7182-2902-1807 nhan Cashback 800.000đ, han su dung den ngay 22/06/2025\",\n      \"gift_code\": \"8176-7182-2902-1807\",\n      \"manage_code\": \"1287657035753\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"Cashback 800.000đ ... HSD: 26/09-22/06\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 0,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1664161675,\n      \"date_expire\": 1750611599,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 388\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109418,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"Cashback 8.000đ\",\n      \"gift_content\": \"Concung.com: Ma PQT 6254-8713-2865-9675 nhan Cashback 8.000đ, han su dung den ngay 22/06/2025\",\n      \"gift_code\": \"6254-8713-2865-9675\",\n      \"manage_code\": \"1680536003223\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"Cashback 8.000đ ... HSD: 26/09-22/06\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 0,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1664160985,\n      \"date_expire\": 1750611599,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 388\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109419,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"Cashback 8.000đ\",\n      \"gift_content\": \"Concung.com: Ma PQT 8152-4987-0499-4780 nhan Cashback 8.000đ, han su dung den ngay 22/06/2025\",\n      \"gift_code\": \"8152-4987-0499-4780\",\n      \"manage_code\": \"1720373108443\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"Cashback 8.000đ ... HSD: 26/09-22/06\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 0,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1664182125,\n      \"date_expire\": 1750611599,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 388\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109396,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"Phiếu mua hàng thời trang đồ chơi 50.000VNĐ\",\n      \"gift_content\": \"Concung.com: Ma PQT 0059-4498-4181-0884 nhan Phiếu mua hàng thời trang đồ chơi 50.000VNĐ, han su dung den ngay 21/04/2025\",\n      \"gift_code\": \"0059-4498-4181-0884\",\n      \"manage_code\": \"1580213266110\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"Phiếu mua hàng thời trang đồ chơi 50.000VNĐ ... HSD: 26/07-21/04\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 50000,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1658822637,\n      \"date_expire\": 1745254799,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 326\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109397,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"Phiếu mua hàng thời trang đồ chơi 50.000VNĐ\",\n      \"gift_content\": \"Concung.com: Ma PQT 0268-6650-4973-4084 nhan Phiếu mua hàng thời trang đồ chơi 50.000VNĐ, han su dung den ngay 21/04/2025\",\n      \"gift_code\": \"0268-6650-4973-4084\",\n      \"manage_code\": \"1322520446110\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"Phiếu mua hàng thời trang đồ chơi 50.000VNĐ ... HSD: 26/07-21/04\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 50000,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1658822637,\n      \"date_expire\": 1745254799,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 326\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109401,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"PQT mua tã Moony trị giá 365.000 đồng\",\n      \"gift_content\": \"Concung.com: Ma PQT 3506-4150-7042-4505 nhan PQT mua tã Moony trị giá 365.000 đồng, han su dung den ngay 20/04/2025\",\n      \"gift_code\": \"3506-4150-7042-4505\",\n      \"manage_code\": \"1570143315280\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"PQT mua tã Moony trị giá 365.000 đồng ... HSD: 25/07-20/04\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 0,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1658730768,\n      \"date_expire\": 1745168399,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 325\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109402,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"PQT mua tã Moony trị giá 365.000 đồng\",\n      \"gift_content\": \"Concung.com: Ma PQT 5932-4750-6036-9878 nhan PQT mua tã Moony trị giá 365.000 đồng, han su dung den ngay 20/04/2025\",\n      \"gift_code\": \"5932-4750-6036-9878\",\n      \"manage_code\": \"1609396435280\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"PQT mua tã Moony trị giá 365.000 đồng ... HSD: 25/07-20/04\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 0,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1658730768,\n      \"date_expire\": 1745168399,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 325\n    },\n    {\n      \"voucher_id\": 0,\n      \"percent\": 0,\n      \"gift_code_id\": 109400,\n      \"gift_image\": \"\",\n      \"width_image\": 0,\n      \"height_image\": 0,\n      \"customer_phone\": \"0969150217\",\n      \"gift_name\": \"Phiếu mua hàng thời trang đồ chơi 50.000VNĐ\",\n      \"gift_content\": \"Concung.com: Ma PQT 8119-4084-0271-0656 nhan Phiếu mua hàng thời trang đồ chơi 50.000VNĐ, han su dung den ngay 20/04/2025\",\n      \"gift_code\": \"8119-4084-0271-0656\",\n      \"manage_code\": \"1501028866110\",\n      \"voucher_type_id\": 0,\n      \"manu_desc\": \"Phiếu mua hàng thời trang đồ chơi 50.000VNĐ ... HSD: 25/07-20/04\",\n      \"manufacturer_name\": \"Voucher\",\n      \"price_voucher\": 50000,\n      \"actived\": 1,\n      \"reason\": \"\",\n      \"date_add\": 1658730768,\n      \"date_expire\": 1745168399,\n      \"gift_status\": \"Chưa sử dụng\",\n      \"is_online\": 1,\n      \"is_used\": \"0\",\n      \"deleted\": \"0\",\n      \"sort\": 325\n    },\n    {\n      \"gift_code_id\": \"9719\",\n      \"gift_image\": \"\",\n      \"width_image\": \"500\",\n      \"height_image\": \"250\",\n      \"customer_phone\": \"0969150217\",\n      \"manufacturer_name\": \"Tất cả sản phẩm\",\n      \"manu_desc\": \" HSD: 24/08-24/12\",\n      \"gift_name\": \"cho đơn online từ 199K\",\n      \"gift_content\": \"Ma PQT 7652-5687-5739-4037 (1692891010548164)\",\n      \"gift_code\": \"7652-5687-5739-4037\",\n      \"manage_code\": \"1692891010548164\",\n      \"price_voucher\": \"50000\",\n      \"voucher_type_id\": \"2\",\n      \"gift_status\": \"Chưa cập nhật\",\n      \"is_online\": \"1\",\n      \"is_used\": \"0\",\n      \"date_add\": \"1692865781\",\n      \"date_expire\": \"1735059599\",\n      \"actived\": \"1\",\n      \"reason\": \"\",\n      \"deleted\": \"0\",\n      \"sort\": \"10\",\n      \"voucher_id\": \"635\",\n      \"percent\": \"0.00\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "f57194c9-bdf3-4484-b8fa-a6d90f9daee8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "75e70ed7-73b9-43c2-8364-14fbb539b11b",
+      "type": "http",
+      "documentation": "api lấy phương thức thanh toán",
+      "method": "get",
+      "endpoint": "payment/getPayment",
+      "responses": [
+        {
+          "uuid": "c72c1df9-b390-4137-9f0b-0a6e9ba9e8c4",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n        {\n            \"id_payment\": \"1\",\n            \"payment_name\": \"Thanh toán khi nhận hàng\",\n            \"payment_icon\": \"https://concung.com/img/res/payment/cod.png\",\n            \"payment_content\": \"\",\n            \"position\": \"2\",\n            \"is_default\": \"1\",\n            \"is_show\": \"0\",\n            \"payment_hint\": \"\",\n            \"actived\": \"1\",\n            \"deleted\": \"0\",\n            \"payment_desc\": \"Thanh toán COD\",\n            \"discount\": \"\",\n            \"payment_notice\": \"\",\n            \"url_link\": \"\",\n            \"id_customer_token\": \"0\",\n            \"card_number\": \"0\",\n            \"bank_code\": \"0\",\n            \"payment_installment\": []\n        },\n        {\n            \"id_payment\": \"38\",\n            \"payment_name\": \"Thanh toán ví ZaloPay\",\n            \"payment_icon\": \"https://concung.com/img/res/payment/zalopay.png\",\n            \"payment_content\": \"<span style=\\\"color:blue\\\">Giảm 30.000đ cho đơn từ 900.000đ khi nhập mã \\\"CONYEUT9\\\" thanh toán ví ZaloPay</span>\",\n            \"position\": \"1\",\n            \"is_default\": \"0\",\n            \"is_show\": \"1\",\n            \"payment_hint\": \"\",\n            \"actived\": \"1\",\n            \"deleted\": \"0\",\n            \"payment_desc\": \"Ví ZaloPay\",\n            \"discount\": \"Giảm 30k\",\n            \"payment_notice\": \"\",\n            \"url_link\": \"\",\n            \"id_customer_token\": \"0\",\n            \"card_number\": \"0\",\n            \"bank_code\": \"0\",\n            \"payment_installment\": []\n        },\n        {\n            \"id_payment\": \"40\",\n            \"payment_name\": \"Thanh toán ví MoMo\",\n            \"payment_icon\": \"https://concung.com/img/res/payment/momo.png\",\n            \"payment_content\": \"\",\n            \"position\": \"7\",\n            \"is_default\": \"0\",\n            \"is_show\": \"0\",\n            \"payment_hint\": \"\",\n            \"actived\": \"1\",\n            \"deleted\": \"0\",\n            \"payment_desc\": \"Ví Momo\",\n            \"discount\": \"Giảm 10%\",\n            \"payment_notice\": \"\",\n            \"url_link\": \"https://123test.concung.com/chinh-sach-giao-hang.html?app=1\",\n            \"id_customer_token\": \"0\",\n            \"card_number\": \"0\",\n            \"bank_code\": \"0\",\n            \"payment_installment\": []\n        },\n        {\n            \"id_payment\": \"41\",\n            \"payment_name\": \"Thanh toán ví VNPay\",\n            \"payment_icon\": \"https://concung.com/img/res/payment/vnpay.png\",\n            \"payment_content\": \"<span style=\\\"color:#111\\\"><span style=\\\"font-weight:500\\\" class=\\\"font-medium\\\">Thanh toán VNPAY giảm thêm 10% (tối đa 50.000đ).</span><br/> Áp dụng từ ngày 01-30/06, 2022 - <a href=\\\"#\\\" style=\\\"color:#FF379B\\\">Xem chi tiết</a></span>\",\n            \"position\": \"5\",\n            \"is_default\": \"0\",\n            \"is_show\": \"1\",\n            \"payment_hint\": \"\",\n            \"actived\": \"1\",\n            \"deleted\": \"0\",\n            \"payment_desc\": \"Ví VNPay\",\n            \"discount\": \"Giảm 40k\",\n            \"payment_notice\": \"\",\n            \"url_link\": \"https://concung.com/chinh-sach-giao-hang-bv2052.html?app=1\",\n            \"id_customer_token\": \"0\",\n            \"card_number\": \"0\",\n            \"bank_code\": \"0\",\n            \"payment_installment\": []\n        },\n        {\n            \"id_payment\": \"42\",\n            \"payment_name\": \"Thanh toán ví ShopeePay\",\n            \"payment_icon\": \"https://concung.com/img/res/payment/shopeepay.png\",\n            \"payment_content\": \"\",\n            \"position\": \"8\",\n            \"is_default\": \"0\",\n            \"is_show\": \"0\",\n            \"payment_hint\": \"\",\n            \"actived\": \"1\",\n            \"deleted\": \"0\",\n            \"payment_desc\": \"Ví Shopeepay\",\n            \"discount\": \"\",\n            \"payment_notice\": \"\",\n            \"url_link\": \"\",\n            \"id_customer_token\": \"0\",\n            \"card_number\": \"0\",\n            \"bank_code\": \"0\",\n            \"payment_installment\": []\n        },\n        {\n            \"id_payment\": \"43\",\n            \"payment_name\": \"Thẻ tín dụng / Thẻ ghi nợ\",\n            \"payment_icon\": \"https://concung.com/img/res/payment/the_tin_dung.png\",\n            \"payment_content\": \"\",\n            \"position\": \"6\",\n            \"is_default\": \"0\",\n            \"is_show\": \"0\",\n            \"payment_hint\": \"\",\n            \"actived\": \"1\",\n            \"deleted\": \"0\",\n            \"payment_desc\": \"Visa, MasterCard, JCB\",\n            \"discount\": \"\",\n            \"payment_notice\": \"\",\n            \"url_link\": \"\",\n            \"id_customer_token\": \"0\",\n            \"card_number\": \"0\",\n            \"bank_code\": \"0\",\n            \"payment_installment\": []\n        },\n        {\n            \"id_payment\": \"44\",\n            \"payment_name\": \"Thẻ ATM nội địa\",\n            \"payment_icon\": \"https://concung.com/img/res/payment/atm_noi_dia.png\",\n            \"payment_content\": \"\",\n            \"position\": \"3\",\n            \"is_default\": \"0\",\n            \"is_show\": \"0\",\n            \"payment_hint\": \"\",\n            \"actived\": \"1\",\n            \"deleted\": \"0\",\n            \"payment_desc\": \"Internet Banking\",\n            \"discount\": \"\",\n            \"payment_notice\": \"\",\n            \"url_link\": \"4\",\n            \"id_customer_token\": \"0\",\n            \"card_number\": \"0\",\n            \"bank_code\": \"0\",\n            \"payment_installment\": []\n        },\n        {\n            \"id_payment\": \"45\",\n            \"payment_name\": \"Thanh toán VietQR\",\n            \"payment_icon\": \"https://123test.concung.com/img/adds/2023/12/10029-mobilewallet-1702546123.png\",\n            \"payment_content\": \"\",\n            \"position\": \"11\",\n            \"is_default\": \"0\",\n            \"is_show\": \"0\",\n            \"payment_hint\": \"Xem hướng dẫn\",\n            \"actived\": \"1\",\n            \"deleted\": \"0\",\n            \"payment_desc\": \"VietQR\",\n            \"discount\": \"\",\n            \"payment_notice\": \"\",\n            \"url_link\": \"\",\n            \"id_customer_token\": \"0\",\n            \"card_number\": \"0\",\n            \"bank_code\": \"0\",\n            \"payment_installment\": []\n        },\n        {\n            \"id_payment\": \"46\",\n            \"payment_name\": \"Chuyển khoản ngân hàng\",\n            \"payment_icon\": \"https://123test.concung.com/img/payment/vietqr.png\",\n            \"payment_content\": \"\",\n            \"position\": \"0\",\n            \"is_default\": \"0\",\n            \"is_show\": \"0\",\n            \"payment_hint\": \"Xem hướng dẫn Qrco\",\n            \"actived\": \"1\",\n            \"deleted\": \"0\",\n            \"payment_desc\": \"Chuyển khoản ngân hàng\",\n            \"discount\": \"\",\n            \"payment_notice\": \"\",\n            \"url_link\": \"https://concung.com/tin-khuyen-mai/huong-dan-thanh-toan-qrcode-bv2457.html\",\n            \"id_customer_token\": \"0\",\n            \"card_number\": \"0\",\n            \"bank_code\": \"0\",\n            \"payment_installment\": []\n        },\n        {\n            \"id_payment\": \"47\",\n            \"payment_name\": \"ZaloThẻ tín dụng / Thẻ ghi nợ\",\n            \"payment_icon\": \"https://concung.com/img/res/payment/the_tin_dung.png\",\n            \"payment_content\": \"\",\n            \"position\": \"4\",\n            \"is_default\": \"0\",\n            \"is_show\": \"0\",\n            \"payment_hint\": \"\",\n            \"actived\": \"1\",\n            \"deleted\": \"0\",\n            \"payment_desc\": \"Visa, MasterCard, JCB\",\n            \"discount\": \"\",\n            \"payment_notice\": \"\",\n            \"url_link\": \"\",\n            \"id_customer_token\": \"0\",\n            \"card_number\": \"0\",\n            \"bank_code\": \"0\",\n            \"payment_installment\": []\n        },\n        {\n            \"id_payment\": \"48\",\n            \"payment_name\": \"Zalo Thẻ ATM nội địa\",\n            \"payment_icon\": \"https://concung.com/img/res/payment/atm_noi_dia.png\",\n            \"payment_content\": \"\",\n            \"position\": \"3\",\n            \"is_default\": \"0\",\n            \"is_show\": \"0\",\n            \"payment_hint\": \"\",\n            \"actived\": \"1\",\n            \"deleted\": \"0\",\n            \"payment_desc\": \"Internet Banking\",\n            \"discount\": \"\",\n            \"payment_notice\": \"\",\n            \"url_link\": \"\",\n            \"id_customer_token\": \"0\",\n            \"card_number\": \"0\",\n            \"bank_code\": \"0\",\n            \"payment_installment\": []\n        }\n    ]\n\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "27f6b3fc-d98e-4175-b18b-c48d685423f6",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "5dbd3c2c-658b-44d3-be43-ead9639c3443",
+      "type": "http",
+      "documentation": "api suggest để khách hàng mua thêm sp",
+      "method": "post",
+      "endpoint": "cart/checkValidate",
+      "responses": [
+        {
+          "uuid": "336e8b2a-0573-42db-9f2f-bb9817fa03b1",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"product_id\": 0,\n      \"id_reason_type\": 6,\n      \"reason_name\": \"Mua thêm 685.000đ để nhận 100% Hoàn ngẫu nhiên 800K/80K/8K.\",\n      \"limit_quantity\": 50\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "010b2356-43be-4f9c-a03a-bf64441a5f65",
+      "type": "http",
+      "documentation": "api lấy store gần đây và phí ship",
+      "method": "post",
+      "endpoint": "payment/getStoreAndShipFee",
+      "responses": [
+        {
+          "uuid": "ff74ab23-d391-46eb-9187-eb6ed2a22a95",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id_store\": 324,\n      \"name\": \"Con Cưng: HCM - 326 Lê Văn Lương\",\n      \"address\": \"Con Cưng: 326 Lê Văn Lương, Phường Tân Hưng, Quận 7, TPHCM.\",\n      \"distance\": 0.9,\n      \"ofsuid\": \"8cd665ec-d105-46e0-b551-abc0d6aa36f7\",\n      \"is_show_package\": 0,\n      \"shipfee\": 0,\n      \"notification\": \"\",\n      \"url_link\": \"\",\n      \"api_page\": \"\",\n      \"id_page\": \"\",\n      \"name_page\": \"\",\n      \"suggest_product\": [],\n      \"ship_services\": [\n        {\n          \"today\": [\n            {\n              \"title\": \"Hôm nay 30/05\",\n              \"title_meta\": \"Hôm nay\",\n              \"start_time\": \"18:00\",\n              \"time\": \"18:00-19:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Hôm nay 30/05\",\n              \"title_meta\": \"Hôm nay\",\n              \"start_time\": \"19:00\",\n              \"time\": \"19:00-20:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Hôm nay 30/05\",\n              \"title_meta\": \"Hôm nay\",\n              \"start_time\": \"20:00\",\n              \"time\": \"20:00-21:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            }\n          ],\n          \"tomorrow\": [\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"09:00\",\n              \"time\": \"09:00-10:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"10:00\",\n              \"time\": \"10:00-11:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"11:00\",\n              \"time\": \"11:00-12:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"12:00\",\n              \"time\": \"12:00-13:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"13:00\",\n              \"time\": \"13:00-14:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"14:00\",\n              \"time\": \"14:00-15:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"15:00\",\n              \"time\": \"15:00-16:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"16:00\",\n              \"time\": \"16:00-17:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"17:00\",\n              \"time\": \"17:00-18:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"18:00\",\n              \"time\": \"18:00-19:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"19:00\",\n              \"time\": \"19:00-20:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            },\n            {\n              \"title\": \"Ngày mai 31/05\",\n              \"title_meta\": \"Ngày mai\",\n              \"start_time\": \"20:00\",\n              \"time\": \"20:00-21:00\",\n              \"shipping_service\": 1,\n              \"ship_fee\": 23000,\n              \"shipping_customer_pay\": 23000\n            }\n          ],\n          \"ship_name\": \"Giao hỏa tốc\",\n          \"ship_fee\": 23000,\n          \"shipping_customer_pay\": 23000,\n          \"shipping_service\": 1,\n          \"shipping_type\": 1,\n          \"is_change_time\": true,\n          \"priority\": 1,\n          \"intend_time_minutes\": 120,\n          \"intend_time_note\": \"<div style=\\\"font-family: Helvetica Neue !important; font-size: 1.025rem !important; font-weight: 400 !important; line-height: 1.4285714286 !important; color: #555555 !important; text-align: left;\\\">Nhận trong <b><font color=\\\"#FF379B\\\">15-60 phút tới</font></b></div>\",\n          \"ship_image\": \"https://cdn1.concung.com/img/res/ship_label/step2_sieu_toc.png\",\n          \"ship_icon\": \"https://cdn1.concung.com/img/res/ship_label/sieu_toc_1h.png\",\n          \"intend_time\": 18,\n          \"min_time\": 120,\n          \"min_date\": \"2024-05-30\",\n          \"time_from\": 9,\n          \"time_to\": 21,\n          \"is_default\": true\n        }\n      ]\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "2acc035c-bb6a-46d5-b0cd-dc69cfab4a65",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "49ea3672-d4d9-4cd5-96db-5fea0ad6442b",
+      "type": "http",
+      "documentation": "api lấy điểm thưởng của khách ",
+      "method": "post",
+      "endpoint": "customer/getBonusPoint",
+      "responses": [
+        {
+          "uuid": "5ca8baf2-00a6-4de6-8da4-9d7ca1632c7a",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n        {\n            \"customer_phone\": \"0969150217\",\n            \"bonus_point\": 28101000,\n            \"bonus_point_min\": 30000,\n            \"min_order\": 30000,\n            \"not_apply_list\": [\n                \"3972000000001\",\n                \"1920000001408\",\n                \"1920000002084\",\n                \"1920000001138\",\n                \"1920000001115\",\n                \"1920000000974\",\n                \"1920000000977\",\n                \"1920000001282\",\n                \"1920000000976\",\n                \"5837000000001\",\n                \"1920000001126\",\n                \"1920000001124\",\n                \"1920000001123\",\n                \"1920000001163\",\n                \"1920000001285\",\n                \"1920000001284\",\n                \"1920000001283\",\n                \"1920000000975\",\n                \"1920000001394\",\n                \"1920000001395\",\n                \"1920000001164\"\n            ]\n        }\n    ]\n\n\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "512e3cff-b8e5-4762-b43a-0bc32cebace7",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 406,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -2854,7 +3261,19 @@
     },
     {
       "type": "folder",
-      "uuid": "e6b87157-e7d9-4610-9f0c-59fc059ae269"
+      "uuid": "333c80b5-2550-40d6-b733-270d7c285cdf"
+    },
+    {
+      "type": "folder",
+      "uuid": "9a7ee1e3-8c98-4895-b261-00a57939f080"
+    },
+    {
+      "type": "folder",
+      "uuid": "3cdcca54-4d68-45af-be02-3976cea6c184"
+    },
+    {
+      "type": "folder",
+      "uuid": "b0873c3e-20ec-48b1-bf24-6ee4579dfa17"
     }
   ],
   "proxyMode": false,
