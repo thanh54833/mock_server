@@ -65,6 +65,7 @@ for route in mockoon_data['routes']:
         method: {
             "description": "",
             "responses": responses,
+            "summary": route['documentation'],
             "tags": [
                 path.split("/")[1]
             ]
