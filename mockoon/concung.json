@@ -244,6 +244,16 @@
           "uuid": "8dc1acef-d659-47cb-8346-cfa00ea8ea69"
         }
       ]
+    },
+    {
+      "uuid": "e6b87157-e7d9-4610-9f0c-59fc059ae269",
+      "name": "splash",
+      "children": [
+        {
+          "type": "route",
+          "uuid": "baecff83-60e2-424f-9d43-9cad579af504"
+        }
+      ]
     }
   ],
   "routes": [
@@ -2782,6 +2792,35 @@
         }
       ],
       "responseMode": null
+    },
+    {
+      "uuid": "baecff83-60e2-424f-9d43-9cad579af504",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "splash/get_splash",
+      "responses": [
+        {
+          "uuid": "67aeee5d-4131-4f84-893b-b1f7b9c98ea8",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -2812,6 +2851,10 @@
     {
       "type": "folder",
       "uuid": "b6ba2962-a133-4e90-a2b6-b180becab033"
+    },
+    {
+      "type": "folder",
+      "uuid": "e6b87157-e7d9-4610-9f0c-59fc059ae269"
     }
   ],
   "proxyMode": false,
