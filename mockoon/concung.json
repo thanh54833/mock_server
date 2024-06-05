@@ -78,6 +78,18 @@
         {
           "type": "route",
           "uuid": "e50a8396-d751-4ea9-aaba-cdd5af51a85b"
+        },
+        {
+          "type": "route",
+          "uuid": "af95e910-9fe2-4861-a3f9-ab3d933abebf"
+        },
+        {
+          "type": "route",
+          "uuid": "4cc41ce0-5ee3-4780-9b0d-3bf93b4a9dce"
+        },
+        {
+          "type": "route",
+          "uuid": "35caebff-6260-475b-b991-bb350331440e"
         }
       ]
     },
@@ -404,7 +416,7 @@
     {
       "uuid": "9d342b32-5cc0-43c4-b0b6-50436698cb9d",
       "type": "http",
-      "documentation": "",
+      "documentation": "Danh mục",
       "method": "post",
       "endpoint": "home/menu",
       "responses": [
@@ -740,7 +752,7 @@
     {
       "uuid": "7b89755b-3449-49c5-803d-6023634eb8c1",
       "type": "http",
-      "documentation": "",
+      "documentation": "Giá sốc",
       "method": "post",
       "endpoint": "home/flash_sale",
       "responses": [
@@ -852,7 +864,7 @@
     {
       "uuid": "c5528bec-72eb-43f8-bdbf-4eafabae6234",
       "type": "http",
-      "documentation": "",
+      "documentation": "PINK",
       "method": "post",
       "endpoint": "home/news_box",
       "responses": [
@@ -908,7 +920,7 @@
     {
       "uuid": "e2204908-1863-4456-9172-ee199b41aa64",
       "type": "http",
-      "documentation": "",
+      "documentation": "Bán chạy",
       "method": "post",
       "endpoint": "home/selling_fast",
       "responses": [
@@ -964,7 +976,7 @@
     {
       "uuid": "6d69e1dd-5aea-4c07-b384-00016f5c434e",
       "type": "http",
-      "documentation": "",
+      "documentation": "Săn quà",
       "method": "post",
       "endpoint": "home/gifts_hunt",
       "responses": [
@@ -1020,7 +1032,7 @@
     {
       "uuid": "5df6c7e0-b9d2-434f-9c55-f4e982c40ad9",
       "type": "http",
-      "documentation": "",
+      "documentation": "Mua nhanh giảm nhanh",
       "method": "post",
       "endpoint": "home/quick_promotion",
       "responses": [
@@ -1132,7 +1144,7 @@
     {
       "uuid": "1341095a-1b94-419c-af33-d51c12b9bafe",
       "type": "http",
-      "documentation": "",
+      "documentation": "Block banner",
       "method": "post",
       "endpoint": "home/getAllAdds",
       "responses": [
@@ -1188,13 +1200,13 @@
     {
       "uuid": "e50a8396-d751-4ea9-aaba-cdd5af51a85b",
       "type": "http",
-      "documentation": "",
+      "documentation": "Danh sách block màn hình home",
       "method": "post",
       "endpoint": "home/getAllBlock",
       "responses": [
         {
           "uuid": "a37265a8-f0d1-4abc-8679-cbbfbb62efc0",
-          "body": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": [\n    {\n      \"id\": 2,\n      \"blockTypeId\": 1,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240403\",\n      \"isHide\": false,\n      \"sort\": 1.0,\n      \"title\": \"\",\n      \"action\": \"\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 3,\n      \"blockTypeId\": 2,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240497\",\n      \"isHide\": false,\n      \"sort\": 2.0,\n      \"title\": \"LIVE STREAM SẮP DIỄN RA\",\n      \"action\": \"\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"packages/assets/assets/png/background_event.png\",\n      \"duration\": 0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 4,\n      \"blockTypeId\": 15,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240524\",\n      \"isHide\": false,\n      \"sort\": 3.0,\n      \"title\": \"\",\n      \"action\": \"\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 5,\n      \"blockTypeId\": 17,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240547\",\n      \"isHide\": false,\n      \"sort\": 3.5,\n      \"title\": \"Dành Tặng Bạn\",\n      \"action\": \"\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 6,\n      \"blockTypeId\": 16,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240569\",\n      \"isHide\": false,\n      \"sort\": 4.0,\n      \"title\": \"Clip Hot\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 7,\n      \"blockTypeId\": 3,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240590\",\n      \"isHide\": false,\n      \"sort\": 5.0,\n      \"title\": \"Săn Quà\",\n      \"action\": \"Săn ngay\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"packages/assets/assets/png/background_promotion_category.png\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 8,\n      \"blockTypeId\": 18,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240611\",\n      \"isHide\": false,\n      \"sort\": 6.0,\n      \"title\": \"Mua Nhanh Giảm Ngay\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"packages/assets/assets/png/background_quick_promotion.png\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 9,\n      \"blockTypeId\": 4,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240631\",\n      \"isHide\": false,\n      \"sort\": 7.0,\n      \"title\": \"Giá Sốc\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 1700222400.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 10,\n      \"blockTypeId\": 5,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240658\",\n      \"isHide\": false,\n      \"sort\": 8.0,\n      \"title\": \"Danh mục\",\n      \"action\": \"Dạo & Khám phá\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 11,\n      \"blockTypeId\": 6,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240678\",\n      \"isHide\": false,\n      \"sort\": 9.0,\n      \"title\": \"Bán Chạy\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 12,\n      \"blockTypeId\": 19,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240699\",\n      \"isHide\": false,\n      \"sort\": 10.0,\n      \"title\": \"Ưu Đãi\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 13,\n      \"blockTypeId\": 20,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240719\",\n      \"isHide\": false,\n      \"sort\": 11.0,\n      \"title\": \"Super Center Live\",\n      \"action\": \"\",\n      \"background\": \"\",\n      \"imageBackground\": \"packages/assets/assets/png/bg_super_center_live.png\",\n      \"duration\": 0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 14,\n      \"blockTypeId\": 7,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240739\",\n      \"isHide\": false,\n      \"sort\": 12.0,\n      \"title\": \"PINK\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 15,\n      \"blockTypeId\": 21,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240759\",\n      \"isHide\": false,\n      \"sort\": 13.0,\n      \"title\": \"Live đang diễn ra\",\n      \"action\": \"\",\n      \"background\": \"\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 16,\n      \"blockTypeId\": 8,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240779\",\n      \"isHide\": false,\n      \"sort\": 14.0,\n      \"title\": \"\",\n      \"action\": \"\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    }\n  ]\n}",
+          "body": "{\n    \"message\": \"\",\n    \"status\": 200,\n    \"data\": [\n    {\n      \"id\": 2,\n      \"blockTypeId\": 1,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240403\",\n      \"isHide\": false,\n      \"sort\": 1.0,\n      \"title\": \"\",\n      \"action\": \"\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 3,\n      \"blockTypeId\": 2,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240497\",\n      \"isHide\": false,\n      \"sort\": 2.0,\n      \"title\": \"LIVE STREAM SẮP DIỄN RA\",\n      \"action\": \"\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"packages/assets/assets/png/background_event.png\",\n      \"duration\": 0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 4,\n      \"blockTypeId\": 15,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240524\",\n      \"isHide\": false,\n      \"sort\": 3.0,\n      \"title\": \"\",\n      \"action\": \"\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 5,\n      \"blockTypeId\": 17,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240547\",\n      \"isHide\": false,\n      \"sort\": 3.5,\n      \"title\": \"Dành Tặng Bạn\",\n      \"action\": \"\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 6,\n      \"blockTypeId\": 16,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240569\",\n      \"isHide\": false,\n      \"sort\": 4.0,\n      \"title\": \"Clip Hot\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 7,\n      \"blockTypeId\": 3,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240590\",\n      \"isHide\": false,\n      \"sort\": 5.0,\n      \"title\": \"Săn Quà\",\n      \"action\": \"Săn ngay\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"packages/assets/assets/png/background_promotion_category.png\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 8,\n      \"blockTypeId\": 18,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240611\",\n      \"isHide\": false,\n      \"sort\": 6.0,\n      \"title\": \"Mua Nhanh Giảm Ngay\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"packages/assets/assets/png/background_quick_promotion.png\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 9,\n      \"blockTypeId\": 4,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240631\",\n      \"isHide\": false,\n      \"sort\": 7.0,\n      \"title\": \"Giá Sốc\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 1700222400.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 10,\n      \"blockTypeId\": 5,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240658\",\n      \"isHide\": false,\n      \"sort\": 8.0,\n      \"title\": \"Danh mục\",\n      \"action\": \"Dạo & Khám phá\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 11,\n      \"blockTypeId\": 6,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240678\",\n      \"isHide\": false,\n      \"sort\": 9.0,\n      \"title\": \"Bán Chạy\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 12,\n      \"blockTypeId\": 19,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240699\",\n      \"isHide\": false,\n      \"sort\": 10.0,\n      \"title\": \"Ưu Đãi\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 13,\n      \"blockTypeId\": 20,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240719\",\n      \"isHide\": false,\n      \"sort\": 11.0,\n      \"title\": \"Super Center Live\",\n      \"action\": \"\",\n      \"background\": \"\",\n      \"imageBackground\": \"packages/assets/assets/png/bg_super_center_live.png\",\n      \"duration\": 0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 14,\n      \"blockTypeId\": 7,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240739\",\n      \"isHide\": false,\n      \"sort\": 12.0,\n      \"title\": \"PINK\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 16,\n      \"blockTypeId\": 23,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240759\",\n      \"isHide\": false,\n      \"sort\": 13.0,\n      \"title\": \"Vải Mềm Kháng Khuẩn\",\n      \"action\": \"Xem tất cả\",\n      \"background\": \"\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n        {\n      \"id\": 15,\n      \"blockTypeId\": 21,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240759\",\n      \"isHide\": false,\n      \"sort\": 13.0,\n      \"title\": \"Live đang diễn ra\",\n      \"action\": \"\",\n      \"background\": \"\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    },\n    {\n      \"id\": 17,\n      \"blockTypeId\": 8,\n      \"lastUpdate\": \"2024-05-20 16:12:45.240779\",\n      \"isHide\": false,\n      \"sort\": 14.0,\n      \"title\": \"\",\n      \"action\": \"\",\n      \"background\": \"0x00ffffff\",\n      \"imageBackground\": \"\",\n      \"duration\": 0.0,\n      \"startDate\": null,\n      \"endDate\": null\n    }\n  ]\n}",
           "latency": 500,
           "statusCode": 200,
           "label": "",
@@ -2469,6 +2481,34 @@
           "callbacks": []
         },
         {
+          "uuid": "34f8bde2-1881-41dc-92f4-5443e08ec394",
+          "body": "{\n  \"message\": \"Đăng nhập thành công\",\n  \"status\": 200,\n  \"data\": {\n    \"full_name\": \"Nguyễn Văn Chung\",\n    \"first_name\": \"Nguyễn\",\n    \"middle_name\": \"Văn\",\n    \"last_name\": \"Chung\",\n    \"customer_id\": 2,\n    \"customer_uuid\": 2,\n    \"gender\": 1,\n    \"dob\": \"\",\n    \"email\": \"\",\n    \"phone\": \"0987654321\",\n    \"avatar\": \"\",\n    \"address\": \"\",\n    \"children\": []\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "Chung test",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Authorization",
+              "value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkZDNjFGQTkxQjYxRDgyREE5REVDQUUyQzkxMDlBNzFEQkYyRTFGM0ZSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6Il9HSDZrYllkZ3RxZDdLNHNrUW1uSGI4dUh6OCJ9.eyJuYmYiOjE3MTY1MjY0OTMsImV4cCI6MTcxNjYxMjg5MywiaXNzIjoiY29uY3VuZy5jb20iLCJjbGllbnRfaWQiOiI1YmZjZmJlNy1jMmZiLTQ5NTEtOTQ1MC0zOGMyZTMzODkxMzYiLCJzdWIiOiIzIiwiYXV0aF90aW1lIjoxNzE2NTI2NDkzLCJpZHAiOiJsb2NhbCIsIi9jdXN0b21lcl9pZCI6IjMiLCIvY3VzdG9tZXJfdWlkIjoiYTQxYjQ0MzQtYmQ5OS00ZDRmLTg5MjYtYjFlYjU3YmUzNmNiIiwiL3VzZXJuYW1lIjoiMDM1Njg4MjA0NiIsIi9jdXN0b21lcl9uYW1lIjoiVGhhbmgiLCJpYXQiOjE3MTY1MjY0OTMsInNjb3BlIjoiYXV0aC1hcGkgb2ZmbGluZV9hY2Nlc3MiLCJhbXIiOlsicGhvbmVfb3RwIl19.jCvEWwf_ci6tSs0Oj3tT4s16zaMHOU-wG6J3tfkED7LBPpVhNP3dl0GEJ5J7ahfQ-Uqlgy7XPsnXflHOdtYLSXBgY4WqSb0gkOpgKAmahTY9tqdycPwHQA155z4cClhSV2CKRX96sPfDRXtrex9nMxjToUXmI21pFR-JoI1P_XhUUqxPJZYTQRWmdQVdAmjZMIDXNSs2jX9ZkS_cKEC-1tfzavIzvm99y23VN9-9Kx1AKTeuCp0fLRtAHk6sqS5VXxqBKuojLz1_0RWbew36YEVIK6HJXI7v_EG03xibIG-RR-PCOpqfZMHROL0tMbLc89qAqIrnSLDSZRNfPrL0sQ\",         \"refresh_token\": \"F355A874C07232D95D2C0898E5C145D3D69A4DC150FC24CF8690D05DE319F546"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "jycs",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
           "uuid": "49bf55aa-8e25-45ac-adb5-165d7800ff93",
           "body": "{\n  \"message\": \"Không thành công\",\n    \"status\": 406,\n    \"data\": null\n}",
           "latency": 0,
@@ -3100,35 +3140,6 @@
       "responseMode": null
     },
     {
-      "uuid": "8dc1acef-d659-47cb-8346-cfa00ea8ea69",
-      "type": "http",
-      "documentation": "API dùng để lấy tên các nhãn hàng trong màn hình search",
-      "method": "get",
-      "endpoint": "search/get_promotion_brands",
-      "responses": [
-        {
-          "uuid": "f4c1b459-8660-4460-889f-cb7b51c965ff",
-          "body": "{\n  \"message\": \"success\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id\": 1,\n      \"brand_name\": \"Meiji\",\n      \"image_url\": \"https://lh3.googleusercontent.com/drive-viewer/AKGpihbDXbFqtpiIRADmpNZ1Tw5NchnaNMCAIZtvQmep9XoYxfLcRc9Qy1q94Aq_MHu2yIGJlKz1pM0zgdS5vUo0lyG5-3yoSFMVDtw=s1600-rw-v1\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Genki\",\n      \"image_url\": \"https://lh3.googleusercontent.com/drive-viewer/AKGpihYxonutgCMuf-_UozD-H4g-TUM5gdcNM9t2Gniyr7hyTFBLjeKORyTltw6tZ2VFwjLlKSQfq5ljBqPJXaAUMyvoR2vCtoG_WCM=s2560\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Merries\",\n      \"image_url\": \"https://lh3.googleusercontent.com/drive-viewer/AKGpihbpVt-N65Fo5EYGOx-Xaw1zeOhEs5hYXKXCccfFtb3OXtfalI3kP6sRYvSP5y9p_Q4yoVFt4uY4Eu7LRZVz5UxE-rU_3s8v4Dg=s1600-rw-v1\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Vinamilk\",\n      \"image_url\": \"https://lh3.googleusercontent.com/drive-viewer/AKGpihZboanK1-pyrWdZmDfdYhb9VmQM_3E8NVil9YxMC0ekz5ulmUKpk1v9pBSUm6tlEfUK9jNzoWLPeV5RCSKirc4m7yJ4QRm8SJ4=s1600-rw-v1\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"YOKOGOLD\",\n      \"image_url\": \"https://lh3.googleusercontent.com/drive-viewer/AKGpihZugjS-4f1oAJ1xdL9jKTfuVRj4Wd75tTKlGSqFK0pnIE7A7SEO0RSRmmBX878remYNMw3kJRi58lZfjPkPQUr3ZkTReKXDEGo=s2560\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Enfa\",\n      \"image_url\": \"https://lh3.googleusercontent.com/drive-viewer/AKGpihaprn2JvtSxdAE7czYPpAfDkeb1JMjNUiGp7I16qEjh-P8Bfv4oUw0oYZcD4smalHi4GdVcXIt-C5LitKDMxklBZapzldH5ifA=s1600-rw-v1\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"GOO.N\",\n      \"image_url\": \"https://lh3.googleusercontent.com/drive-viewer/AKGpihYK4EmQXbfeCP7TFyVgYsrymOfxXzoWcVzMaKmMU_Gy_jZyiETjhWBeO0lbtV8wr00eGZp9l_WYOrqKWvtPrpSlSVbTi1UP_w=s2560\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Nestle\",\n      \"image_url\": \"https://lh3.googleusercontent.com/drive-viewer/AKGpihZUsD7ZcmK5XyQcfEraeo4f1kyhWQ-yZ7GT0Kj22mrjnT1NUT-azVgTEX9xij58Ikip7Wq78ddknoNAn3TqivOrSZAt4UxQQlo=s1600-rw-v1\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Whito\",\n      \"image_url\": \"https://lh3.googleusercontent.com/drive-viewer/AKGpihYhj68hpVETAvIc-OP5Nl0OKJWO-8zbulb9q3KD6-tt1ovbNrdJMvUEhCj_ahOziijrltiT8yS3S6jdF-WSFqcYTO7ypQ77Obo=s2560\",\n      \"promotions\": 10\n    },\n    {\n      \"id\": 1,\n      \"brand_name\": \"Huggies\",\n      \"image_url\": \"https://lh3.googleusercontent.com/drive-viewer/AKGpihZFGWmCqHm1NOFNgbuTWav5t-CiNG7FSa0NW5i02O4GeRJn7vx0Jq20B586utCXYstXdinBr3-MEJfQt9GDo_SsvCaJG2sVmEc=s1600-rw-v1\",\n      \"promotions\": 10\n    }\n  ]\n}",
-          "latency": 0,
-          "statusCode": 200,
-          "label": "",
-          "headers": [],
-          "bodyType": "INLINE",
-          "filePath": "",
-          "databucketID": "",
-          "sendFileAsBody": false,
-          "rules": [],
-          "rulesOperator": "OR",
-          "disableTemplating": false,
-          "fallbackTo404": false,
-          "default": true,
-          "crudKey": "id",
-          "callbacks": []
-        }
-      ],
-      "responseMode": null
-    },
-    {
       "uuid": "baecff83-60e2-424f-9d43-9cad579af504",
       "type": "http",
       "documentation": "",
@@ -3521,6 +3532,93 @@
         }
       ],
       "responseMode": null
+    },
+    {
+      "uuid": "af95e910-9fe2-4861-a3f9-ab3d933abebf",
+      "type": "http",
+      "documentation": "Vải mềm kháng khuẩn",
+      "method": "post",
+      "endpoint": "home/fashion_sale",
+      "responses": [
+        {
+          "uuid": "d77af106-02f5-4e01-a55e-4b9aafedfa53",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id_product\": \"65713\",\n      \"product_name\": \"Set 2 Bộ kháng khuẩn Modal ngắn Cầu vồng Animo VD1023002 (0-24M,Vàng)\",\n      \"image_cover\": \"https://cdn1.concung.com/2024/05/65713-1715678196-trans.png\",\n      \"height_mobile\": \"280\",\n      \"category_name\": \"Thời trang & Phụ kiện\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"1021\",\n      \"reference\": \"6996000000008\",\n      \"id_manufacturer\": \"945\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Animo\",\n      \"url_link\": \"https://concung.com/thoi-trang/set-2-bo-khang-khuan-modal-ngan-cau-vong-animo-vd1023002-0-3m-vang-65713.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"2\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"290\",\n      \"text_price\": \"\",\n      \"price\": \"349000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"279200\",\n      \"reduction_price\": \"69800\",\n      \"reduction_percent\": \"20\",\n      \"reduction_from\": \"1716483600\",\n      \"reduction_to\": \"1719248399\",\n      \"promotion_id\": \"79651\",\n      \"promotion_no\": \"441PRO24051759113818\",\n      \"have_gift\": \"0\",\n      \"gift_content\": \"\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"0\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"gift_list\": [],\n      \"link_video\": \"\",\n      \"only_online\": \"0\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"\",\n      \"thumb_start\": \"1708074905\",\n      \"thumb_end\": \"1708074905\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"6997\",\n      \"category_name_erp\": \"Thời trang;Modal kháng khuẩn;Bộ Modal;Bộ Modal set 2\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"0\",\n      \"date_start\": \"1708074905\",\n      \"date_end\": \"1708074905\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"10\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"1000\",\n      \"table_link\": \"https://cdn1.concung.comhttps://concung.com/img/bang_size_cf/thoi-trang-so-sinh-body.png\",\n      \"total_sales\": \"1\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"0\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"0\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"0\",\n      \"date_add\": \"1708074905\",\n      \"date_upd\": \"1715678243\",\n      \"deleted\": \"0\",\n      \"api_page\": \"product\",\n      \"id_page\": \"65713\",\n      \"name_page\": \"\",\n      \"box_title\": \"Vải Mềm Kháng Khuẩn\",\n      \"box_color\": \"#FF8024\",\n      \"box_more\": \"https://concung.com/animo-mem-mat-khang-khuan-hashtag-9141.html?app=1\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_bst_vai_mem_cung_da_mong.png\",\n      \"score\": \"0\",\n      \"image_top\": \"\"\n    },\n    {\n      \"id_product\": \"66225\",\n      \"product_name\": \"Set 2 Bộ kháng khuẩn Modal ngắn Cầu vồng Animo VD1023001 (0-24M,Beige)\",\n      \"image_cover\": \"https://cdn1.concung.com/2024/05/66225-1715678074-trans.png\",\n      \"height_mobile\": \"280\",\n      \"category_name\": \"Thời trang & Phụ kiện\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"1021\",\n      \"reference\": \"6996000000002\",\n      \"id_manufacturer\": \"945\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Animo\",\n      \"url_link\": \"https://concung.com/thoi-trang/set-2-bo-khang-khuan-modal-ngan-cau-vong-animo-vd1023001-0-3m-beige-66225.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"3\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"317\",\n      \"text_price\": \"\",\n      \"price\": \"349000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"279200\",\n      \"reduction_price\": \"69800\",\n      \"reduction_percent\": \"20\",\n      \"reduction_from\": \"1716483600\",\n      \"reduction_to\": \"1719248399\",\n      \"promotion_id\": \"79651\",\n      \"promotion_no\": \"441PRO24051759113818\",\n      \"have_gift\": \"0\",\n      \"gift_content\": \"\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"0\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"gift_list\": [],\n      \"link_video\": \"\",\n      \"only_online\": \"0\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"\",\n      \"thumb_start\": \"1713258625\",\n      \"thumb_end\": \"1713258625\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"6997\",\n      \"category_name_erp\": \"Thời trang;Modal kháng khuẩn;Bộ Modal;Bộ Modal set 2\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"0\",\n      \"date_start\": \"1713258625\",\n      \"date_end\": \"1713258625\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"3\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"1000\",\n      \"table_link\": \"https://cdn1.concung.comhttps://concung.com/img/bang_size_cf/thoi-trang-so-sinh-body.png\",\n      \"total_sales\": \"1\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"0\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"0\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"0\",\n      \"date_add\": \"1713258625\",\n      \"date_upd\": \"1715678098\",\n      \"deleted\": \"0\",\n      \"api_page\": \"product\",\n      \"id_page\": \"66225\",\n      \"name_page\": \"\",\n      \"box_title\": \"Vải Mềm Kháng Khuẩn\",\n      \"box_color\": \"#FF8024\",\n      \"box_more\": \"https://concung.com/animo-mem-mat-khang-khuan-hashtag-9141.html?app=1\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_bst_vai_mem_cung_da_mong.png\",\n      \"score\": \"0\",\n      \"image_top\": \"\"\n    },\n    {\n      \"id_product\": \"65696\",\n      \"product_name\": \"Set 2 Bộ kháng khuẩn Modal ngắn Xe hơi Animo VD1023003 (0-24M,Xanh ngọc)\",\n      \"image_cover\": \"https://cdn1.concung.com/2024/05/65696-1715677937-trans.png\",\n      \"height_mobile\": \"280\",\n      \"category_name\": \"Thời trang & Phụ kiện\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"1021\",\n      \"reference\": \"6996000000015\",\n      \"id_manufacturer\": \"945\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Animo\",\n      \"url_link\": \"https://concung.com/thoi-trang/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc-65696.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"6\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"226\",\n      \"text_price\": \"\",\n      \"price\": \"349000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"279200\",\n      \"reduction_price\": \"69800\",\n      \"reduction_percent\": \"20\",\n      \"reduction_from\": \"1716483600\",\n      \"reduction_to\": \"1719248399\",\n      \"promotion_id\": \"79651\",\n      \"promotion_no\": \"441PRO24051759113818\",\n      \"have_gift\": \"0\",\n      \"gift_content\": \"\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"0\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"gift_list\": [],\n      \"link_video\": \"\",\n      \"only_online\": \"0\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"\",\n      \"thumb_start\": \"1708074772\",\n      \"thumb_end\": \"1708074772\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"6997\",\n      \"category_name_erp\": \"Thời trang;Modal kháng khuẩn;Bộ Modal;Bộ Modal set 2\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"0\",\n      \"date_start\": \"1708074772\",\n      \"date_end\": \"1708074772\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"8\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"1000\",\n      \"table_link\": \"https://cdn1.concung.comhttps://concung.com/img/bang_size_cf/thoi-trang-so-sinh-body.png\",\n      \"total_sales\": \"1\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"0\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"0\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"0\",\n      \"date_add\": \"1708074772\",\n      \"date_upd\": \"1715677962\",\n      \"deleted\": \"0\",\n      \"api_page\": \"product\",\n      \"id_page\": \"65696\",\n      \"name_page\": \"\",\n      \"box_title\": \"Vải Mềm Kháng Khuẩn\",\n      \"box_color\": \"#FF8024\",\n      \"box_more\": \"https://concung.com/animo-mem-mat-khang-khuan-hashtag-9141.html?app=1\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_bst_vai_mem_cung_da_mong.png\",\n      \"score\": \"0\",\n      \"image_top\": \"\"\n    },\n    {\n      \"id_product\": \"65707\",\n      \"product_name\": \"Set 2 Bodysuit kháng khuẩn đùi Hoa nắng Animo VD1023007 (0-12M,Kem)\",\n      \"image_cover\": \"https://cdn1.concung.com/2024/05/65707-1715678336-trans.png\",\n      \"height_mobile\": \"280\",\n      \"category_name\": \"Thời trang & Phụ kiện\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"1021\",\n      \"reference\": \"6999000000002\",\n      \"id_manufacturer\": \"945\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Animo\",\n      \"url_link\": \"https://concung.com/thoi-trang/set-2-bodysuit-khang-khuan-dui-hoa-nang-animo-vd1023007-0-3m-kem-65707.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"5\",\n      \"rating_star\": \"5\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"96\",\n      \"text_price\": \"\",\n      \"price\": \"349000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"279200\",\n      \"reduction_price\": \"69800\",\n      \"reduction_percent\": \"20\",\n      \"reduction_from\": \"1716483600\",\n      \"reduction_to\": \"1719248399\",\n      \"promotion_id\": \"79651\",\n      \"promotion_no\": \"441PRO24051759113818\",\n      \"have_gift\": \"0\",\n      \"gift_content\": \"\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"7\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"gift_list\": [],\n      \"link_video\": \"\",\n      \"only_online\": \"0\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"\",\n      \"thumb_start\": \"1708074904\",\n      \"thumb_end\": \"1708074904\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"7010\",\n      \"category_name_erp\": \"Thời trang;Modal kháng khuẩn;Bodysuit Modal;Bodysuit Modal set 2\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"0\",\n      \"date_start\": \"1708074904\",\n      \"date_end\": \"1708074904\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"13\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"1000\",\n      \"table_link\": \"https://cdn1.concung.comhttps://concung.com/img/bang_size_cf/thoi-trang-so-sinh-body.png\",\n      \"total_sales\": \"1\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"0\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"0\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"0\",\n      \"date_add\": \"1708074904\",\n      \"date_upd\": \"1715678361\",\n      \"deleted\": \"0\",\n      \"api_page\": \"product\",\n      \"id_page\": \"65707\",\n      \"name_page\": \"\",\n      \"box_title\": \"Vải Mềm Kháng Khuẩn\",\n      \"box_color\": \"#FF8024\",\n      \"box_more\": \"https://concung.com/animo-mem-mat-khang-khuan-hashtag-9141.html?app=1\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_bst_vai_mem_cung_da_mong.png\",\n      \"score\": \"0\",\n      \"image_top\": \"\"\n    },\n    {\n      \"id_product\": \"65703\",\n      \"product_name\": \"Set 2 Bộ kháng khuẩn Modal dài Xe hơi Animo VD1023005 (0-24M,Xanh biển)\",\n      \"image_cover\": \"https://cdn1.concung.com/2024/05/65703-1715678481-trans.png\",\n      \"height_mobile\": \"280\",\n      \"category_name\": \"Thời trang & Phụ kiện\",\n      \"id_page_segment\": \"1\",\n      \"id_recommendation\": \"Concung_A1\",\n      \"id_category\": \"1021\",\n      \"reference\": \"6997000000002\",\n      \"id_manufacturer\": \"945\",\n      \"image_logo\": \"\",\n      \"manufacture_name\": \"Animo\",\n      \"url_link\": \"https://concung.com/thoi-trang/set-2-bo-khang-khuan-modal-dai-xe-hoi-animo-vd1023005-0-3m-xanh-bien-65703.html\",\n      \"text_buy\": \"\",\n      \"total_product\": \"0\",\n      \"rating_number\": \"7\",\n      \"rating_star\": \"4.9\",\n      \"show_rating\": \"1\",\n      \"quantity\": \"61\",\n      \"text_price\": \"\",\n      \"price\": \"379000\",\n      \"save_price\": \"0\",\n      \"real_price\": \"379000\",\n      \"reduction_price\": \"0\",\n      \"reduction_percent\": \"0\",\n      \"reduction_from\": \"1716144341\",\n      \"reduction_to\": \"1716403541\",\n      \"promotion_id\": \"0\",\n      \"promotion_no\": \"\",\n      \"have_gift\": \"0\",\n      \"gift_content\": \"\",\n      \"ui_type\": \"0\",\n      \"is_show_filter\": \"0\",\n      \"comment_number\": \"0\",\n      \"top_text\": \"\",\n      \"middle_text\": \"\",\n      \"center_text\": \"\",\n      \"bottom_text\": \"\",\n      \"is_newdate\": \"0\",\n      \"event_uid\": \"\",\n      \"event_url\": \"\",\n      \"is_take_promotion\": \"0\",\n      \"reference_gift\": \"\",\n      \"gift_list\": [],\n      \"link_video\": \"\",\n      \"only_online\": \"0\",\n      \"image_thumb\": \"\",\n      \"thumb_width\": \"0\",\n      \"thumb_height\": \"0\",\n      \"image_frame\": \"\",\n      \"thumb_start\": \"1708074877\",\n      \"thumb_end\": \"1708074877\",\n      \"combo_id\": \"\",\n      \"id_category_erp\": \"6997\",\n      \"category_name_erp\": \"Thời trang;Modal kháng khuẩn;Bộ Modal;Bộ Modal set 2\",\n      \"combo_name\": \"\",\n      \"type_combo\": \"0\",\n      \"quantity_combo\": \"0\",\n      \"date_start\": \"1708074877\",\n      \"date_end\": \"1708074877\",\n      \"type_group\": \"0\",\n      \"type_show\": \"1\",\n      \"trust_love\": \"19\",\n      \"is_hot\": \"0\",\n      \"is_cf\": \"0\",\n      \"type_sale\": \"0\",\n      \"position\": \"1000\",\n      \"table_link\": \"https://cdn1.concung.comhttps://concung.com/img/bang_size_cf/thoi-trang-so-sinh-body.png\",\n      \"total_sales\": \"1\",\n      \"actived\": \"1\",\n      \"is_online\": \"0\",\n      \"max_number\": \"0\",\n      \"step_number\": \"1\",\n      \"deal_number\": \"0\",\n      \"is_outstock\": \"0\",\n      \"is_freeship\": 0,\n      \"ship_label\": \"\",\n      \"total_buy\": \"0\",\n      \"date_add\": \"1708074877\",\n      \"date_upd\": \"1715678540\",\n      \"deleted\": \"0\",\n      \"api_page\": \"product\",\n      \"id_page\": \"65703\",\n      \"name_page\": \"\",\n      \"box_title\": \"Vải Mềm Kháng Khuẩn\",\n      \"box_color\": \"#FF8024\",\n      \"box_more\": \"https://concung.com/animo-mem-mat-khang-khuan-hashtag-9141.html?app=1\",\n      \"box_background\": \"https://concung.com/img/res/bg/bg_bst_vai_mem_cung_da_mong.png\",\n      \"score\": \"0\",\n      \"image_top\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "4cc41ce0-5ee3-4780-9b0d-3bf93b4a9dce",
+      "type": "http",
+      "documentation": "Bán chạy, top mua lại, top review tốt....",
+      "method": "post",
+      "endpoint": "home/menu_top_selling_fast",
+      "responses": [
+        {
+          "uuid": "8fc7db71-a168-47aa-a549-420c1fcbee94",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id_utility\": \"27\",\n      \"id_type\": \"4\",\n      \"utility_name\": \"Bán Chạy\",\n      \"utility_meta\": \"\",\n      \"short_name\": \"\",\n      \"mobile_image\": \"https://cdn1.concung.com\",\n      \"sub_image\": \"\",\n      \"position\": \"1\",\n      \"new_number\": \"0\",\n      \"url_link\": \"\",\n      \"id_manufacturer\": \"0\",\n      \"id_category\": \"0\",\n      \"id_promotion_list\": \"\",\n      \"require_location\": \"0\",\n      \"api_page\": \"web\",\n      \"id_page\": \"\"\n    },\n    {\n      \"id_utility\": \"28\",\n      \"id_type\": \"4\",\n      \"utility_name\": \"Xu Hướng\",\n      \"utility_meta\": \"\",\n      \"short_name\": \"\",\n      \"mobile_image\": \"https://cdn1.concung.com\",\n      \"sub_image\": \"\",\n      \"position\": \"2\",\n      \"new_number\": \"0\",\n      \"url_link\": \"\",\n      \"id_manufacturer\": \"0\",\n      \"id_category\": \"0\",\n      \"id_promotion_list\": \"\",\n      \"require_location\": \"0\",\n      \"api_page\": \"web\",\n      \"id_page\": \"\"\n    },\n    {\n      \"id_utility\": \"29\",\n      \"id_type\": \"4\",\n      \"utility_name\": \"Top Review Tốt\",\n      \"utility_meta\": \"\",\n      \"short_name\": \"\",\n      \"mobile_image\": \"https://cdn1.concung.com\",\n      \"sub_image\": \"\",\n      \"position\": \"3\",\n      \"new_number\": \"0\",\n      \"url_link\": \"\",\n      \"id_manufacturer\": \"0\",\n      \"id_category\": \"0\",\n      \"id_promotion_list\": \"\",\n      \"require_location\": \"0\",\n      \"api_page\": \"web\",\n      \"id_page\": \"\"\n    },\n    {\n      \"id_utility\": \"30\",\n      \"id_type\": \"4\",\n      \"utility_name\": \"Top Mua Lại\",\n      \"utility_meta\": \"\",\n      \"short_name\": \"\",\n      \"mobile_image\": \"https://cdn1.concung.com\",\n      \"sub_image\": \"\",\n      \"position\": \"4\",\n      \"new_number\": \"0\",\n      \"url_link\": \"\",\n      \"id_manufacturer\": \"0\",\n      \"id_category\": \"0\",\n      \"id_promotion_list\": \"\",\n      \"require_location\": \"0\",\n      \"api_page\": \"web\",\n      \"id_page\": \"\"\n    },\n    {\n      \"id_utility\": \"31\",\n      \"id_type\": \"4\",\n      \"utility_name\": \"Top Giỏ Hàng\",\n      \"utility_meta\": \"\",\n      \"short_name\": \"\",\n      \"mobile_image\": \"https://cdn1.concung.com\",\n      \"sub_image\": \"\",\n      \"position\": \"5\",\n      \"new_number\": \"0\",\n      \"url_link\": \"\",\n      \"id_manufacturer\": \"0\",\n      \"id_category\": \"0\",\n      \"id_promotion_list\": \"\",\n      \"require_location\": \"0\",\n      \"api_page\": \"web\",\n      \"id_page\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "35caebff-6260-475b-b991-bb350331440e",
+      "type": "http",
+      "documentation": "Top menu block cuối",
+      "method": "post",
+      "endpoint": "home/top_menu_quick_sale",
+      "responses": [
+        {
+          "uuid": "e1d2e18b-4171-46ac-9635-ad4c2eaca126",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"id_utility\": \"9\",\n      \"id_type\": \"3\",\n      \"utility_name\": \"Dành\",\n      \"utility_meta\": \"Cho Bạn\",\n      \"short_name\": \"Cho Bạn\",\n      \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/danh_cho_ban.png\",\n      \"sub_image\": \"\",\n      \"position\": \"1\",\n      \"new_number\": \"0\",\n      \"url_link\": \"\",\n      \"id_manufacturer\": \"0\",\n      \"id_category\": \"0\",\n      \"id_promotion_list\": \"\",\n      \"require_location\": \"0\",\n      \"api_page\": \"web\",\n      \"id_page\": \"\"\n    },\n    {\n      \"id_utility\": \"12\",\n      \"id_type\": \"3\",\n      \"utility_name\": \"Hot Sale\",\n      \"utility_meta\": \"Tháng 6\",\n      \"short_name\": \"Hot Sale\",\n      \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/hot_sale_thang_6.png\",\n      \"sub_image\": \"\",\n      \"position\": \"2\",\n      \"new_number\": \"0\",\n      \"url_link\": \"\",\n      \"id_manufacturer\": \"0\",\n      \"id_category\": \"0\",\n      \"id_promotion_list\": \"\",\n      \"require_location\": \"0\",\n      \"api_page\": \"web\",\n      \"id_page\": \"\"\n    },\n    {\n      \"id_utility\": \"10\",\n      \"id_type\": \"3\",\n      \"utility_name\": \"Siêu Tốc\",\n      \"utility_meta\": \"Giao 1h\",\n      \"short_name\": \"Siêu Tốc\",\n      \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/sieu_toc_1h_moi.png\",\n      \"sub_image\": \"\",\n      \"position\": \"3\",\n      \"new_number\": \"0\",\n      \"url_link\": \"\",\n      \"id_manufacturer\": \"0\",\n      \"id_category\": \"0\",\n      \"id_promotion_list\": \"\",\n      \"require_location\": \"1\",\n      \"api_page\": \"web\",\n      \"id_page\": \"\"\n    },\n    {\n      \"id_utility\": \"11\",\n      \"id_type\": \"3\",\n      \"utility_name\": \"Tất Cả\",\n      \"utility_meta\": \"Freeship\",\n      \"short_name\": \"Freeship\",\n      \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/freeship.png\",\n      \"sub_image\": \"\",\n      \"position\": \"4\",\n      \"new_number\": \"0\",\n      \"url_link\": \"\",\n      \"id_manufacturer\": \"0\",\n      \"id_category\": \"0\",\n      \"id_promotion_list\": \"\",\n      \"require_location\": \"0\",\n      \"api_page\": \"web\",\n      \"id_page\": \"\"\n    },\n    {\n      \"id_utility\": \"13\",\n      \"id_type\": \"3\",\n      \"utility_name\": \"Mua Là\",\n      \"utility_meta\": \"Có Quà\",\n      \"short_name\": \"Có Quà\",\n      \"mobile_image\": \"https://cdn1.concung.com/img/res/img_label/buy_with_gift.png\",\n      \"sub_image\": \"\",\n      \"position\": \"5\",\n      \"new_number\": \"0\",\n      \"url_link\": \"\",\n      \"id_manufacturer\": \"0\",\n      \"id_category\": \"0\",\n      \"id_promotion_list\": \"\",\n      \"require_location\": \"0\",\n      \"api_page\": \"web\",\n      \"id_page\": \"\"\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
     }
   ],
   "rootChildren": [
@@ -3567,10 +3665,6 @@
     {
       "type": "route",
       "uuid": "baecff83-60e2-424f-9d43-9cad579af504"
-    },
-    {
-      "type": "route",
-      "uuid": "8dc1acef-d659-47cb-8346-cfa00ea8ea69"
     }
   ],
   "proxyMode": false,
