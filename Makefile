@@ -17,4 +17,4 @@ convert_avif:
 	python download_image.py
 
 t:
-	docker build -t mock_server .
+	docker build -t mock_server ffff.

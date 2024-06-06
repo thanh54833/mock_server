@@ -43,7 +43,7 @@ services:
       PHOTOPRISM_DEBUG: "false"
       PHOTOPRISM_PUBLIC: "true"
     volumes:
-      - "./photoprism/photos:/photoprism/originals" # [local path]:[container path]
+      - "./images/assets:/photoprism/originals" # [local path]:[container path]
       - "./photoprism/import:/photoprism/import"
       - "./photoprism/database:/photoprism/database"
 
