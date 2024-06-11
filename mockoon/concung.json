@@ -132,6 +132,10 @@
         {
           "type": "route",
           "uuid": "26220a08-4323-4d2f-b9ab-8d4fe731f430"
+        },
+        {
+          "type": "route",
+          "uuid": "d854b7f3-d58f-438a-bae1-28163536f221"
         }
       ]
     },
@@ -1270,16 +1274,89 @@
           "latency": 0,
           "statusCode": 200,
           "label": "",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "64cdc8cd-b829-4b20-b242-0e9772140909",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\":     {\n            \"id_product\": \"65696\",\n            \"product_name\": \"Set 2 Bộ kháng khuẩn Modal ngắn Xe hơi Animo VD1023003 (0-24M,Xanh ngọc)\",\n            \"image_cover\": \"https://cdn1.concung.com/2024/05/65696-110151-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-0-24m-xanh-ngoc.png\",\n            \"height_mobile\": \"280\",\n            \"width_mobile\": \"280\",\n            \"category_name\": \"Thời trang & Phụ kiện\",\n            \"id_category\": \"1021\",\n            \"id_supplier\": \"0\",\n            \"id_category_erp\": \"6997\",\n            \"category_name_erp\": \"Thời trang;Modal kháng khuẩn;Bộ Modal;Bộ Modal set 2\",\n            \"description_short\": \"<div style=\\\"font-family: Helvetica Neue !important; font-size: 1.0rem !important; font-weight: 400 !important; line-height: 1.4285714286 !important; color: #333333 !important; text-align: left;\\\"><p><i style=\\\"font-family: Helvetica; font-size: 16px;\\\"><b><span style=\\\"font-size: 14px;\\\">.</span></b><span style=\\\"font-size: 14px;\\\">&nbsp;</span></i><span style=\\\"font-family: Helvetica; font-size: 16px;\\\"><span style=\\\"font-size: 14px;\\\">Bộ quần áo ngắn mang lại sự thoải mái và mát mẻ nhất cho bé yêu khi mặc;</span><br></span><b style=\\\"font-family: Helvetica; font-size: 16px;\\\"><span style=\\\"font-size: 14px;\\\">.&nbsp;</span></b><span style=\\\"font-family: Helvetica; font-size: 16px;\\\"><span style=\\\"font-size: 14px;\\\">Bộ quần áo làm từ vải Modal kháng khuẩn có độ co giãn, mềm mại và thấm hút vượt trội so với các loại vải thông thường;&nbsp;</span><br></span><b style=\\\"font-family: Helvetica; font-size: 16px;\\\"><span style=\\\"font-size: 14px;\\\">.&nbsp;</span></b><span style=\\\"font-family: Helvetica; font-size: 16px;\\\"><span style=\\\"font-size: 14px;\\\">Vải được bổ sung hoạt chất kháng khuẩn trên bề mặt giúp hạn chế sự xâm nhập của vi khuẩn tới da bé trong những năm đầu đời.<br></span></span><img src=\\\"https://concung.com/storage/2024/04/1713753305-vd1023003-4-1.webp\\\" style=\\\"width: 100%;\\\"><span style=\\\"font-family: Helvetica; font-size: 16px;\\\"><br></span></p></div>\",\n            \"reference_gift\": \"\",\n            \"description\": \"<div style=\\\"font-family: Helvetica Neue !important; font-size: 1.0rem !important; font-weight: 400 !important; line-height: 1.4285714286 !important; color: #333333 !important; text-align: left;\\\"><div class=\\\"addclassfont16\\\" style=\\\"font-size: 16px; font-family: Helvetica;\\\"><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span>﻿<b>Set 2 Bộ kháng khuẩn Modal ngắn Xe hơi Animo VD1023003 (0-24M,Xanh ngọc)&nbsp;</b>với chất liệu sợi vải thiên nhiên không chỉ lành tính mà còn mềm mại, thấm hút nhanh chóng. Bộ quần áo có khả năng kháng khuẩn vượt trội giúp bảo vệ làn da mỏng manh của bé trong những năm đầu đời.&nbsp;</div><div style=\\\"font-size: 16px;\\t  font-family: Helvetica;\\\">\\r\\n\\r\\n<!--StartFragment--><div><br><br><img src=\\\"https://concung.com/storage/2024/04/1713753315-vd1023003-4-1.webp\\\" style=\\\"width: 100%;\\\"><br><div><b>Ưu điểm nổi bật</b><br><i><b>Đặc điểm thiết kế</b><br><b>.</b>&nbsp;</i>Bộ quần áo ngắn mang lại sự thoải mái và mát mẻ nhất cho bé yêu khi mặc;<br><b>.&nbsp;</b>Cổ áo bo tròn kết hợp cùng hàng nút dọc giúp ba mẹ dễ dàng mặc vào, cởi ra cho bé;<br><b>.&nbsp;</b>Quần đùi được bo chun co giãn tốt, ôm vừa vặn vùng bụng mà không lo bị hằn hay ngứa;<br><b>.&nbsp;</b>Hoạ tiết động vật đáng yêu sử dụng kỹ thuật in nước giúp bề mặt vải mềm mại;&nbsp;<br><b>.&nbsp;</b>Đường may kết hợp giữa chỉ cotton và chỉ tơ không chỉ đẹp mắt mà còn hạn chế gây ngứa vào da bé.&nbsp;<br><br><b><i>Đặc điểm chất liệu&nbsp;<br></i>.&nbsp;</b>Bộ quần áo làm từ vải Modal kháng khuẩn được cấu thành từ sợi cellulose trong cây sồi. Vải Modal có độ co giãn, mềm mại và thấm hút vượt trội so với các loại vải thông thường;&nbsp;<br><b>.&nbsp;</b>Cảm giác dễ chịu, thoáng khí giúp bé thoải mái vui chơi và vận động khám phá;&nbsp;<br><b>.&nbsp;</b>Vải được bổ sung hoạt chất kháng khuẩn trên bề mặt giúp hạn chế sự xâm nhập của vi khuẩn tới da bé trong những năm đầu đời:<br><div><div>&nbsp; &nbsp;+ Bảo vệ bé khỏi 99,9% vi khuẩn gây hại* (* Đối với vi khuẩn Staphylococcus aureus - ATCC 6538 bởi Viện nghiên cứu dệt may VN)<br></div><div>&nbsp; &nbsp;+&nbsp;Kháng khuẩn đến 30 lần giặt ** (** Theo tiêu chuẩn công nghiệp Nhật Bản (JIS L 1902:2015))<br><br><img src=\\\"https://concung.com/storage/2024/06/1717669981-kv-kk-animo-kv-1.webp\\\" style=\\\"width: 100%;\\\"><br><img src=\\\"https://concung.com/storage/2024/06/1717639482-post-chat-vai-01.webp\\\" style=\\\"width: 100%;\\\"><br><img src=\\\"https://concung.com/storage/2024/06/1717639492-post-chat-vai-02-1.webp\\\" style=\\\"width: 100%;\\\"><br><img src=\\\"https://concung.com/storage/2024/06/1717639503-post-chat-vai-03.webp\\\" style=\\\"width: 100%;\\\"><br><img src=\\\"https://concung.com/storage/2024/06/1717639513-post-chat-vai-04-2.webp\\\" style=\\\"width: 100%;\\\"><br></div></div></div></div><div>﻿<br><b>Hướng dẫn giặt là<br></b>﻿<img src=\\\"https://concung.com/storage/2024/04/1713753334-huong-dan-giat-la.webp\\\" style=\\\"width: 100%;\\\"><br></div><!--EndFragment-->\\r\\n\\r\\n<div></div></div><div class=\\\"addclassfont16\\\" style=\\\"font-size: 16px; font-family: Helvetica;\\\"><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span><span style=\\\"font-size: 16px;\\\">﻿</span></div></div>\",\n            \"reference\": \"6996000000015\",\n            \"date_info\": \"\",\n            \"legal_note\": \"\",\n            \"id_manufacturer\": \"945\",\n            \"image_logo\": \"\",\n            \"manufacture_name\": \"Animo\",\n            \"url_link\": \"https://concung.com/thoi-trang/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc-65696.html\",\n            \"link\": \"https://concung.com/thoi-trang/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc-65696.html\",\n            \"text_buy\": \"500+\",\n            \"satisfy_number\": \"98\",\n            \"rating_number\": \"7\",\n            \"rating_star\": \"5.0\",\n            \"show_rating\": \"1\",\n            \"quantity\": \"216\",\n            \"text_price\": \"\",\n            \"price\": \"349000\",\n            \"save_price\": \"0\",\n            \"reduction_price\": \"69800\",\n            \"reduction_percent\": \"20\",\n            \"type_discount\": \"1\",\n            \"reduction_from\": \"1716483600\",\n            \"reduction_to\": \"1719248399\",\n            \"promotion_no\": \"441PRO24051759113818\",\n            \"promotion_id\": \"79651\",\n            \"promotion_name\": \"Giảm 20% Bộ ngắn, bodysuit đùi Kháng khuẩn\",\n            \"have_gift\": \"0\",\n            \"combo_id\": \"\",\n            \"combo_name\": \"\",\n            \"type_combo\": \"0\",\n            \"quantity_combo\": \"0\",\n            \"comment_number\": \"0\",\n            \"top_text\": \"\",\n            \"middle_text\": \"\",\n            \"center_text\": \"\",\n            \"bottom_text\": \"\",\n            \"is_newdate\": \"0\",\n            \"event_uid\": \"\",\n            \"event_url\": \"\",\n            \"is_take_promotion\": \"0\",\n            \"image_thumb\": \"\",\n            \"thumb_width\": \"0\",\n            \"thumb_height\": \"0\",\n            \"image_frame\": \"\",\n            \"only_online\": \"0\",\n            \"text_online\": null,\n            \"link_video\": \"\",\n            \"thumb_start\": \"1577811600\",\n            \"thumb_end\": \"1577811600\",\n            \"date_start\": \"1708074772\",\n            \"date_end\": \"1708074772\",\n            \"type_group\": \"0\",\n            \"type_show\": \"1\",\n            \"trust_love\": \"9\",\n            \"is_hot\": \"0\",\n            \"is_cf\": \"0\",\n            \"type_sale\": \"0\",\n            \"table_link\": \"https://concung.com/img/bang_size_cf/thoi-trang-so-sinh-body.png\",\n            \"table_size\": \"1\",\n            \"min_number\": \"1\",\n            \"max_number\": \"0\",\n            \"step_number\": \"1\",\n            \"deal_number\": \"0\",\n            \"defect_id\": \"\",\n            \"defect_type_id\": \"0\",\n            \"deal_content\": \"\",\n            \"actived\": \"1\",\n            \"is_online\": \"0\",\n            \"is_exclusive\": \"0\",\n            \"is_outstock\": \"0\",\n            \"total_sales\": \"1\",\n            \"max_customer\": \"1\",\n            \"is_reference\": \"0\",\n            \"is_featured\": \"0\",\n            \"date_upd\": \"1717669990\",\n            \"deleted\": \"0\",\n            \"is_freeship\": 0,\n            \"ship_label\": \"\",\n            \"total_buy\": \"0\",\n            \"api_page\": \"product\",\n            \"id_page\": \"65696\",\n            \"name_page\": \"\",\n            \"is_trust_love\": \"0\",\n            \"score\": \"0\",\n            \"gross_margin\": \"333\",\n            \"image_top\": \"\",\n            \"image_pride\": \"\",\n            \"image_width\": \"750\",\n            \"image_height\": \"268\",\n            \"info_ship\": [\n                {\n                    \"id_ship_speed\": 4,\n                    \"intend_time_des\": \"<i style=\\\"color:#FF4B00; font-family: Helvetica Neue !important; font-size: 1.025rem !important; font-weight: 400 !important; line-height: 1.4285714286 !important;\\\">(Dự kiến giao 2 - 5 ngày)</i>\",\n                    \"ship_icon\": \"https://cdn1.concung.com/img/res/ship_label/giao_tieu_chuan_text.png\",\n                    \"intend_time_note\": \"<div style=\\\"font-family: Helvetica Neue !important; font-size: 1.025rem !important; font-weight: 400 !important; line-height: 1.4285714286 !important;\\\">Nhận vào <b> ngày 13 - 16<br>tháng 06</b></div>\"\n                }\n            ],\n            \"gift_list\": [],\n            \"images\": [\n                {\n                    \"id_image\": \"110151\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"1\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/05/65696-110151-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.png\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/05/65696-110151-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.png\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109628\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109628-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109628-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109629\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109629-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109629-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109630\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109630-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109630-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109631\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109631-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109631-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109632\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109632-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109632-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109633\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109633-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109633-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109634\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109634-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109634-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109635\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109635-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109635-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109636\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109636-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109636-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109637\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109637-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109637-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109638\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109638-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109638-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109639\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109639-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109639-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109640\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109640-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109640-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109641\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109641-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109641-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109642\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109642-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109642-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109643\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109643-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109643-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109644\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109644-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109644-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109645\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109645-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109645-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109646\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109646-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109646-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                },\n                {\n                    \"id_image\": \"109647\",\n                    \"id_color_attributes\": \"0\",\n                    \"cover\": \"0\",\n                    \"is_default\": \"0\",\n                    \"link_image\": \"https://cdn1.concung.com/2024/04/65696-109647-large_mobile/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"width_mobile\": \"600\",\n                    \"height_mobile\": \"600\",\n                    \"link_image_small\": \"https://cdn1.concung.com/2024/04/65696-109647-small/set-2-bo-khang-khuan-modal-ngan-xe-hoi-animo-vd1023003-3-6m-xanh-ngoc.jpg\",\n                    \"expires_in\": \"0\",\n                    \"id_type\": \"0\",\n                    \"file_path\": \"\"\n                }\n            ],\n            \"group_display\": [\n                {\n                    \"id_attribute\": \"118\",\n                    \"attribute_name\": \"3-6M\",\n                    \"color\": \"\",\n                    \"id_attribute_group\": \"2\",\n                    \"group_name\": \"Chọn Size\"\n                },\n                {\n                    \"id_attribute\": \"122\",\n                    \"attribute_name\": \"18-24M\",\n                    \"color\": \"\",\n                    \"id_attribute_group\": \"2\",\n                    \"group_name\": \"Chọn Size\"\n                },\n                {\n                    \"id_attribute\": \"214\",\n                    \"attribute_name\": \"6-9M\",\n                    \"color\": \"\",\n                    \"id_attribute_group\": \"2\",\n                    \"group_name\": \"Chọn Size\"\n                },\n                {\n                    \"id_attribute\": \"249\",\n                    \"attribute_name\": \"12-18M\",\n                    \"color\": \"\",\n                    \"id_attribute_group\": \"2\",\n                    \"group_name\": \"Chọn Size\"\n                }\n            ],\n            \"combinations\": [\n                {\n                    \"id_product_attribute\": \"62224\",\n                    \"id_product\": \"65696\",\n                    \"product_name\": \"Set 2 Bộ kháng khuẩn Modal ngắn Xe hơi Animo VD1023003 (3-6M,Xanh ngọc)\",\n                    \"reference\": \"6996000000015\",\n                    \"text_price\": null,\n                    \"price\": \"349000\",\n                    \"reduction_price\": \"69800\",\n                    \"reduction_percent\": \"20\",\n                    \"id_category_erp\": \"6997\",\n                    \"reduction_from\": \"1716483600\",\n                    \"reduction_to\": \"1719248399\",\n                    \"promotion_no\": \"441PRO24051759113818\",\n                    \"promotion_id\": \"79651\",\n                    \"promotion_name\": \"Giảm 20% Bộ ngắn, bodysuit đùi Kháng khuẩn\",\n                    \"quantity\": \"216\",\n                    \"date_upd\": \"2024-04-22 09:23:21\",\n                    \"combo_id\": \"\",\n                    \"combo_name\": \"\",\n                    \"type_combo\": \"0\",\n                    \"type_discount\": \"1\",\n                    \"quantity_combo\": \"1\",\n                    \"date_start\": \"1708074772\",\n                    \"date_end\": \"1708074772\",\n                    \"min_number\": \"1\",\n                    \"max_number\": \"0\",\n                    \"step_number\": \"0\",\n                    \"deal_number\": \"0\",\n                    \"total_sales\": \"0\",\n                    \"max_customer\": \"1\",\n                    \"defect_id\": \"\",\n                    \"defect_type_id\": \"0\",\n                    \"type_show\": \"1\",\n                    \"deleted\": \"0\",\n                    \"id_attribute\": \"118\",\n                    \"attribute_name\": \"3-6M\",\n                    \"color\": \"\",\n                    \"id_attribute_group\": \"2\",\n                    \"group_name\": \"Chọn Size\",\n                    \"position\": \"10\",\n                    \"combine\": [\n                        {\n                            \"id_attribute\": \"118\",\n                            \"attribute_name\": \"3-6M\",\n                            \"color\": \"\",\n                            \"id_attribute_group\": \"2\",\n                            \"group_name\": \"Chọn Size\",\n                            \"position\": \"10\"\n                        }\n                    ]\n                },\n                {\n                    \"id_product_attribute\": \"62225\",\n                    \"id_product\": \"65696\",\n                    \"product_name\": \"Set 2 Bộ kháng khuẩn Modal ngắn Xe hơi Animo VD1023003 (6-9M,Xanh ngọc)\",\n                    \"reference\": \"6996000000016\",\n                    \"text_price\": null,\n                    \"price\": \"349000\",\n                    \"reduction_price\": \"69800\",\n                    \"reduction_percent\": \"20\",\n                    \"id_category_erp\": \"6997\",\n                    \"reduction_from\": \"1716483600\",\n                    \"reduction_to\": \"1719248399\",\n                    \"promotion_no\": \"441PRO24051759113818\",\n                    \"promotion_id\": \"79651\",\n                    \"promotion_name\": \"Giảm 20% Bộ ngắn, bodysuit đùi Kháng khuẩn\",\n                    \"quantity\": \"218\",\n                    \"date_upd\": \"2024-04-22 09:23:51\",\n                    \"combo_id\": \"\",\n                    \"combo_name\": \"\",\n                    \"type_combo\": \"0\",\n                    \"type_discount\": \"1\",\n                    \"quantity_combo\": \"1\",\n                    \"date_start\": \"1708074772\",\n                    \"date_end\": \"1708074772\",\n                    \"min_number\": \"1\",\n                    \"max_number\": \"0\",\n                    \"step_number\": \"0\",\n                    \"deal_number\": \"0\",\n                    \"total_sales\": \"0\",\n                    \"max_customer\": \"1\",\n                    \"defect_id\": \"\",\n                    \"defect_type_id\": \"0\",\n                    \"type_show\": \"1\",\n                    \"deleted\": \"0\",\n                    \"id_attribute\": \"214\",\n                    \"attribute_name\": \"6-9M\",\n                    \"color\": \"\",\n                    \"id_attribute_group\": \"2\",\n                    \"group_name\": \"Chọn Size\",\n                    \"position\": \"10\",\n                    \"combine\": [\n                        {\n                            \"id_attribute\": \"214\",\n                            \"attribute_name\": \"6-9M\",\n                            \"color\": \"\",\n                            \"id_attribute_group\": \"2\",\n                            \"group_name\": \"Chọn Size\",\n                            \"position\": \"10\"\n                        }\n                    ]\n                },\n                {\n                    \"id_product_attribute\": \"62227\",\n                    \"id_product\": \"65696\",\n                    \"product_name\": \"Set 2 Bộ kháng khuẩn Modal ngắn Xe hơi Animo VD1023003 (12-18M,Xanh ngọc)\",\n                    \"reference\": \"6996000000018\",\n                    \"text_price\": null,\n                    \"price\": \"349000\",\n                    \"reduction_price\": \"69800\",\n                    \"reduction_percent\": \"20\",\n                    \"id_category_erp\": \"6997\",\n                    \"reduction_from\": \"1716483600\",\n                    \"reduction_to\": \"1719248399\",\n                    \"promotion_no\": \"441PRO24051759113818\",\n                    \"promotion_id\": \"79651\",\n                    \"promotion_name\": \"Giảm 20% Bộ ngắn, bodysuit đùi Kháng khuẩn\",\n                    \"quantity\": \"74\",\n                    \"date_upd\": \"2024-04-22 09:24:19\",\n                    \"combo_id\": \"\",\n                    \"combo_name\": \"\",\n                    \"type_combo\": \"0\",\n                    \"type_discount\": \"1\",\n                    \"quantity_combo\": \"1\",\n                    \"date_start\": \"1708074772\",\n                    \"date_end\": \"1708074772\",\n                    \"min_number\": \"1\",\n                    \"max_number\": \"0\",\n                    \"step_number\": \"0\",\n                    \"deal_number\": \"0\",\n                    \"total_sales\": \"0\",\n                    \"max_customer\": \"1\",\n                    \"defect_id\": \"\",\n                    \"defect_type_id\": \"0\",\n                    \"type_show\": \"1\",\n                    \"deleted\": \"0\",\n                    \"id_attribute\": \"249\",\n                    \"attribute_name\": \"12-18M\",\n                    \"color\": \"\",\n                    \"id_attribute_group\": \"2\",\n                    \"group_name\": \"Chọn Size\",\n                    \"position\": \"10\",\n                    \"combine\": [\n                        {\n                            \"id_attribute\": \"249\",\n                            \"attribute_name\": \"12-18M\",\n                            \"color\": \"\",\n                            \"id_attribute_group\": \"2\",\n                            \"group_name\": \"Chọn Size\",\n                            \"position\": \"10\"\n                        }\n                    ]\n                },\n                {\n                    \"id_product_attribute\": \"62228\",\n                    \"id_product\": \"65696\",\n                    \"product_name\": \"Set 2 Bộ kháng khuẩn Modal ngắn Xe hơi Animo VD1023003 (18-24M,Xanh ngọc)\",\n                    \"reference\": \"6996000000019\",\n                    \"text_price\": null,\n                    \"price\": \"349000\",\n                    \"reduction_price\": \"69800\",\n                    \"reduction_percent\": \"20\",\n                    \"id_category_erp\": \"6997\",\n                    \"reduction_from\": \"1716483600\",\n                    \"reduction_to\": \"1719248399\",\n                    \"promotion_no\": \"441PRO24051759113818\",\n                    \"promotion_id\": \"79651\",\n                    \"promotion_name\": \"Giảm 20% Bộ ngắn, bodysuit đùi Kháng khuẩn\",\n                    \"quantity\": \"84\",\n                    \"date_upd\": \"2024-04-22 09:24:32\",\n                    \"combo_id\": \"\",\n                    \"combo_name\": \"\",\n                    \"type_combo\": \"0\",\n                    \"type_discount\": \"1\",\n                    \"quantity_combo\": \"1\",\n                    \"date_start\": \"1708074772\",\n                    \"date_end\": \"1708074772\",\n                    \"min_number\": \"1\",\n                    \"max_number\": \"0\",\n                    \"step_number\": \"0\",\n                    \"deal_number\": \"0\",\n                    \"total_sales\": \"0\",\n                    \"max_customer\": \"1\",\n                    \"defect_id\": \"\",\n                    \"defect_type_id\": \"0\",\n                    \"type_show\": \"1\",\n                    \"deleted\": \"0\",\n                    \"id_attribute\": \"122\",\n                    \"attribute_name\": \"18-24M\",\n                    \"color\": \"\",\n                    \"id_attribute_group\": \"2\",\n                    \"group_name\": \"Chọn Size\",\n                    \"position\": \"10\",\n                    \"combine\": [\n                        {\n                            \"id_attribute\": \"122\",\n                            \"attribute_name\": \"18-24M\",\n                            \"color\": \"\",\n                            \"id_attribute_group\": \"2\",\n                            \"group_name\": \"Chọn Size\",\n                            \"position\": \"10\"\n                        }\n                    ]\n                }\n            ],\n            \"gifts\": [],\n            \"features\": [\n                {\n                    \"id_product_feature\": \"27203\",\n                    \"id_product\": \"65696\",\n                    \"id_feature\": \"21\",\n                    \"feature_link\": \"\",\n                    \"is_long_content\": \"1\",\n                    \"feature_name\": \"Tên sản phẩm\",\n                    \"position\": \"0\",\n                    \"is_off_key\": \"0\",\n                    \"background_color\": \"#FFFFFF\",\n                    \"feature_value\": \"Set 2 Bộ kháng khuẩn Modal ngắn Xe hơi Animo VD1023003 (0-24M,Xanh ngọc)\",\n                    \"date_upd\": \"2024-04-22 09:18:43\",\n                    \"deleted\": \"0\",\n                    \"url_link\": \"\",\n                    \"api_page\": \"0\",\n                    \"id_page\": \"0\",\n                    \"name_page\": \"\"\n                },\n                {\n                    \"id_product_feature\": \"27204\",\n                    \"id_product\": \"65696\",\n                    \"id_feature\": \"1\",\n                    \"feature_link\": \"\",\n                    \"is_long_content\": \"0\",\n                    \"feature_name\": \"Thương hiệu\",\n                    \"position\": \"1\",\n                    \"is_off_key\": \"0\",\n                    \"background_color\": \"#FFFFFF\",\n                    \"feature_value\": \"Animo\",\n                    \"date_upd\": \"2024-04-22 09:18:43\",\n                    \"deleted\": \"0\",\n                    \"url_link\": \"\",\n                    \"api_page\": \"0\",\n                    \"id_page\": \"0\",\n                    \"name_page\": \"\"\n                },\n                {\n                    \"id_product_feature\": \"27205\",\n                    \"id_product\": \"65696\",\n                    \"id_feature\": \"2\",\n                    \"feature_link\": \"\",\n                    \"is_long_content\": \"0\",\n                    \"feature_name\": \"Xuất xứ thương hiệu\",\n                    \"position\": \"2\",\n                    \"is_off_key\": \"0\",\n                    \"background_color\": \"#FFFFFF\",\n                    \"feature_value\": \"Việt Nam\",\n                    \"date_upd\": \"2024-04-22 09:18:43\",\n                    \"deleted\": \"0\",\n                    \"url_link\": \"\",\n                    \"api_page\": \"0\",\n                    \"id_page\": \"0\",\n                    \"name_page\": \"\"\n                },\n                {\n                    \"id_product_feature\": \"27206\",\n                    \"id_product\": \"65696\",\n                    \"id_feature\": \"9\",\n                    \"feature_link\": \"\",\n                    \"is_long_content\": \"1\",\n                    \"feature_name\": \"Chất liệu\",\n                    \"position\": \"9\",\n                    \"is_off_key\": \"0\",\n                    \"background_color\": \"#FFFFFF\",\n                    \"feature_value\": \"95% modal, 5% spandex\",\n                    \"date_upd\": \"2024-04-22 09:18:43\",\n                    \"deleted\": \"0\",\n                    \"url_link\": \"\",\n                    \"api_page\": \"0\",\n                    \"id_page\": \"0\",\n                    \"name_page\": \"\"\n                },\n                {\n                    \"id_product_feature\": \"27207\",\n                    \"id_product\": \"65696\",\n                    \"id_feature\": \"10\",\n                    \"feature_link\": \"\",\n                    \"is_long_content\": \"1\",\n                    \"feature_name\": \"Độ tuổi phù hợp\",\n                    \"position\": \"10\",\n                    \"is_off_key\": \"0\",\n                    \"background_color\": \"#FFFFFF\",\n                    \"feature_value\": \"Bé từ 0 đến 24 tháng tuổi\",\n                    \"date_upd\": \"2024-04-22 09:18:43\",\n                    \"deleted\": \"0\",\n                    \"url_link\": \"\",\n                    \"api_page\": \"0\",\n                    \"id_page\": \"0\",\n                    \"name_page\": \"\"\n                }\n            ],\n            \"comments\": [\n                {\n                    \"id_comment\": \"604123\",\n                    \"id_product\": \"65696\",\n                    \"id_comment_parent\": \"0\",\n                    \"id_level\": \"0\",\n                    \"id_customer\": \"1601034\",\n                    \"customer_email\": \"\",\n                    \"customer_name\": \"Thao\",\n                    \"customer_image\": \"\",\n                    \"content\": \"\",\n                    \"have_file\": \"0\",\n                    \"grade\": \"0\",\n                    \"is_buy\": \"0\",\n                    \"date_upd\": \"1717863495\",\n                    \"deleted\": \"0\",\n                    \"validate\": \"1\",\n                    \"vote_number\": \"0\",\n                    \"id_employee_add\": \"0\",\n                    \"sortID\": \"604123\",\n                    \"files\": []\n                },\n                {\n                    \"id_comment\": \"598834\",\n                    \"id_product\": \"65696\",\n                    \"id_comment_parent\": \"0\",\n                    \"id_level\": \"0\",\n                    \"id_customer\": \"1462719\",\n                    \"customer_email\": \"trandothoainhan.aw@gmail.com\",\n                    \"customer_name\": \"Trần Đỗ Thoại Nhân\",\n                    \"customer_image\": \"\",\n                    \"content\": \"\",\n                    \"have_file\": \"0\",\n                    \"grade\": \"0\",\n                    \"is_buy\": \"0\",\n                    \"date_upd\": \"1717227424\",\n                    \"deleted\": \"0\",\n                    \"validate\": \"1\",\n                    \"vote_number\": \"0\",\n                    \"id_employee_add\": \"0\",\n                    \"sortID\": \"598834\",\n                    \"files\": []\n                },\n                {\n                    \"id_comment\": \"591195\",\n                    \"id_product\": \"65696\",\n                    \"id_comment_parent\": \"0\",\n                    \"id_level\": \"0\",\n                    \"id_customer\": \"1842000\",\n                    \"customer_email\": \"\",\n                    \"customer_name\": \"Trần Trương Phương Thảo\",\n                    \"customer_image\": \"\",\n                    \"content\": \"\",\n                    \"have_file\": \"0\",\n                    \"grade\": \"0\",\n                    \"is_buy\": \"0\",\n                    \"date_upd\": \"1716179910\",\n                    \"deleted\": \"0\",\n                    \"validate\": \"1\",\n                    \"vote_number\": \"0\",\n                    \"id_employee_add\": \"0\",\n                    \"sortID\": \"591195\",\n                    \"files\": []\n                }\n            ],\n            \"banner\": [],\n            \"suggests\": [],\n            \"together\": [],\n            \"menus\": []\n        }",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "fashion",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65703",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65707",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65696",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "66225",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65713",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -1299,16 +1376,89 @@
           "latency": 0,
           "statusCode": 200,
           "label": "",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "0a43e655-682d-4e3a-80e8-574c3aec63f2",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"PromotionID\": 79651,\n      \"PromotionNo\": \"441PRO24051759113818\",\n      \"PromotionName\": \"Giảm 20% Bộ ngắn, bodysuit đùi Kháng khuẩn\",\n      \"PromotionTypeID\": 3,\n      \"BeginDate\": 1716483600,\n      \"EndDate\": 1719248399,\n      \"PriorityLevelID\": 0,\n      \"IsOption\": false,\n      \"IsDefault\": true,\n      \"IsFixed\": false,\n      \"IsDiscount\": true,\n      \"DiscountAmount\": 0,\n      \"DiscountPercent\": 20,\n      \"SamePrice\": null,\n      \"IsCondition\": false,\n      \"InvoiceFromPrice\": 0,\n      \"InvoiceToPrice\": 0,\n      \"IsPromotionProductGroup\": false,\n      \"IsPromotionGift\": false,\n      \"IsCombo\": false,\n      \"CodeID\": null,\n      \"ShortCode\": \"PROM79651\",\n      \"CreatedDate\": \"0001-01-01T00:00:00\",\n      \"UpdatedDate\": \"2024-05-23T23:55:06.98\",\n      \"InvoiceApplyType\": 0,\n      \"ExtendTypeID\": null,\n      \"MaxDiscountAmount\": null,\n      \"RegisterCode\": null,\n      \"ShortDescription\": null,\n      \"PromotionParentID\": null,\n      \"IsAccumulated\": null,\n      \"QuantityMaxOffer\": null,\n      \"PromotionProductApplys\": [\n        {\n          \"PProductApplyID\": 5565410,\n          \"PromotionID\": 79651,\n          \"PID\": 126941,\n          \"ProductID\": \"6996000000015\",\n          \"ProductName\": \"Set 2 Bộ kháng khuẩn Modal ngắn Xe hơi Animo VD1023003 (3-6M,Xanh ngọc)\",\n          \"Discount\": 0,\n          \"TypeID\": 1,\n          \"SalePriceAfter\": 349000\n        }\n      ],\n      \"PromotionProductOffers\": [],\n      \"PromotionProductSamePrices\": [],\n      \"PromotionFollows\": [],\n      \"PromotionCategorys\": [],\n      \"PromotionMembership\": [],\n      \"PromotionCombos\": [],\n      \"companionBrands\": [],\n      \"TimesApply\": null,\n      \"OfferPromotions\": [],\n      \"LimitApply\": null,\n      \"BuyMorePayLess\": null,\n      \"PromotionEnvironments\": [\n        {\n          \"PromotionEnvironmentID\": 91446,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 1\n        },\n        {\n          \"PromotionEnvironmentID\": 91454,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 9\n        },\n        {\n          \"PromotionEnvironmentID\": 91449,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 4\n        },\n        {\n          \"PromotionEnvironmentID\": 91448,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 3\n        },\n        {\n          \"PromotionEnvironmentID\": 91452,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 7\n        },\n        {\n          \"PromotionEnvironmentID\": 91447,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 2\n        },\n        {\n          \"PromotionEnvironmentID\": 91450,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 5\n        },\n        {\n          \"PromotionEnvironmentID\": 91453,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 8\n        },\n        {\n          \"PromotionEnvironmentID\": 91451,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 6\n        }\n      ],\n      \"RequiredQuantity\": null,\n      \"IsLimitOrder\": 0,\n      \"LimitQuantity\": 60,\n      \"LimitQuantityGift\": 60\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "fashion",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65713",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "66225",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65696",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65707",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65703",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -1357,16 +1507,89 @@
           "latency": 0,
           "statusCode": 200,
           "label": "",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "94f2df0b-03ea-48c8-a423-eb2bc96f5767",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": {\n    \"manufacturer\": [\n      {\n        \"id_manufacturer\": \"908\",\n        \"name\": \"Meiji\",\n        \"image_logo\": \"https://cdn1.concung.com/img/m/2022/09/908_logo_vuong1662627380.png\",\n        \"file_path\": \"\",\n        \"description\": \"<p style=\\\"touch-action: manipulation; margin-bottom: 0px; font-family: Montserrat, sans-serif; font-size: 16px;\\\"><span style=\\\"touch-action: manipulation; font-weight: bolder;\\\"><a href=\\\"https://concung.com/416-thuong-hieu-meiji.html\\\" style=\\\"touch-action: manipulation; color: rgb(21, 146, 230); cursor: pointer;\\\">Meiji&nbsp;</a></span>từ lâu được biết đến là một trong những thương hiệu sản xuất&nbsp;<a href=\\\"https://concung.com/sua-bot-101586.html\\\" style=\\\"touch-action: manipulation; color: rgb(21, 146, 230); cursor: pointer;\\\">sữa bột</a>&nbsp;cho bé lâu đời bậc nhất tại Nhật Bản và châu Á. Được thành lập năm 1917, sau hơn 100 năm hình thành và phát triển, Meiji đã khẳng định được giá trị thương hiệu số 1 với dây chuyền sản xuất hiện đại, cho ra những sản phẩm chất lượng cao nhất.&nbsp;Tất cả sản phẩm Meiji dù ở các thị trường nước ngoài hay thị trường trong nước đều được sản xuất tại cùng một nhà máy ở tỉnh Saitama, Nhật Bản.</p><p style=\\\"touch-action: manipulation; margin-bottom: 0px; font-family: Montserrat, sans-serif; font-size: 16px;\\\">&nbsp;</p><p style=\\\"touch-action: manipulation; margin-bottom: 0px; font-family: Montserrat, sans-serif; font-size: 16px;\\\"><span style=\\\"touch-action: manipulation;\\\">Hướng tới việc tạo ra được loại sữa bột có thành phần gần gũi với trẻ nhỏ, Meiji đã thực hiện dự án “Khoa học sữa mẹ”</span>&nbsp;và cho ra những dòng sữa phù hợp nhất. Tất cả các dòng sữa bột Meiji đều mang lại cho bé thể trạng và sự phát triển toàn diện nhất dựa trên sức mạnh tự nhiên có từ sữa.&nbsp;&nbsp;<br style=\\\"touch-action: manipulation;\\\"><br style=\\\"touch-action: manipulation;\\\"></p><p style=\\\"touch-action: manipulation; margin-bottom: 0px; font-family: Montserrat, sans-serif; font-size: 16px;\\\">&nbsp;</p><p style=\\\"touch-action: manipulation; margin-bottom: 0px; font-family: Montserrat, sans-serif; font-size: 16px; text-align: center;\\\"><img src=\\\"https://concung.com/storage/2021/08/1629359087-a%CC%89nh-3-khoa-ho%CC%A3c-su%CC%9B%CC%83a-me%CC%A3.jpg\\\" style=\\\"touch-action: manipulation; border-style: none; width: 421.007px;\\\"><br style=\\\"touch-action: manipulation;\\\"></p><p style=\\\"touch-action: manipulation; margin-bottom: 0px; font-family: Montserrat, sans-serif; font-size: 16px;\\\"><span style=\\\"touch-action: manipulation;\\\"><b>Meiji&nbsp;</b></span><span style=\\\"touch-action: manipulation; font-weight: bolder;\\\">nhập khẩu:&nbsp;</span></p><p style=\\\"touch-action: manipulation; margin-bottom: 0px; font-family: Montserrat, sans-serif; font-size: 16px; text-align: center;\\\"><img src=\\\"https://concung.com/storage/2021/08/1629359101-a%CC%89nh-2-nha%CC%80-ma%CC%81y-1.png\\\" style=\\\"touch-action: manipulation; border-style: none; width: 800px;\\\"><span style=\\\"touch-action: manipulation; font-weight: bolder;\\\"><br style=\\\"touch-action: manipulation;\\\"></span></p><p style=\\\"touch-action: manipulation; margin-bottom: 0px; font-family: Montserrat, sans-serif; font-size: 16px;\\\">Meiji nhập khẩu là sản phẩm dinh dưỡng công thức dành cho trẻ em được sản xuất 100% tại Nhật Bản. Sau đó, sản phẩm được đóng gói và nhập khẩu trực tiếp về Việt Nam. Công thức sữa Meiji nhập được nghiên cứu phù hợp với thể trạng và nhu cầu của trẻ em Việt.&nbsp;</p><p style=\\\"touch-action: manipulation; margin-bottom: 0px; font-family: Montserrat, sans-serif; font-size: 16px;\\\">&nbsp;</p><p style=\\\"touch-action: manipulation; margin-bottom: 0px; font-family: Montserrat, sans-serif; font-size: 16px;\\\"><span style=\\\"touch-action: manipulation; font-weight: bolder;\\\"><span style=\\\"touch-action: manipulation; font-weight: bolder;\\\"><a href=\\\"https://concung.com/416-thuong-hieu-meiji.html\\\" style=\\\"touch-action: manipulation; color: rgb(21, 146, 230); cursor: pointer;\\\">Meiji&nbsp;</a></span>và giải thưởng</span></p><p style=\\\"touch-action: manipulation; margin-bottom: 0px; font-family: Montserrat, sans-serif; font-size: 16px;\\\">Sản phẩm dạng viên của Meiji đạt giải thưởng của Bộ trưởng Bộ Nông nghiệp, Lâm nghiệp và Thủy sản Nhật Bản về \\\"Phát triển công nghệ sản xuất sữa bột dạng rắn\\\" tại \\\"Giải thưởng Thành tựu R&amp;D của Bộ Nông nghiệp, Lâm nghiệp và Thủy sản năm 2014\\\"&nbsp;</p>\",\n        \"short_description\": \"\",\n        \"meta_title\": \"Meiji Nhập khẩu\",\n        \"trust_love\": \"0\",\n        \"is_cf\": \"0\",\n        \"is_follow\": \"0\",\n        \"satisfy_number\": \"98.1\",\n        \"follow_number\": \"5169\",\n        \"rating_number\": \"5.0\",\n        \"share_number\": \"1287\",\n        \"comment_number\": \"5159\",\n        \"actived\": \"1\",\n        \"date_upd\": \"1718089554\",\n        \"url_link\": \"https://concung.com/908-thuong-hieu-meiji-nhap-khau.html\",\n        \"api_page\": \"manufacturer\",\n        \"id_page\": \"908\",\n        \"name_page\": \"\"\n      }\n    ],\n    \"quicksale\": [\n      {\n        \"id_product\": \"27426\",\n        \"product_name\": \"Sữa Meiji Infant Formula 800g (0-12 tháng)\",\n        \"image_cover\": \"https://cdn1.concung.com/2021/04/27426-72037-large_mobile/meiji-infant-formula-800g-0-12-thang.png\",\n        \"category_name\": \"Sữa bột công thức\",\n        \"id_page_segment\": \"1\",\n        \"id_recommendation\": \"Concung_A1\",\n        \"id_category\": \"586\",\n        \"reference\": \"0020010000438\",\n        \"id_manufacturer\": \"908\",\n        \"image_logo\": \"\",\n        \"manufacture_name\": \"Meiji Nhập khẩu\",\n        \"url_link\": \"https://concung.com/sua-bot/meiji-infant-formula-800g-0-12-thang-27426.html\",\n        \"text_buy\": \"\",\n        \"total_product\": \"0\",\n        \"rating_number\": \"3116\",\n        \"rating_star\": \"5\",\n        \"show_rating\": \"1\",\n        \"quantity\": \"4851\",\n        \"text_price\": \"\",\n        \"price\": \"529000\",\n        \"save_price\": \"0\",\n        \"real_price\": \"529000\",\n        \"reduction_price\": \"0\",\n        \"reduction_percent\": \"0\",\n        \"reduction_from\": \"1627838402\",\n        \"reduction_to\": \"1628097602\",\n        \"promotion_id\": \"0\",\n        \"promotion_no\": \"\",\n        \"have_gift\": \"0\",\n        \"gift_content\": \"\",\n        \"ui_type\": \"0\",\n        \"is_show_filter\": \"0\",\n        \"comment_number\": \"5201\",\n        \"top_text\": \"Số 0\",\n        \"middle_text\": \"0-12 tháng\",\n        \"center_text\": \"0.8\",\n        \"bottom_text\": \"Kg\",\n        \"is_newdate\": \"0\",\n        \"event_uid\": \"\",\n        \"event_url\": \"\",\n        \"is_take_promotion\": \"0\",\n        \"reference_gift\": \"\",\n        \"gift_list\": [],\n        \"link_video\": \"\",\n        \"only_online\": \"0\",\n        \"text_online\": null,\n        \"image_thumb\": \"\",\n        \"thumb_width\": \"90\",\n        \"thumb_height\": \"137\",\n        \"image_frame\": \"\",\n        \"thumb_start\": \"1262278800\",\n        \"thumb_end\": \"1262278800\",\n        \"combo_id\": \"\",\n        \"id_category_erp\": \"2541\",\n        \"category_name_erp\": \"Sữa;Meiji;Meiji;Meiji Step 1\",\n        \"combo_name\": \"\",\n        \"type_combo\": \"0\",\n        \"quantity_combo\": \"1\",\n        \"date_start\": \"1262278800\",\n        \"date_end\": \"1262278800\",\n        \"type_group\": \"0\",\n        \"type_show\": \"1\",\n        \"trust_love\": \"914290\",\n        \"is_hot\": \"0\",\n        \"is_cf\": \"0\",\n        \"type_sale\": \"0\",\n        \"position\": \"1000\",\n        \"table_link\": \"\",\n        \"total_sales\": \"1\",\n        \"actived\": \"1\",\n        \"is_online\": \"0\",\n        \"max_number\": \"1\",\n        \"step_number\": \"1\",\n        \"deal_number\": \"0\",\n        \"is_outstock\": \"0\",\n        \"is_freeship\": 0,\n        \"ship_label\": \"https://cdn1.concung.com/img/res/ship_label_new/list_10k.png\",\n        \"total_buy\": \"110000\",\n        \"date_add\": \"1470816971\",\n        \"date_upd\": \"1697512353\",\n        \"deleted\": \"0\",\n        \"api_page\": \"product\",\n        \"id_page\": \"27426\",\n        \"name_page\": \"\",\n        \"score\": \"0\",\n        \"image_top\": \"https://cdn1.concung.com/img/frame/themor_5.png\"\n      },\n      {\n        \"id_product\": \"27427\",\n        \"product_name\": \"Sữa Meiji Growing up Formula 800g (12-36 tháng)\",\n        \"image_cover\": \"https://cdn1.concung.com/2021/04/27427-72039-large_mobile/meiji-growing-up-formula-800g-1-3-tuoi.png\",\n        \"category_name\": \"Sữa bột công thức\",\n        \"id_page_segment\": \"1\",\n        \"id_recommendation\": \"Concung_A1\",\n        \"id_category\": \"586\",\n        \"reference\": \"0020010000440\",\n        \"id_manufacturer\": \"908\",\n        \"image_logo\": \"\",\n        \"manufacture_name\": \"Meiji Nhập khẩu\",\n        \"url_link\": \"https://concung.com/sua-bot/meiji-growing-up-formula-800g-1-3-tuoi-27427.html\",\n        \"text_buy\": \"\",\n        \"total_product\": \"0\",\n        \"rating_number\": \"1010\",\n        \"rating_star\": \"5\",\n        \"show_rating\": \"1\",\n        \"quantity\": \"5130\",\n        \"text_price\": \"\",\n        \"price\": \"465000\",\n        \"save_price\": \"0\",\n        \"real_price\": \"465000\",\n        \"reduction_price\": \"0\",\n        \"reduction_percent\": \"0\",\n        \"reduction_from\": \"1627838402\",\n        \"reduction_to\": \"1628097602\",\n        \"promotion_id\": \"0\",\n        \"promotion_no\": \"\",\n        \"have_gift\": \"0\",\n        \"gift_content\": \"\",\n        \"ui_type\": \"0\",\n        \"is_show_filter\": \"0\",\n        \"comment_number\": \"1313\",\n        \"top_text\": \"Số 3\",\n        \"middle_text\": \"1-3 tuổi\",\n        \"center_text\": \"0.8\",\n        \"bottom_text\": \"Kg\",\n        \"is_newdate\": \"0\",\n        \"event_uid\": \"\",\n        \"event_url\": \"\",\n        \"is_take_promotion\": \"0\",\n        \"reference_gift\": \"\",\n        \"gift_list\": [],\n        \"link_video\": \"\",\n        \"only_online\": \"0\",\n        \"text_online\": null,\n        \"image_thumb\": \"\",\n        \"thumb_width\": \"90\",\n        \"thumb_height\": \"137\",\n        \"image_frame\": \"\",\n        \"thumb_start\": \"1262278800\",\n        \"thumb_end\": \"1262278800\",\n        \"combo_id\": \"\",\n        \"id_category_erp\": \"2542\",\n        \"category_name_erp\": \"Sữa;Meiji;Meiji;Meiji Step 3\",\n        \"combo_name\": \"\",\n        \"type_combo\": \"0\",\n        \"quantity_combo\": \"1\",\n        \"date_start\": \"1262278800\",\n        \"date_end\": \"1262278800\",\n        \"type_group\": \"0\",\n        \"type_show\": \"1\",\n        \"trust_love\": \"2202\",\n        \"is_hot\": \"0\",\n        \"is_cf\": \"0\",\n        \"type_sale\": \"0\",\n        \"position\": \"1000\",\n        \"table_link\": \"\",\n        \"total_sales\": \"2875914\",\n        \"actived\": \"1\",\n        \"is_online\": \"0\",\n        \"max_number\": \"1\",\n        \"step_number\": \"1\",\n        \"deal_number\": \"0\",\n        \"is_outstock\": \"0\",\n        \"is_freeship\": 0,\n        \"ship_label\": \"\",\n        \"total_buy\": \"80000\",\n        \"date_add\": \"1470818581\",\n        \"date_upd\": \"1682578179\",\n        \"deleted\": \"0\",\n        \"api_page\": \"product\",\n        \"id_page\": \"27427\",\n        \"name_page\": \"\",\n        \"score\": \"0\",\n        \"image_top\": \"https://cdn1.concung.com/img/frame/themor_5.png\"\n      },\n      {\n        \"id_product\": \"64137\",\n        \"product_name\": \"Sữa Meiji thanh Infant Formula Ezcube 540g (0-12 tháng)\",\n        \"image_cover\": \"https://cdn1.concung.com/2023/10/64137-1696404011-trans.png\",\n        \"category_name\": \"Sữa bột công thức\",\n        \"id_page_segment\": \"1\",\n        \"id_recommendation\": \"Concung_A1\",\n        \"id_category\": \"586\",\n        \"reference\": \"2541000000002\",\n        \"id_manufacturer\": \"908\",\n        \"image_logo\": \"\",\n        \"manufacture_name\": \"Meiji Nhập khẩu\",\n        \"url_link\": \"https://concung.com/sua-bot/san-pham-dinh-duong-cong-thuc-cho-tre-tu-0-12-thang-meiji-0-1-year-old-infant-formula-ezcube-540g-64137.html\",\n        \"text_buy\": \"\",\n        \"total_product\": \"0\",\n        \"rating_number\": \"380\",\n        \"rating_star\": \"5\",\n        \"show_rating\": \"1\",\n        \"quantity\": \"3210\",\n        \"text_price\": \"\",\n        \"price\": \"455000\",\n        \"save_price\": \"0\",\n        \"real_price\": \"455000\",\n        \"reduction_price\": \"0\",\n        \"reduction_percent\": \"0\",\n        \"reduction_from\": \"1696308468\",\n        \"reduction_to\": \"1696308468\",\n        \"promotion_id\": \"0\",\n        \"promotion_no\": \"\",\n        \"have_gift\": \"0\",\n        \"gift_content\": \"\",\n        \"ui_type\": \"0\",\n        \"is_show_filter\": \"0\",\n        \"comment_number\": \"504\",\n        \"top_text\": \"\",\n        \"middle_text\": \"\",\n        \"center_text\": \"\",\n        \"bottom_text\": \"\",\n        \"is_newdate\": \"0\",\n        \"event_uid\": \"\",\n        \"event_url\": \"\",\n        \"is_take_promotion\": \"0\",\n        \"reference_gift\": \"\",\n        \"gift_list\": [],\n        \"link_video\": \"\",\n        \"only_online\": \"0\",\n        \"text_online\": null,\n        \"image_thumb\": \"\",\n        \"thumb_width\": \"0\",\n        \"thumb_height\": \"0\",\n        \"image_frame\": \"\",\n        \"thumb_start\": \"1696308468\",\n        \"thumb_end\": \"1696308468\",\n        \"combo_id\": \"\",\n        \"id_category_erp\": \"2541\",\n        \"category_name_erp\": \"Sữa;Meiji;Meiji;Meiji Step 1\",\n        \"combo_name\": \"\",\n        \"type_combo\": \"0\",\n        \"quantity_combo\": \"0\",\n        \"date_start\": \"1696308468\",\n        \"date_end\": \"1696308468\",\n        \"type_group\": \"0\",\n        \"type_show\": \"1\",\n        \"trust_love\": \"751\",\n        \"is_hot\": \"0\",\n        \"is_cf\": \"0\",\n        \"type_sale\": \"0\",\n        \"position\": \"1000\",\n        \"table_link\": \"\",\n        \"total_sales\": \"1\",\n        \"actived\": \"1\",\n        \"is_online\": \"0\",\n        \"max_number\": \"0\",\n        \"step_number\": \"1\",\n        \"deal_number\": \"0\",\n        \"is_outstock\": \"0\",\n        \"is_freeship\": 0,\n        \"ship_label\": \"\",\n        \"total_buy\": \"90000\",\n        \"date_add\": \"1696308468\",\n        \"date_upd\": \"1696405459\",\n        \"deleted\": \"0\",\n        \"api_page\": \"product\",\n        \"id_page\": \"64137\",\n        \"name_page\": \"\",\n        \"score\": \"0\",\n        \"image_top\": \"https://cdn1.concung.com/img/frame/themor_4.png\"\n      },\n      {\n        \"id_product\": \"66308\",\n        \"product_name\": \"Sữa Meiji Growing up Formula Ezcube 560g (1-3 tuổi)\",\n        \"image_cover\": \"https://cdn1.concung.com/2024/04/66308-1714113279-trans.png\",\n        \"category_name\": \"Sữa bột công thức\",\n        \"id_page_segment\": \"1\",\n        \"id_recommendation\": \"Concung_A1\",\n        \"id_category\": \"586\",\n        \"reference\": \"2542000000003\",\n        \"id_manufacturer\": \"908\",\n        \"image_logo\": \"\",\n        \"manufacture_name\": \"Meiji Nhập khẩu\",\n        \"url_link\": \"https://concung.com/sua-bot/san-pham-dinh-duong-cong-thuc-cho-tre-tu-1-3-tuoi-meiji-1-3-years-old-growing-up-formula-ezcube-560g-66308.html\",\n        \"text_buy\": \"\",\n        \"total_product\": \"0\",\n        \"rating_number\": \"9\",\n        \"rating_star\": \"5\",\n        \"show_rating\": \"1\",\n        \"quantity\": \"1074\",\n        \"text_price\": \"\",\n        \"price\": \"399000\",\n        \"save_price\": \"0\",\n        \"real_price\": \"399000\",\n        \"reduction_price\": \"0\",\n        \"reduction_percent\": \"0\",\n        \"reduction_from\": \"1713862115\",\n        \"reduction_to\": \"1713862115\",\n        \"promotion_id\": \"0\",\n        \"promotion_no\": \"\",\n        \"have_gift\": \"0\",\n        \"gift_content\": \"\",\n        \"ui_type\": \"0\",\n        \"is_show_filter\": \"0\",\n        \"comment_number\": \"5\",\n        \"top_text\": \"\",\n        \"middle_text\": \"\",\n        \"center_text\": \"\",\n        \"bottom_text\": \"\",\n        \"is_newdate\": \"0\",\n        \"event_uid\": \"\",\n        \"event_url\": \"\",\n        \"is_take_promotion\": \"0\",\n        \"reference_gift\": \"\",\n        \"gift_list\": [],\n        \"link_video\": \"\",\n        \"only_online\": \"0\",\n        \"text_online\": null,\n        \"image_thumb\": \"\",\n        \"thumb_width\": \"0\",\n        \"thumb_height\": \"0\",\n        \"image_frame\": \"\",\n        \"thumb_start\": \"1713862115\",\n        \"thumb_end\": \"1713862115\",\n        \"combo_id\": \"\",\n        \"id_category_erp\": \"2542\",\n        \"category_name_erp\": \"Sữa;Meiji;Meiji;Meiji Step 3\",\n        \"combo_name\": \"\",\n        \"type_combo\": \"0\",\n        \"quantity_combo\": \"0\",\n        \"date_start\": \"1713862115\",\n        \"date_end\": \"1713862115\",\n        \"type_group\": \"0\",\n        \"type_show\": \"1\",\n        \"trust_love\": \"8\",\n        \"is_hot\": \"0\",\n        \"is_cf\": \"0\",\n        \"type_sale\": \"0\",\n        \"position\": \"1000\",\n        \"table_link\": \"\",\n        \"total_sales\": \"1\",\n        \"actived\": \"1\",\n        \"is_online\": \"0\",\n        \"max_number\": \"0\",\n        \"step_number\": \"1\",\n        \"deal_number\": \"0\",\n        \"is_outstock\": \"0\",\n        \"is_freeship\": 0,\n        \"ship_label\": \"https://cdn1.concung.com/img/res/ship_label_new/list_20k_new.png\",\n        \"total_buy\": \"120000\",\n        \"date_add\": \"1713862115\",\n        \"date_upd\": \"1714114376\",\n        \"deleted\": \"0\",\n        \"api_page\": \"product\",\n        \"id_page\": \"66308\",\n        \"name_page\": \"\",\n        \"score\": \"0\",\n        \"image_top\": \"\"\n      },\n      {\n        \"id_product\": \"27423\",\n        \"product_name\": \"Sữa bầu Meiji mama 350g\",\n        \"image_cover\": \"https://cdn1.concung.com/2024/04/27423-1714118863-trans.png\",\n        \"category_name\": \"Dinh dưỡng cho mẹ\",\n        \"id_page_segment\": \"1\",\n        \"id_recommendation\": \"Concung_A1\",\n        \"id_category\": \"526\",\n        \"reference\": \"0020010000436\",\n        \"id_manufacturer\": \"908\",\n        \"image_logo\": \"\",\n        \"manufacture_name\": \"Meiji Nhập khẩu\",\n        \"url_link\": \"https://concung.com/dinh-duong-cho-me/sua-bau-meiji-mama-milk-350g-27423.html\",\n        \"text_buy\": \"\",\n        \"total_product\": \"0\",\n        \"rating_number\": \"232\",\n        \"rating_star\": \"5\",\n        \"show_rating\": \"1\",\n        \"quantity\": \"343\",\n        \"text_price\": \"\",\n        \"price\": \"219000\",\n        \"save_price\": \"0\",\n        \"real_price\": \"219000\",\n        \"reduction_price\": \"0\",\n        \"reduction_percent\": \"0\",\n        \"reduction_from\": \"1627838402\",\n        \"reduction_to\": \"1628097602\",\n        \"promotion_id\": \"0\",\n        \"promotion_no\": \"\",\n        \"have_gift\": \"0\",\n        \"gift_content\": \"\",\n        \"ui_type\": \"0\",\n        \"is_show_filter\": \"0\",\n        \"comment_number\": \"274\",\n        \"top_text\": \"\",\n        \"middle_text\": \"\",\n        \"center_text\": \"\",\n        \"bottom_text\": \"\",\n        \"is_newdate\": \"0\",\n        \"event_uid\": \"\",\n        \"event_url\": \"\",\n        \"is_take_promotion\": \"0\",\n        \"reference_gift\": \"\",\n        \"gift_list\": [],\n        \"link_video\": \"\",\n        \"only_online\": \"0\",\n        \"text_online\": null,\n        \"image_thumb\": \"\",\n        \"thumb_width\": \"90\",\n        \"thumb_height\": \"137\",\n        \"image_frame\": \"\",\n        \"thumb_start\": \"1262278800\",\n        \"thumb_end\": \"1262278800\",\n        \"combo_id\": \"\",\n        \"id_category_erp\": \"2540\",\n        \"category_name_erp\": \"Sữa;Meiji;Meiji;Meiji Mom\",\n        \"combo_name\": \"\",\n        \"type_combo\": \"0\",\n        \"quantity_combo\": \"1\",\n        \"date_start\": \"1262278800\",\n        \"date_end\": \"1262278800\",\n        \"type_group\": \"0\",\n        \"type_show\": \"1\",\n        \"trust_love\": \"5557\",\n        \"is_hot\": \"1\",\n        \"is_cf\": \"0\",\n        \"type_sale\": \"0\",\n        \"position\": \"1000\",\n        \"table_link\": \"\",\n        \"total_sales\": \"20\",\n        \"actived\": \"1\",\n        \"is_online\": \"0\",\n        \"max_number\": \"1\",\n        \"step_number\": \"1\",\n        \"deal_number\": \"0\",\n        \"is_outstock\": \"0\",\n        \"is_freeship\": 0,\n        \"ship_label\": \"\",\n        \"total_buy\": \"30000\",\n        \"date_add\": \"1470796314\",\n        \"date_upd\": \"1714119020\",\n        \"deleted\": \"0\",\n        \"api_page\": \"product\",\n        \"id_page\": \"27423\",\n        \"name_page\": \"\",\n        \"score\": \"0\",\n        \"image_top\": \"\"\n      }\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "fashion",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65713",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "66225",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65696",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65707",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65703",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -1386,16 +1609,89 @@
           "latency": 0,
           "statusCode": 200,
           "label": "",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "d5dc09c9-acef-4c0e-8689-cecfb3f90c58",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": {\n    \"faq\": [\n      {\n        \"title\": \"Thông tin bổ ích\",\n        \"more_link\": \"https://concung.com/do-choi-1-6-dm105.html\",\n        \"news_cate\": \"https://concung.com/do-choi-1-6-dm105.html\",\n        \"id_news\": \"1030\",\n        \"id_newscategory\": \"105\",\n        \"category_name\": \"Đồ chơi 1/6\",\n        \"meta_title\": \"Top 5 loại đồ chơi cho bé 2 tuổi phát triển trí thông minh\",\n        \"description_short\": \"Trong giai đoạn 2 tuổi, bộ não của bé sẽ hoạt động liên tục để tiếp thu và học hỏi những điều mới lạ. Tuy nhiên, việc lựa chọn đồ chơi thông minh cho bế 2 tuổi để phát triển trí tuệ vẫn đang là bài toán khó đối với nhiều phụ huynh.\",\n        \"image_cover\": \"https://cdn1.concung.com/img/news/2023/1030-1684377364-cover.webp\",\n        \"image_type\": \"0\",\n        \"link_rewrite\": \"https://concung.com/do-choi-1-6/top-5-mon-do-choi-cho-be-2-tuoi-phat-trien-tri-thong-minh-bv1030.html\",\n        \"url_link\": \"https://concung.com/do-choi-1-6/top-5-mon-do-choi-cho-be-2-tuoi-phat-trien-tri-thong-minh-bv1030.html\",\n        \"position\": \"1\",\n        \"page_view\": \"5853\",\n        \"trust_love\": \"8\",\n        \"comment_number\": \"0\",\n        \"actived\": \"1\",\n        \"date_public\": \"1683835200\",\n        \"date_upd\": \"1716977157\",\n        \"deleted\": \"0\"\n      },\n      {\n        \"title\": \"Thông tin bổ ích\",\n        \"more_link\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"news_cate\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"id_news\": \"2757\",\n        \"id_newscategory\": \"61\",\n        \"category_name\": \"Thông tin bổ ích\",\n        \"meta_title\": \"Vải kháng khuẩn là gì? Ưu, nhược điểm của vải kháng khuẩn\",\n        \"description_short\": \"Làn da của bé sơ sinh rất nhạy cảm, non nớt và dễ bị kích ứng. Vì vậy, việc lựa chọn loại vải phù hợp và an toàn là rất quan trọng. Hiện nay, quần áo làm từ vải kháng khuẩn đang là xu hướng lựa chọn của không ít ba mẹ bỉm. Vậy vải kháng khuẩn là gì? Ưu, nhược điểm như thế nào? Hãy cùng Con Cưng giải đáp qua bài viết sau nhé! \",\n        \"image_cover\": \"https://cdn1.concung.com/img/news/2024/05/2757-1717062257-cover.webp\",\n        \"image_type\": \"0\",\n        \"link_rewrite\": \"https://concung.com/thong-tin-bo-ich/vai-khang-khuan-la-gi-uu-nhuoc-diem-cua-vai-khang-khuan-bv2757.html\",\n        \"url_link\": \"https://concung.com/thong-tin-bo-ich/vai-khang-khuan-la-gi-uu-nhuoc-diem-cua-vai-khang-khuan-bv2757.html\",\n        \"position\": \"1\",\n        \"page_view\": \"340\",\n        \"trust_love\": \"0\",\n        \"comment_number\": \"0\",\n        \"actived\": \"1\",\n        \"date_public\": \"1717002000\",\n        \"date_upd\": \"1717669261\",\n        \"deleted\": \"0\"\n      },\n      {\n        \"title\": \"Thông tin bổ ích\",\n        \"more_link\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"news_cate\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"id_news\": \"1823\",\n        \"id_newscategory\": \"61\",\n        \"category_name\": \"Thông tin bổ ích\",\n        \"meta_title\": \"Top 3 loại nước xả vải cho trẻ sơ sinh được ưa chuộng nhất tại Con Cưng\",\n        \"description_short\": \"Để bảo vệ làn da nhạy cảm của trẻ sơ sinh, tìm kiếm nước giặt xả quần áo dành riêng cho con là một việc cần được ba mẹ quan tâm. Nếu ba mẹ còn băn khoăn chưa biết nên chọn sản phẩm nào phù hợp với bé, thì Con Cưng sẽ bật mí cho ba mẹ biết top 3 loại nước xả vải cho trẻ sơ sinh đang được ưa chuộng nhất tại Con Cưng. Theo dõi ngay, ba mẹ nhé! \",\n        \"image_cover\": \"https://cdn1.concung.com/img/news/2022/1823-1657704528-cover.webp\",\n        \"image_type\": \"0\",\n        \"link_rewrite\": \"https://concung.com/thong-tin-bo-ich/top-3-loai-nuoc-xa-vai-cho-tre-so-sinh-duoc-ua-chuong-nhat-tai-con-cung-bv1823.html\",\n        \"url_link\": \"https://concung.com/thong-tin-bo-ich/top-3-loai-nuoc-xa-vai-cho-tre-so-sinh-duoc-ua-chuong-nhat-tai-con-cung-bv1823.html\",\n        \"position\": \"10\",\n        \"page_view\": \"15177\",\n        \"trust_love\": \"1\",\n        \"comment_number\": \"0\",\n        \"actived\": \"1\",\n        \"date_public\": \"1655312400\",\n        \"date_upd\": \"1687833011\",\n        \"deleted\": \"0\"\n      },\n      {\n        \"title\": \"Thông tin bổ ích\",\n        \"more_link\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"news_cate\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"id_news\": \"2007\",\n        \"id_newscategory\": \"61\",\n        \"category_name\": \"Thông tin bổ ích\",\n        \"meta_title\": \"Mách mẹ cách chọn nước giặt cho bé an toàn\",\n        \"description_short\": \"Làn da trẻ nhỏ vốn rất mỏng manh và nhạy cảm. Để đảm bảo an toàn cho làn da con yêu, ba mẹ cần lưu ý một số điều bao gồm cả việc lựa chọn nước giặt cho bé. Nếu mẹ còn băn khoăn chưa biết cách để chọn nước giặt phù hợp cho bé nhà mình, thì hãy tìm hiểu ngay bài viết sau đây của Con Cưng nhé!\",\n        \"image_cover\": \"https://cdn1.concung.com/img/news/2022/2007-1666922532-cover.webp\",\n        \"image_type\": \"0\",\n        \"link_rewrite\": \"https://concung.com/thong-tin-bo-ich/mach-me-cach-chon-nuoc-giat-cho-be-an-toan-bv2007.html\",\n        \"url_link\": \"https://concung.com/thong-tin-bo-ich/mach-me-cach-chon-nuoc-giat-cho-be-an-toan-bv2007.html\",\n        \"position\": \"10\",\n        \"page_view\": \"5173\",\n        \"trust_love\": \"0\",\n        \"comment_number\": \"0\",\n        \"actived\": \"1\",\n        \"date_public\": \"1666544400\",\n        \"date_upd\": \"1667791565\",\n        \"deleted\": \"0\"\n      },\n      {\n        \"title\": \"Thông tin bổ ích\",\n        \"more_link\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"news_cate\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"id_news\": \"2010\",\n        \"id_newscategory\": \"61\",\n        \"category_name\": \"Thông tin bổ ích\",\n        \"meta_title\": \"Các mẹ bỉm nói gì về nước giặt cho trẻ sơ sinh Dnee?\",\n        \"description_short\": \"Nhắc đến nước giặt cho trẻ sơ sinh, Dnee hẳn là một sản phẩm quen thuộc được nhiều mẹ bỉm lựa chọn cho bé. Vậy sản phẩm này có tốt và an toàn đối với làn da bé không? Để biết câu trả lời, ba mẹ hãy theo dõi ngay những phản hồi của các mẹ bỉm đối với dòng nước giặt này mà Con Cưng đã tổng hợp trong bài viết dưới đây nhé!\",\n        \"image_cover\": \"https://cdn1.concung.com/img/news/2022/2010-1666923017-cover.webp\",\n        \"image_type\": \"0\",\n        \"link_rewrite\": \"https://concung.com/thong-tin-bo-ich/cac-me-bim-noi-gi-ve-nuoc-giat-cho-tre-so-sinh-dnee-bv2010.html\",\n        \"url_link\": \"https://concung.com/thong-tin-bo-ich/cac-me-bim-noi-gi-ve-nuoc-giat-cho-tre-so-sinh-dnee-bv2010.html\",\n        \"position\": \"10\",\n        \"page_view\": \"9601\",\n        \"trust_love\": \"0\",\n        \"comment_number\": \"0\",\n        \"actived\": \"1\",\n        \"date_public\": \"1666630800\",\n        \"date_upd\": \"1667791972\",\n        \"deleted\": \"0\"\n      },\n      {\n        \"title\": \"Thông tin bổ ích\",\n        \"more_link\": \"https://concung.com/do-choi-1-6-dm105.html\",\n        \"news_cate\": \"https://concung.com/do-choi-1-6-dm105.html\",\n        \"id_news\": \"2288\",\n        \"id_newscategory\": \"105\",\n        \"category_name\": \"Đồ chơi 1/6\",\n        \"meta_title\": \"6 lợi ích bất ngờ từ đồ chơi thông minh cho bé\",\n        \"description_short\": \"Đồ chơi thông minh được biết đến là công cụ giúp bé vừa chơi vừa học hiệu quả. Bên cạnh công dụng giải trí, đồ chơi thông minh còn mang đến nhiều lợi ích bất ngờ hỗ trợ quá trình phát triển thể chất và trí tuệ của bé. Cụ thể các lợi ích đó là gì? Cùng Con Cưng khám phá ngay trong bài viết dưới đây nhé.\",\n        \"image_cover\": \"https://cdn1.concung.com/img/news/2023/2288-1683876433-cover.webp\",\n        \"image_type\": \"0\",\n        \"link_rewrite\": \"https://concung.com/do-choi-1-6/6-loi-ich-bat-ngo-tu-do-choi-thong-minh-cho-be-bv2288.html\",\n        \"url_link\": \"https://concung.com/do-choi-1-6/6-loi-ich-bat-ngo-tu-do-choi-thong-minh-cho-be-bv2288.html\",\n        \"position\": \"10\",\n        \"page_view\": \"3943\",\n        \"trust_love\": \"3\",\n        \"comment_number\": \"0\",\n        \"actived\": \"1\",\n        \"date_public\": \"1683738000\",\n        \"date_upd\": \"1683876456\",\n        \"deleted\": \"0\"\n      },\n      {\n        \"title\": \"Thông tin bổ ích\",\n        \"more_link\": \"https://concung.com/do-choi-1-6-dm105.html\",\n        \"news_cate\": \"https://concung.com/do-choi-1-6-dm105.html\",\n        \"id_news\": \"2296\",\n        \"id_newscategory\": \"105\",\n        \"category_name\": \"Đồ chơi 1/6\",\n        \"meta_title\": \"Lưu ngay 5 tiêu chí chọn đồ chơi cho bé sơ sinh vừa vui, vừa an toàn\",\n        \"description_short\": \"Đối với trẻ sơ sinh, đồ chơi là công cụ giúp thúc đẩy quá trình phát triển về mặt tư duy và cảm xúc. Song ba mẹ cần đặc biệt cân nhắc khi lựa chọn đồ chơi cho bé sơ sinh, vì trẻ ở giai đoạn này vẫn chưa biết cách chơi như thế nào để đảm bảo an toàn cho bản thân. Ba mẹ hãy cùng Con Cưng tìm hiểu 5 tiêu chí chọn đồ chơi cho bé sơ sinh vừa vui, vừa an toàn trong bài viết dưới đây nhé! \",\n        \"image_cover\": \"https://cdn1.concung.com/img/news/2023/2296-1684225135-cover.webp\",\n        \"image_type\": \"0\",\n        \"link_rewrite\": \"https://concung.com/do-choi-1-6/luu-ngay-5-tieu-chi-chon-do-choi-cho-be-so-sinh-vua-vui-vua-an-toan-bv2296.html\",\n        \"url_link\": \"https://concung.com/do-choi-1-6/luu-ngay-5-tieu-chi-chon-do-choi-cho-be-so-sinh-vua-vui-vua-an-toan-bv2296.html\",\n        \"position\": \"10\",\n        \"page_view\": \"6169\",\n        \"trust_love\": \"2\",\n        \"comment_number\": \"0\",\n        \"actived\": \"1\",\n        \"date_public\": \"1684170000\",\n        \"date_upd\": \"1684379304\",\n        \"deleted\": \"0\"\n      },\n      {\n        \"title\": \"Thông tin bổ ích\",\n        \"more_link\": \"https://concung.com/do-choi-1-6-dm105.html\",\n        \"news_cate\": \"https://concung.com/do-choi-1-6-dm105.html\",\n        \"id_news\": \"2300\",\n        \"id_newscategory\": \"105\",\n        \"category_name\": \"Đồ chơi 1/6\",\n        \"meta_title\": \"[Đồ chơi trẻ em] - Những đặc điểm nào khiến con mê mẩn? \",\n        \"description_short\": \"Đồ chơi vốn có một sức hấp dẫn đặc biệt đối với trẻ nhỏ. Sự hấp dẫn này sẽ được nhân bội, đồng thời còn mang lại nhiều lợi ích vừa học vừa chơi nếu ba mẹ lựa chọn đồ chơi cho bé theo một số đặc điểm mà Con Cưng đã tổng hợp trong bài viết dưới đây. Tham khảo ngay!\",\n        \"image_cover\": \"https://cdn1.concung.com/img/news/2023/2300-1684405190-cover.webp\",\n        \"image_type\": \"0\",\n        \"link_rewrite\": \"https://concung.com/do-choi-1-6/do-choi-tre-em-nhung-dac-diem-nao-khien-con-me-man-bv2300.html\",\n        \"url_link\": \"https://concung.com/do-choi-1-6/do-choi-tre-em-nhung-dac-diem-nao-khien-con-me-man-bv2300.html\",\n        \"position\": \"10\",\n        \"page_view\": \"3479\",\n        \"trust_love\": \"2\",\n        \"comment_number\": \"0\",\n        \"actived\": \"1\",\n        \"date_public\": \"1684342800\",\n        \"date_upd\": \"1684407606\",\n        \"deleted\": \"0\"\n      },\n      {\n        \"title\": \"Thông tin bổ ích\",\n        \"more_link\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"news_cate\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"id_news\": \"2331\",\n        \"id_newscategory\": \"61\",\n        \"category_name\": \"Thông tin bổ ích\",\n        \"meta_title\": \"Các loại vải giúp \\\"giải nhiệt\\\" mùa hè cho bé sơ sinh bán chạy nhất tại Con Cưng\",\n        \"description_short\": \"Vào những ngày hè nắng nóng, làn da vốn nhạy cảm của trẻ sơ sinh lại càng dễ bị kích ứng hơn. Do đó, khi lựa chọn quần áo cho bé sơ sinh thì chất liệu vải thoáng khí là yếu tố quan trọng. Trong bài viết sau, Con Cưng sẽ gợi ý 3 loại vải mát mẻ giúp bé sơ sinh thoải mái ngày hè đang được ưa chuộng hiện nay. \",\n        \"image_cover\": \"https://cdn1.concung.com/img/news/2023/2331-1686560625-cover.webp\",\n        \"image_type\": \"0\",\n        \"link_rewrite\": \"https://concung.com/thong-tin-bo-ich/cac-loai-vai-giup-giai-nhiet-mua-he-cho-be-so-sinh-ban-chay-nhat-tai-con-cung-bv2331.html\",\n        \"url_link\": \"https://concung.com/thong-tin-bo-ich/cac-loai-vai-giup-giai-nhiet-mua-he-cho-be-so-sinh-ban-chay-nhat-tai-con-cung-bv2331.html\",\n        \"position\": \"10\",\n        \"page_view\": \"9898\",\n        \"trust_love\": \"1\",\n        \"comment_number\": \"0\",\n        \"actived\": \"1\",\n        \"date_public\": \"1686243600\",\n        \"date_upd\": \"1689759143\",\n        \"deleted\": \"0\"\n      },\n      {\n        \"title\": \"Thông tin bổ ích\",\n        \"more_link\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"news_cate\": \"https://concung.com/thong-tin-bo-ich-dm61.html\",\n        \"id_news\": \"2333\",\n        \"id_newscategory\": \"61\",\n        \"category_name\": \"Thông tin bổ ích\",\n        \"meta_title\": \"Vải Modal là vải gì? Tại sao vải Modal lại phổ biến trong quần áo trẻ em?\",\n        \"description_short\": \"Trong quá trình tư vấn và bán hàng, Con Cưng nhận thấy quần áo cho bé từ vải Modal rất được ba mẹ quan tâm và lựa chọn. Vậy vải Modal là gì? Tại sao vải Modal lại phổ biến trong quần áo trẻ em? Hãy cùng Con Cưng tìm hiểu câu trả lời trong bài viết dưới đây, ba mẹ nhé! \",\n        \"image_cover\": \"https://cdn1.concung.com/img/news/2024/06/2333-1718079962-cover.webp\",\n        \"image_type\": \"0\",\n        \"link_rewrite\": \"https://concung.com/thong-tin-bo-ich/vai-modal-la-vai-gi-tai-sao-vai-modal-lai-pho-bien-trong-quan-ao-tre-em-bv2333.html\",\n        \"url_link\": \"https://concung.com/thong-tin-bo-ich/vai-modal-la-vai-gi-tai-sao-vai-modal-lai-pho-bien-trong-quan-ao-tre-em-bv2333.html\",\n        \"position\": \"10\",\n        \"page_view\": \"6511\",\n        \"trust_love\": \"0\",\n        \"comment_number\": \"0\",\n        \"actived\": \"1\",\n        \"date_public\": \"1686243600\",\n        \"date_upd\": \"1718079962\",\n        \"deleted\": \"0\"\n      }\n    ],\n    \"comment_list\": [],\n    \"file_list\": [],\n    \"rating_comment_list\": [\n      {\n        \"id_comment\": \"604123\",\n        \"id_product\": \"65696\",\n        \"id_comment_parent\": \"0\",\n        \"id_level\": \"0\",\n        \"id_customer\": \"1601034\",\n        \"customer_email\": \"\",\n        \"id_category\": \"0\",\n        \"id_manufacturer\": \"0\",\n        \"customer_name\": \"Thao\",\n        \"customer_image\": \"\",\n        \"content\": \"\",\n        \"have_file\": \"0\",\n        \"rating\": \"5\",\n        \"vip_type\": \"0\",\n        \"grade\": \"0\",\n        \"is_buy\": \"0\",\n        \"date_upd\": \"1717863495\",\n        \"deleted\": \"0\",\n        \"validate\": \"1\",\n        \"vote_number\": \"0\",\n        \"id_employee_add\": \"0\",\n        \"sortID\": \"604123\",\n        \"comment_number\": \"7\",\n        \"rating_number\": \"5.0\",\n        \"files\": []\n      },\n      {\n        \"id_comment\": \"598834\",\n        \"id_product\": \"65696\",\n        \"id_comment_parent\": \"0\",\n        \"id_level\": \"0\",\n        \"id_customer\": \"1462719\",\n        \"customer_email\": \"trandothoainhan.aw@gmail.com\",\n        \"id_category\": \"0\",\n        \"id_manufacturer\": \"0\",\n        \"customer_name\": \"Trần Đỗ Thoại Nhân\",\n        \"customer_image\": \"\",\n        \"content\": \"\",\n        \"have_file\": \"0\",\n        \"rating\": \"5\",\n        \"vip_type\": \"0\",\n        \"grade\": \"0\",\n        \"is_buy\": \"0\",\n        \"date_upd\": \"1717227424\",\n        \"deleted\": \"0\",\n        \"validate\": \"1\",\n        \"vote_number\": \"0\",\n        \"id_employee_add\": \"0\",\n        \"sortID\": \"598834\",\n        \"comment_number\": \"7\",\n        \"rating_number\": \"5.0\",\n        \"files\": []\n      }\n    ],\n    \"rating_file_list\": []\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "fashion",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65703",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65707",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65696",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "66225",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65713",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -1415,16 +1711,89 @@
           "latency": 0,
           "statusCode": 200,
           "label": "",
-          "headers": [],
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
           "bodyType": "INLINE",
           "filePath": "",
           "databucketID": "",
           "sendFileAsBody": false,
-          "rules": [],
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
           "rulesOperator": "OR",
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "01490af6-43d4-4bfa-bb03-b8414ece4c7a",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": [\n    {\n      \"PromotionID\": 79651,\n      \"PromotionNo\": \"441PRO24051759113818\",\n      \"PromotionName\": \"Giảm 20% Bộ ngắn, bodysuit đùi Kháng khuẩn\",\n      \"PromotionTypeID\": 3,\n      \"BeginDate\": 1716483600,\n      \"EndDate\": 1719248399,\n      \"PriorityLevelID\": 0,\n      \"IsOption\": false,\n      \"IsDefault\": true,\n      \"IsFixed\": false,\n      \"IsDiscount\": true,\n      \"DiscountAmount\": 0,\n      \"DiscountPercent\": 20,\n      \"SamePrice\": null,\n      \"IsCondition\": false,\n      \"InvoiceFromPrice\": 0,\n      \"InvoiceToPrice\": 0,\n      \"IsPromotionProductGroup\": false,\n      \"IsPromotionGift\": false,\n      \"IsCombo\": false,\n      \"CodeID\": null,\n      \"ShortCode\": \"PROM79651\",\n      \"CreatedDate\": \"0001-01-01T00:00:00\",\n      \"UpdatedDate\": \"2024-05-23T23:55:06.98\",\n      \"InvoiceApplyType\": 0,\n      \"ExtendTypeID\": null,\n      \"MaxDiscountAmount\": null,\n      \"RegisterCode\": null,\n      \"ShortDescription\": null,\n      \"PromotionParentID\": null,\n      \"IsAccumulated\": null,\n      \"QuantityMaxOffer\": null,\n      \"PromotionProductApplys\": [\n        {\n          \"PProductApplyID\": 5565410,\n          \"PromotionID\": 79651,\n          \"PID\": 126941,\n          \"ProductID\": \"6996000000015\",\n          \"ProductName\": \"Set 2 Bộ kháng khuẩn Modal ngắn Xe hơi Animo VD1023003 (3-6M,Xanh ngọc)\",\n          \"Discount\": 0,\n          \"TypeID\": 1,\n          \"SalePriceAfter\": 349000\n        }\n      ],\n      \"PromotionProductOffers\": [],\n      \"PromotionProductSamePrices\": [],\n      \"PromotionFollows\": [],\n      \"PromotionCategorys\": [],\n      \"PromotionMembership\": [],\n      \"PromotionCombos\": [],\n      \"companionBrands\": [],\n      \"TimesApply\": null,\n      \"OfferPromotions\": [],\n      \"LimitApply\": null,\n      \"BuyMorePayLess\": null,\n      \"PromotionEnvironments\": [\n        {\n          \"PromotionEnvironmentID\": 91446,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 1\n        },\n        {\n          \"PromotionEnvironmentID\": 91454,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 9\n        },\n        {\n          \"PromotionEnvironmentID\": 91449,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 4\n        },\n        {\n          \"PromotionEnvironmentID\": 91448,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 3\n        },\n        {\n          \"PromotionEnvironmentID\": 91452,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 7\n        },\n        {\n          \"PromotionEnvironmentID\": 91447,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 2\n        },\n        {\n          \"PromotionEnvironmentID\": 91450,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 5\n        },\n        {\n          \"PromotionEnvironmentID\": 91453,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 8\n        },\n        {\n          \"PromotionEnvironmentID\": 91451,\n          \"PromotionID\": 79651,\n          \"EnvironmentID\": 6\n        }\n      ],\n      \"RequiredQuantity\": null,\n      \"IsLimitOrder\": 0,\n      \"LimitQuantity\": 60,\n      \"LimitQuantityGift\": 60\n    }\n  ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "fashion",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65713",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "66225",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65696",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65707",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "id_product",
+              "value": "65703",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
@@ -3647,6 +4016,80 @@
           "disableTemplating": false,
           "fallbackTo404": false,
           "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "d854b7f3-d58f-438a-bae1-28163536f221",
+      "type": "http",
+      "documentation": "thông tin bảng size",
+      "method": "post",
+      "endpoint": "getSizeBoard",
+      "responses": [
+        {
+          "uuid": "38e4710c-0032-476e-957f-229ee120c413",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": {\n    \"header\": [\n      \"Cỡ/Tuổi\\n(Size)\",\n      \"Chiều cao\\n(cm)\",\n      \"Cân nặng\\n(kg)\"\n    ],\n    \"content\": [\n      [\"NB\", \"48 - 49.9\", \"2.9 - 3.3\"],\n      [\"0 - 3M\", \"54.7 - 61.4\", \"3.9 - 6.4\"],\n      [\"3 - 6M\", \"61.4 - 67.6\", \"6.4 - 7.9\"],\n      [\"6 - 9M\", \"67.6 - 72.0\", \"7.9 - 8.9\"],\n      [\"9 - 12M\", \"72 - 75.7\", \"8.9 - 9.6\"],\n      [\"12 - 18M\", \"75.7 - 82.3\", \"9.6 - 10.9\"],\n      [\"18 - 24M\", \"82.3 - 87.8\", \"10.9 - 12.2\"]\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "thời trang",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_category",
+              "value": "1021",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        },
+        {
+          "uuid": "9c9a12ed-3250-4a0c-b512-70440f0907ff",
+          "body": "{\n  \"message\": \"\",\n  \"status\": 200,\n  \"data\": {\n    \"header\": [\n      \"Cỡ\\n(Size)\",\n      \"Chiều dài bàn chân\\n(cm)\"\n    ],\n    \"content\": [\n      [\"9\", \"9.5\"],\n      [\"10\", \"10\"],\n      [\"11\", \"10.5\"],\n      [\"12\", \"11\"],\n      [\"13\", \"11.5\"],\n      [\"14\", \"12\"],\n      [\"15\", \"12.5\"],\n      [\"16\", \"13.0\"],\n      [\"17\", \"13.5\"],\n      [\"18\", \"14\"],\n      [\"19\", \"14.5\"]\n    ]\n  }\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "giày dép",
+          "headers": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "id_category",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
           "crudKey": "id",
           "callbacks": []
         }
