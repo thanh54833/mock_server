@@ -13,8 +13,8 @@ u_d:
 
 
 # brew install webp
-convert_avif:
-	python download_image.py
+convert_webp:
+	python3 image_to_webp.py
 
 t:
 	docker build -t mock_server ffff.
