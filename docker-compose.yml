@@ -33,20 +33,6 @@ services:
     volumes:
       - ./openapi.json:/mnt/openapi.json
 
-
-  photoprism:
-    image: photoprism/photoprism:latest
-    restart: always
-    ports:
-      - 2342:2342 # [local port]:[container port]
-    environment:
-      PHOTOPRISM_DEBUG: "false"
-      PHOTOPRISM_PUBLIC: "true"
-    volumes:
-      - "./images/assets:/photoprism/originals" # [local path]:[container path]
-      - "./photoprism/import:/photoprism/import"
-      - "./photoprism/database:/photoprism/database"
-
 #  photoprism:
 #    image: photoprism/photoprism:latest
 #    restart: always
@@ -56,6 +42,7 @@ services:
 #      PHOTOPRISM_DEBUG: "false"
 #      PHOTOPRISM_PUBLIC: "true"
 #    volumes:
-#      - "./images/avif:/photoprism/originals" # [local path]:[container path]
+#      - "./images/assets:/photoprism/originals" # [local path]:[container path]
 #      - "./photoprism/import:/photoprism/import"
 #      - "./photoprism/database:/photoprism/database"
+#      - "./photoprism/sidecar:/photoprism/storage/sidecar" # [local path]:[container path]

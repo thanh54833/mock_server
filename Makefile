@@ -18,3 +18,7 @@ convert_avif:
 
 t:
 	docker build -t mock_server ffff.
+
+
+
+# docker-compose down --volumes --rmi all
