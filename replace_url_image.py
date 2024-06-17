@@ -1,0 +1,16 @@
+from urllib.parse import urlparse, parse_qs
+
+# The URL you want to parse
+url = "https://shopee.vn/app?redir=https%3A%2F%2Fshopee.vn%2Fproduct%2F286157142%2F9212069606%3Fd_id%3D9dea6%26smtt%3D0.117835879-1666671971.9%26utm_campaign%3D-%26utm_content%3Dproduct%26utm_medium%3Daffiliates%26utm_source%3Dan_17358790000%26utm_term%3Dbb2ivgx4ey35#home?navRoute=eyJwYXRocyI6W3sicm5OYXYiOnsidXJsIjoiaHR0cHM6Ly9zaG9wZWUudm4vcHJvZHVjdC8yODYxNTcxNDIvOTIxMjA2OTYwNj9hbnJfaW1wcm92PXRydWUmZF9pZD05ZGVhNiZzbXR0PTAuMTE3ODM1ODc5LTE2NjY2NzE5NzEuOSZ1dG1fY2FtcGFpZ249LSZ1dG1fY29udGVudD1wcm9kdWN0JnV0bV9tZWRpdW09YWZmaWxpYXRlcyZ1dG1fc291cmNlPWFuXzE3MzU4NzkwMDAwJnV0bV90ZXJtPWJiMml2Z3g0ZXkzNSJ9fSx7IndlYk5hdiI6eyJ1cmwiOiJodHRwczovL3Nob3BlZS52bi9wcm9kdWN0LzI4NjE1NzE0Mi85MjEyMDY5NjA2P2Fucl9pbXByb3Y9dHJ1ZSZkX2lkPTlkZWE2JnNtdHQ9MC4xMTc4MzU4NzktMTY2NjY3MTk3MS45JnV0bV9jYW1wYWlnbj0tJnV0bV9jb250ZW50PXByb2R1Y3QmdXRtX21lZGl1bT1hZmZpbGlhdGVzJnV0bV9zb3VyY2U9YW5fMTczNTg3OTAwMDAmdXRtX3Rlcm09YmIyaXZneDRleTM1In19XX0%3D&anr_improv=true&d_id=9dea6&smtt=0.117835879-1666671971.9&utm_campaign=-&utm_content=product&utm_medium=affiliates&utm_source=an_17358790000&utm_term=bb2ivgx4ey35"
+
+# Parse the URL
+parsed_url = urlparse(url)
+
+# Extract the query parameters
+query_params = parse_qs(parsed_url.query)
+
+# Get the 'redir' parameter
+redir_url = query_params.get('redir')
+
+# Print the redir URL
+print(redir_url)
