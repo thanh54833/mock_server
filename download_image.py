@@ -115,7 +115,6 @@ def find_image_urls(data_source):
 
     return data_image_change_avif, image_urls
 
-
 with open('mockoon/concung.json', 'r') as f:
     data = json.load(f)
 
