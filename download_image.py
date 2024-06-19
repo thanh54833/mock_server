@@ -121,7 +121,7 @@ with open('mockoon/concung.json', 'r') as f:
 
 data, image_urls = find_image_urls(data)
 
-with open('mockoon/concung_convert_webp.json', 'w') as f:
+with open('mockoon/concung.json', 'w') as f:
     json.dump(data, f, indent=4)
 
 # Create the output directory if it doesn't exist
