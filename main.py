@@ -22,7 +22,7 @@ async def get_assetlinks():
             "target": {
                 "namespace": "android_app",
                 "package_name": "com.concung.ec.uat",
-                "sha256_cert_fingerprints": ["YOUR_DEV_SHA256_CERT_FINGERPRINT"]
+                "sha256_cert_fingerprints": ["E3:E0:80:6A:4D:7B:3E:87:D9:EA:FA:4F:D8:A1:F6:BB:98:2C:3F:87:55:0E:24:AA:62:49:42:75:63:4C:69:78"]
             }
         }
     ]
