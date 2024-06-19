@@ -35,10 +35,10 @@ async def progressive_image():
 
     # Use subprocess.run() to execute the command
     process = subprocess.run("python download_image.py", shell=True, check=True, text=True, capture_output=True)
-    subprocess.run("git add images/ && git commit -m \"+ progressive_image: jenkin push code.\" && git push origin HEAD:main", shell=True, check=True,
+    git_process = subprocess.run("git add images/ && git commit -m \"+ progressive_image: jenkin push code.\" && git push origin HEAD:main", shell=True, check=True,
                    text=True, capture_output=True)
 
-    return process.stdout
+    return process.stdout +"\n"+ git_process.stdout
 
 
 @app.get("/short/123")
