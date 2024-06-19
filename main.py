@@ -3,7 +3,7 @@ import subprocess
 from urllib.parse import quote
 
 from fastapi import FastAPI, Request
-from starlette.responses import HTMLResponse, RedirectResponse
+from starlette.responses import HTMLResponse, RedirectResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
 from cache.home_cache_api import home_cache_api
@@ -12,6 +12,21 @@ app = FastAPI()
 
 app.include_router(home_cache_api, prefix="/home_cache_api")
 app.mount("/images", StaticFiles(directory="images/webp"), name="images")
+
+
+@app.get("/.well-known/assetlinks.json")
+async def get_assetlinks():
+    assetLinks = [
+        {
+            "relation": ["delegate_permission/common.handle_all_urls"],
+            "target": {
+                "namespace": "android_app",
+                "package_name": "com.concung.ec.uat",
+                "sha256_cert_fingerprints": ["YOUR_DEV_SHA256_CERT_FINGERPRINT"]
+            }
+        }
+    ]
+    return JSONResponse(content=assetLinks)
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -35,10 +50,12 @@ async def progressive_image():
 
     # Use subprocess.run() to execute the command
     process = subprocess.run("python3 download_image.py", shell=True, check=True, text=True, capture_output=True)
-    git_process = subprocess.run("git add images/ && git commit -m \"+ progressive_image: jenkin push code.\" && git push origin HEAD:main", shell=True, check=True,
-                   text=True, capture_output=True)
+    git_process = subprocess.run(
+        "git add images/ && git commit -m \"+ progressive_image: jenkin push code.\" && git push origin HEAD:main",
+        shell=True, check=True,
+        text=True, capture_output=True)
 
-    return process.stdout +"\n"+ git_process.stdout
+    return process.stdout + "\n" + git_process.stdout
 
 
 @app.get("/short/123")
