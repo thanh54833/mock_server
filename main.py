@@ -12,7 +12,7 @@ app = FastAPI()
 
 app.include_router(home_cache_api, prefix="/home_cache_api")
 app.mount("/images", StaticFiles(directory="images/webp"), name="images")
-
+app.mount("/videos", StaticFiles(directory="videos/mp4"), name="videos")
 
 @app.get("/.well-known/assetlinks.json")
 async def get_assetlinks():
