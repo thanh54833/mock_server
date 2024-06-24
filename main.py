@@ -66,7 +66,7 @@ async def short(request: Request):
     redir = "https://concung.com/bim-ta-khuyen-mai/ta-quan-molflix-size-l-68-mieng-9-13kg-59060.html"
     encoded_redir = quote(redir, safe='')
 
-    return RedirectResponse(url="http://10.10.11.159:8002/app?redir=" + encoded_redir)
+    return RedirectResponse(url="http://10.10.11.89:8002/app?redir=" + encoded_redir)
 
 
 # <data android:scheme="http" android:host="10.10.11.169" android:pathPrefix="/app" />
