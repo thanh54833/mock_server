@@ -56,6 +56,9 @@ async def get_assetlinks():
             "apps": [
                 "T3JH79V277.com.concung.ec.uat"
             ]
+        },
+        "appclips": {
+            "apps": []
         }
     }
     return JSONResponse(content=assetLinks)
