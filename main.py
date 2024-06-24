@@ -39,7 +39,7 @@ async def get_assetlinks():
             "details": [
                 {
                     "appIDs": [
-                        "6T4TC4WZGU.com.concung.ec.uat"
+                        "T3JH79V277.com.concung.ec.uat"
                     ],
                     "paths": [
                         "*"
@@ -54,7 +54,7 @@ async def get_assetlinks():
         },
         "webcredentials": {
             "apps": [
-                "6T4TC4WZGU.com.concung.ec.uat"
+                "T3JH79V277.com.concung.ec.uat"
             ]
         },
         "appclips": {
