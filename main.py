@@ -39,7 +39,7 @@ async def get_assetlinks():
             "details": [
                 {
                     "appIDs": [
-                        "T3JH79V277.com.concung.ec.uat"
+                        "6T4TC4WZGU.com.concung.ec.uat"
                     ],
                     "paths": [
                         "*"
@@ -54,7 +54,7 @@ async def get_assetlinks():
         },
         "webcredentials": {
             "apps": [
-                "T3JH79V277.com.concung.ec.uat"
+                "6T4TC4WZGU.com.concung.ec.uat"
             ]
         },
         "appclips": {
@@ -62,40 +62,6 @@ async def get_assetlinks():
         }
     }
 
-    assetLinks = {
-        "applinks": {
-            "apps": [],
-            "details": [
-                {
-                    "appID": "DGTZ9CPSVT.com.beeasy.shopee.vn",
-                    "paths": [
-                        "NOT */login/*",
-                        "NOT *forgot_password*",
-                        "NOT /buyer/w/*",
-                        "NOT */verify/ivs/*",
-                        "NOT /s/browser/*",
-                        "*",
-                        "/"
-                    ]
-                },
-                {
-                    "appID": "TT2N7PPCM7.com.beeasy.shopee.vn.enterprise",
-                    "paths": [
-                        "NOT */login/*",
-                        "NOT *forgot_password*",
-                        "NOT /buyer/w/*",
-                        "NOT */verify/ivs/*",
-                        "NOT /s/browser/*",
-                        "*",
-                        "/"
-                    ]
-                }
-            ]
-        },
-        "appclips": {
-            "apps": []
-        }
-    }
     return JSONResponse(content=assetLinks)
 
 
