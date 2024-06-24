@@ -14,6 +14,7 @@ app.include_router(home_cache_api, prefix="/home_cache_api")
 app.mount("/images", StaticFiles(directory="images/webp"), name="images")
 app.mount("/videos", StaticFiles(directory="videos/mp4"), name="videos")
 
+
 @app.get("/.well-known/assetlinks.json")
 async def get_assetlinks():
     assetLinks = [
@@ -22,10 +23,41 @@ async def get_assetlinks():
             "target": {
                 "namespace": "android_app",
                 "package_name": "com.concung.ec.uat",
-                "sha256_cert_fingerprints": ["E3:E0:80:6A:4D:7B:3E:87:D9:EA:FA:4F:D8:A1:F6:BB:98:2C:3F:87:55:0E:24:AA:62:49:42:75:63:4C:69:78"]
+                "sha256_cert_fingerprints": [
+                    "E3:E0:80:6A:4D:7B:3E:87:D9:EA:FA:4F:D8:A1:F6:BB:98:2C:3F:87:55:0E:24:AA:62:49:42:75:63:4C:69:78"]
             }
         }
     ]
+    return JSONResponse(content=assetLinks)
+
+
+@app.get("/.well-known/apple-app-site-association")
+async def get_assetlinks():
+    assetLinks = {
+        "applinks": {
+            "apps": [],
+            "details": [
+                {
+                    "appIDs": [
+                        "T3JH79V277.com.concung.ec.uat"
+                    ],
+                    "paths": [
+                        "*"
+                    ],
+                    "components": [
+                        {
+                            "/": "/*"
+                        }
+                    ]
+                }
+            ]
+        },
+        "webcredentials": {
+            "apps": [
+                "T3JH79V277.com.concung.ec.uat"
+            ]
+        }
+    }
     return JSONResponse(content=assetLinks)
 
 
