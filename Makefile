@@ -1,7 +1,8 @@
 
 p_c:
 	git add --all && git commit -m "push code" && git push
-
+c_m:
+	git add --all && git commit -m "push code"
 
 u_d:
 	python3 mockoon_to_openapi.py
