@@ -14,6 +14,7 @@ app.include_router(home_cache_api, prefix="/home_cache_api")
 app.mount("/images", StaticFiles(directory="images/webp"), name="images")
 app.mount("/videos", StaticFiles(directory="videos/mp4"), name="videos")
 
+
 @app.get("/.well-known/assetlinks.json")
 async def get_assetlinks():
     assetLinks = [
@@ -22,10 +23,45 @@ async def get_assetlinks():
             "target": {
                 "namespace": "android_app",
                 "package_name": "com.concung.ec.uat",
-                "sha256_cert_fingerprints": ["E3:E0:80:6A:4D:7B:3E:87:D9:EA:FA:4F:D8:A1:F6:BB:98:2C:3F:87:55:0E:24:AA:62:49:42:75:63:4C:69:78"]
+                "sha256_cert_fingerprints": [
+                    "E3:E0:80:6A:4D:7B:3E:87:D9:EA:FA:4F:D8:A1:F6:BB:98:2C:3F:87:55:0E:24:AA:62:49:42:75:63:4C:69:78"]
             }
         }
     ]
+    return JSONResponse(content=assetLinks)
+
+
+@app.get("/.well-known/apple-app-site-association")
+async def get_assetlinks():
+    assetLinks = {
+        "applinks": {
+            "apps": [],
+            "details": [
+                {
+                    "appIDs": [
+                        "6T4TC4WZGU.com.concung.ec.uat"
+                    ],
+                    "paths": [
+                        "*"
+                    ],
+                    "components": [
+                        {
+                            "/": "/*"
+                        }
+                    ]
+                }
+            ]
+        },
+        "webcredentials": {
+            "apps": [
+                "6T4TC4WZGU.com.concung.ec.uat"
+            ]
+        },
+        "appclips": {
+            "apps": []
+        }
+    }
+
     return JSONResponse(content=assetLinks)
 
 
@@ -66,7 +102,17 @@ async def short(request: Request):
     redir = "https://concung.com/bim-ta-khuyen-mai/ta-quan-molflix-size-l-68-mieng-9-13kg-59060.html"
     encoded_redir = quote(redir, safe='')
 
-    return RedirectResponse(url="http://10.10.11.159:8002/app?redir=" + encoded_redir)
+    return RedirectResponse(url="http://10.10.11.89:8002/app?redir=" + encoded_redir)
+
+@app.get("/short/124")
+async def short(request: Request):
+    # redir = "https%3A%2F%2Fshopee.vn%2Fproduct%2F286157142%2F9212069606%3Fd_id%3D9dea6%26smtt%3D0.117835879-1666671971.9%26utm_campaign%3D-%26utm_content%3Dproduct%26utm_medium%3Daffiliates%26utm_source%3Dan_17358790000%26utm_term%3Dbb3hzmv56y4k#home?navRoute=eyJwYXRocyI6W3sicm5OYXYiOnsidXJsIjoiaHR0cHM6Ly9zaG9wZWUudm4vcHJvZHVjdC8yODYxNTcxNDIvOTIxMjA2OTYwNj9hbnJfaW1wcm92PXRydWUmZF9pZD05ZGVhNiZzbXR0PTAuMTE3ODM1ODc5LTE2NjY2NzE5NzEuOSZ1dG1fY2FtcGFpZ249LSZ1dG1fY29udGVudD1wcm9kdWN0JnV0bV9tZWRpdW09YWZmaWxpYXRlcyZ1dG1fc291cmNlPWFuXzE3MzU4NzkwMDAwJnV0bV90ZXJtPWJiM2h6bXY1Nnk0ayJ9fSx7IndlYk5hdiI6eyJ1cmwiOiJodHRwczovL3Nob3BlZS52bi9wcm9kdWN0LzI4NjE1NzE0Mi85MjEyMDY5NjA2P2Fucl9pbXByb3Y9dHJ1ZSZkX2lkPTlkZWE2JnNtdHQ9MC4xMTc4MzU4NzktMTY2NjY3MTk3MS45JnV0bV9jYW1wYWlnbj0tJnV0bV9jb250ZW50PXByb2R1Y3QmdXRtX21lZGl1bT1hZmZpbGlhdGVzJnV0bV9zb3VyY2U9YW5fMTczNTg3OTAwMDAmdXRtX3Rlcm09YmIzaHptdjU2eTRrIn19XX0%3D&anr_improv=true&d_id=9dea6&smtt=0.117835879-1666671971.9&utm_campaign=-&utm_content=product&utm_medium=affiliates&utm_source=an_17358790000&utm_term=bb3hzmv56y4k"
+    # return RedirectResponse(url=f"https://shopee.vn/app?redir={redir}")
+
+    redir = "https://beta.concung.vn/tim-kiem?attr=8_5220&manufac=811&have_reduce_price=1&s=1&p=1&q=s%E1%BB%AFa"
+    encoded_redir = quote(redir, safe='')
+
+    return RedirectResponse(url="http://10.10.11.89:8002/app?redir=" + encoded_redir)
 
 
 # <data android:scheme="http" android:host="10.10.11.169" android:pathPrefix="/app" />
