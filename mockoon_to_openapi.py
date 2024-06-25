@@ -14,7 +14,7 @@ openapi_data = {
     "paths": {},
     "servers": [
         {
-            "url": "http://10.10.11.159:3001/"
+            "url": "http://10.10.11.89:3001/"
         }
     ]
 }
