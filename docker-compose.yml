@@ -14,15 +14,15 @@ services:
     ports:
       - 8002:8002
 
-  nginx:
-    image: nginx:latest
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - /path/to/your/ssl/certificate:/etc/nginx/ssl/concung.mock_server.vn.crt
-      - /path/to/your/ssl/key:/etc/nginx/ssl/concung.mock_server.vn.key
-    ports:
-      - "80:80"
-      - "443:443"
+#  nginx:
+#    image: nginx:latest
+#    volumes:
+#      - ./nginx.conf:/etc/nginx/nginx.conf
+#      - /path/to/your/ssl/certificate:/etc/nginx/ssl/concung.mock_server.vn.crt
+#      - /path/to/your/ssl/key:/etc/nginx/ssl/concung.mock_server.vn.key
+#    ports:
+#      - "80:80"
+#      - "443:443"
 
   #  app_2:
   #    image: fastapi-app:v1
