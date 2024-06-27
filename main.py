@@ -3,15 +3,29 @@ import subprocess
 from urllib.parse import quote
 
 from fastapi import FastAPI, Request
+from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import HTMLResponse, RedirectResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
 from cache.home_cache_api import home_cache_api
 
+
+class CustomHeaderMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        response = await call_next(request)
+        if "/images/" in request.url.path:
+            response.headers['ETag'] = 'cc7ca07af4aca4e0e1be5124fb4f1420'
+            response.headers['Cache-Control'] = 'public, max-age=3600'
+        return response
+
+
 app = FastAPI()
+app.add_middleware(CustomHeaderMiddleware)
 
 app.include_router(home_cache_api, prefix="/home_cache_api")
 app.mount("/images", StaticFiles(directory="images/webp"), name="images")
+
+# ETag: "cc7ca07af4aca4e0e1be5124fb4f1420" , Cache-Control : public, max-age=3600
 app.mount("/videos", StaticFiles(directory="videos/mp4"), name="videos")
 
 
