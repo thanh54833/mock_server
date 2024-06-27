@@ -8,21 +8,23 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: [ "python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8002", "--reload" ]
+    command: [ "python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--ssl-keyfile", "localhost.key", "--ssl-certfile", "localhost.crt" ]
     volumes:
       - .:/code
+      - ./localhost.crt:/localhost.crt
+      - ./localhost.key:/localhost.key
     ports:
-      - 8002:8002
+      - 8000:8000
 
-#  nginx:
-#    image: nginx:latest
-#    volumes:
-#      - ./nginx.conf:/etc/nginx/nginx.conf
-#      - /path/to/your/ssl/certificate:/etc/nginx/ssl/concung.mock_server.vn.crt
-#      - /path/to/your/ssl/key:/etc/nginx/ssl/concung.mock_server.vn.key
-#    ports:
-#      - "80:80"
-#      - "443:443"
+  #  nginx:
+  #    image: nginx:latest
+  #    volumes:
+  #      - ./nginx.conf:/etc/nginx/nginx.conf
+  #      - /path/to/your/ssl/certificate:/etc/nginx/ssl/concung.mock_server.vn.crt
+  #      - /path/to/your/ssl/key:/etc/nginx/ssl/concung.mock_server.vn.key
+  #    ports:
+  #      - "80:80"
+  #      - "443:443"
 
   #  app_2:
   #    image: fastapi-app:v1
