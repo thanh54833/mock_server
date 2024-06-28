@@ -29,3 +29,5 @@ EXPOSE 8002
 
 # Run the command to start uvicorn
 CMD ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8002", "--reload"]
+
+# --ssl-keyfile localhost.key --ssl-certfile localhost.crt

@@ -8,13 +8,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: [ "python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--ssl-keyfile", "localhost.key", "--ssl-certfile", "localhost.crt" ]
+    command: [ "python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8002", "--ssl-keyfile", "localhost.key", "--ssl-certfile", "localhost.crt" ]
     volumes:
       - .:/code
       - ./localhost.crt:/localhost.crt
       - ./localhost.key:/localhost.key
     ports:
-      - 8000:8000
+      - 8002:8002
 
   #  nginx:
   #    image: nginx:latest
