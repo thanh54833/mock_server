@@ -23,6 +23,5 @@ if __name__ == "__main__":
 ## public network:
 
 
-
 1. brew install certbot
 2. sudo certbot certonly --standalone -d concung.mock_server.vn
