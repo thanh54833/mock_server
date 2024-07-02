@@ -1,11 +1,10 @@
 import os
 import subprocess
-from urllib.parse import quote
-
 from fastapi import FastAPI, Request
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import HTMLResponse, RedirectResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
+from urllib.parse import quote
 
 from cache.home_cache_api import home_cache_api
 
@@ -110,7 +109,6 @@ async def progressive_image():
 
 @app.get("/short/123")
 async def short(request: Request):
-
     redir = "https://concung.com/bim-ta-khuyen-mai/ta-quan-molflix-size-l-68-mieng-9-13kg-59060.html"
     encoded_redir = quote(redir, safe='')
 
@@ -119,7 +117,6 @@ async def short(request: Request):
 
 @app.get("/short/124")
 async def short(request: Request):
-
     redir = "https://beta.concung.vn/tim-kiem?attr=8_5220&manufac=811&have_reduce_price=1&s=1&p=1&q=s%E1%BB%AFa"
     encoded_redir = quote(redir, safe='')
 
@@ -128,7 +125,6 @@ async def short(request: Request):
 
 @app.get("/short/125")
 async def short(request: Request):
-
     redir = "https://beta.concung.vn/tim-kiem?attr=8_5220&manufac=811&have_reduce_price=1&s=1&p=1&q=s%E1%BB%AFa"
     encoded_redir = quote(redir, safe='')
 
@@ -155,6 +151,7 @@ async def dynamic_link(redir: str, request: Request):
         <button style="margin: 10px; height: 15vh; width: 40vh; padding: 40px; font-size: 50px;" onclick="window.location.href='{store_url}'">Open App</button>
         <button style="margin: 10px; height: 15vh; width: 40vh; padding: 40px; font-size: 50px;" onclick="window.location.href='{store_url}'">Install App</button>
     </div>
+    
     
     <script>
         setTimeout(function() {{
